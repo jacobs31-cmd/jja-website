@@ -561,26 +561,36 @@ Deployed and **verified live on 2026-06-15**: `https://jjainsurance.com/assets/j
       generators' unclosed `open(...,"w").write()` writes; now fixed with `safe_write()` +
       post-write `</html>` verification (§2). Running generators from a real Windows terminal
       (not the sandbox) remains the recommended practice.
-- [x] **Cache-bust strings standardized 2026-07-02**: all 120 pages now read `styles.css?v=20260529`
-      and `site.v2.js?v=20260614`. Root cause of the recurring drift was `build.py`'s single
-      `VERSION = "20260516q"` constant re-stamping stale versions on every blog build — replaced
-      with separate `CSS_VERSION` / `JS_VERSION` constants set to the canonical values. When
-      `styles.css` or `site.v2.js` next changes, bump the matching constant in `build.py` AND the
-      sitewide refs together (also check `VER` in `gen_product_pages.py` / `gen_cities.py`).
-- [ ] Migrate to Git-based deploys — **prep done 2026-07-02**: `.gitignore` +
-      `GIT-MIGRATION.md` (Phase A = history-only, zero deploy-path change; Phase B =
-      Workers Builds auto-deploy later). Joseph runs Phase A from a Windows terminal.
-      Then optionally Pages CMS for friendly blog editing (`.pages.yml` already configured).
+- [x] **Cache-bust strings standardized 2026-07-02**: all 120 pages uniform at
+      `styles.css?v=20260529` and `site.v2.js?v=20260702` (JS bumped sitewide 2026-07-02 by the
+      Marketing project; `build.py` matched). Root cause of the recurring drift was `build.py`'s
+      single `VERSION = "20260516q"` constant re-stamping stale versions on every blog build —
+      replaced with separate `CSS_VERSION` / `JS_VERSION` constants. When `styles.css` or
+      `site.v2.js` next changes, bump the matching constant in `build.py` AND the sitewide refs
+      together (also check `VER` in `gen_product_pages.py` / `gen_cities.py`).
+      `predeploy_check.py` enforces uniformity on every deploy.
+- [x] **Git Phase A COMPLETE 2026-07-02**: C:\Website is a git repo pushed to the PRIVATE
+      GitHub repo `jacobs31-cmd/jja-website`. `backups/` is git-ignored; `.git/` is in
+      `.assetsignore` (wrangler must never upload it — it broke a deploy before this was added).
+      **Finish-work ritual is now:** `python predeploy_check.py` (must PASS) → `git add -A` +
+      `git commit` + `git push` → `npx wrangler deploy` → `python checkpoint.py`.
+      Phase B (Workers Builds auto-deploy on push) and Pages CMS remain optional/later —
+      see `GIT-MIGRATION.md`.
 - [x] Point `jjainsurance.com` at the new Cloudflare site — **done**; it's served by the
       `jjainsurance` Worker (the from-scratch static site in `C:\Website`). Deploy command now
       confirmed and recorded in §9: `cd C:\Website && npx wrangler deploy` (via `wrangler.jsonc`).
 - [ ] DNS housekeeping in GoDaddy (Crypto Wallet template, Microsoft 365 TXT, SPF typo) — §9.
 - [ ] Replace the placeholder OG image (`assets/img/og-default.jpg`) with a branded card.
-- [x] **Blog pipeline consolidated 2026-07-02**: markdown back-filled for all 38 posts;
-      build.py is fully authoritative. **Pending: Joseph runs `python build.py` +
-      `python predeploy_check.py` + deploy from a Windows terminal** to publish the
-      regenerated posts (template convergence: ☰ menu, SVG utility bar, author bio,
-      article meta/speakable/FAQ schema on all posts; 3 old-nav posts get the standard nav).
+- [x] **Blog pipeline consolidated AND DEPLOYED 2026-07-02**: markdown back-filled for all
+      38 posts; build.py fully authoritative; regenerated site is live (template convergence:
+      ☰ menu, SVG utility bar, author bio — wording corrected to "family's agency founded 1981,
+      Joseph leads" — article meta/speakable/FAQ schema on all posts; 3 old-nav posts modernized).
+      Post-deploy bug found+fixed same day: the back-filled bodies each embedded their own hero
+      figure, so posts briefly showed DOUBLE heroes — embedded heroes removed from the .md
+      sources; the template's `hero_fig()` (driven by frontmatter `image:`) is now the ONLY hero.
+      **Never re-add a top hero `<figure>` inside a post body.**
+- [ ] Nice-to-have: add a duplicate-image check to `predeploy_check.py` (the text-diff
+      verification missed the doubled heroes — images have no text).
 - [ ] Work the audit punch list — see `JJA-Website-Audit.docx` (Section 5 is prioritized).
 - [ ] **Growth / lead-gen roadmap — see `GROWTH-ROADMAP.md`** (prioritized by revenue impact).
       In progress: Initiative 1 (high-value commercial product pages, cannabis first).

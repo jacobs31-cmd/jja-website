@@ -15,7 +15,7 @@ def safe_write(path, text):
             raise SystemExit("ABORT: short/truncated write to " + path)
 SITE="https://jjainsurance.com"
 PHONE_TEL="+12486936455"; PHONE="(248) 693-6455"; EMAIL="Support@jjainsurance.com"
-VER="20260613"; REL="../../"
+VER="20260702"; REL="../../"
 FORCE=(len(sys.argv)>2 and sys.argv[2]=="force")
 
 CONFIG=[

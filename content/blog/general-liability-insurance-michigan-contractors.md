@@ -11,8 +11,7 @@ image: "photo-1589939705384-5185137a7f0f.avif"
 summary: "Michigan contractors: most GCs require $1M-$2M liability before you step on a job site. Here's what you need, what it costs, and how to get it fast."
 meta_description: "Michigan contractors: most GCs require $1M–$2M liability before you step on a job site. Here's what you need, what it costs, and how to get it fast."
 ---
-    <figure style="margin:0 0 2rem;border-radius:12px;overflow:hidden;"><picture><source srcset="../../assets/img/blog/photo-1589939705384-5185137a7f0f.avif" type="image/avif"><img src="../../assets/img/blog/photo-1589939705384-5185137a7f0f.avif" alt="General Liability Insurance for Michigan Contractors" style="width:100%;height:auto;display:block;" loading="eager" width="1200" height="630"></picture></figure>
-    
+
 <p style="font-size:.9rem;background:var(--gray-50);border-left:4px solid var(--navy);padding:.75rem 1rem;border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:1.5rem;">We quote contractor GL in Michigan across 20+ commercial carriers. <a href="../../business/" style="color:var(--navy);font-weight:600;">Get a free contractor insurance quote →</a></p>
 
 <p class="lead">Michigan doesn&#39;t mandate general liability insurance for most contractors at the state level. But try pulling a permit, bidding a commercial job, or signing a subcontract without it — you&#39;ll hit a wall fast. Here&#39;s what Michigan contractors actually need to know about general liability coverage, what it costs, and how to make sure you&#39;re protected on every job.</p>

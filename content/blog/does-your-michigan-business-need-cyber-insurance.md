@@ -11,8 +11,7 @@ image: "photo-1614064641938-3bbee52942c7.avif"
 summary: "Only 17% of Michigan SMBs carry cyber insurance -- yet the average breach costs $200K+. Learn what cyber coverage includes and whether your business needs it."
 meta_description: "Only 17% of Michigan SMBs carry cyber insurance — yet the average breach costs $200K+. Learn what cyber coverage includes and whether your business needs it."
 ---
-    <figure style="margin:0 0 2rem;border-radius:12px;overflow:hidden;"><picture><source srcset="../../assets/img/blog/photo-1614064641938-3bbee52942c7.avif" type="image/avif"><img src="../../assets/img/blog/photo-1614064641938-3bbee52942c7.avif" alt="Does Your Michigan Business Need Cyber Insurance?" style="width:100%;height:auto;display:block;" loading="eager" width="1200" height="630"></picture></figure>
-    
+
 <p style="font-size:.9rem;background:var(--gray-50);border-left:4px solid var(--navy);padding:.75rem 1rem;border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:1.5rem;">We quote Michigan cyber insurance across 20+ commercial carriers. <a href="../../business/" style="color:var(--navy);font-weight:600;">Get a free cyber insurance quote →</a></p>
 <p class="lead">60% of small businesses hit by a serious cyber attack are out of business within six months. Most Michigan business owners assume it won't happen to them — or that their general liability or BOP already covers it. Usually, neither is true.</p>
 

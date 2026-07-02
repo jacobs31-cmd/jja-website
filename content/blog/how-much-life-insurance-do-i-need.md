@@ -11,8 +11,7 @@ image: "photo-1709216461598-018ae6307dc0.avif"
 summary: "How much life insurance do you need in Michigan? Use the DIME method, 10x income rule, and our agent-tested checklist to find the right coverage amount."
 meta_description: "How much life insurance do you need in Michigan? Use the DIME method, 10x income rule, and our agent-tested checklist to find the right coverage amount."
 ---
-    <figure style="margin:0 0 2rem;border-radius:12px;overflow:hidden;"><picture><source srcset="../../assets/img/blog/photo-1709216461598-018ae6307dc0.avif" type="image/avif"><img src="../../assets/img/blog/photo-1709216461598-018ae6307dc0.avif" alt="How Much Life Insurance Do You Need?" style="width:100%;height:auto;display:block;" loading="eager" width="1200" height="630"></picture></figure>
-    
+
 <p style="font-size:.9rem;background:var(--gray-50);border-left:4px solid var(--navy);padding:.75rem 1rem;border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:1.5rem;">Ready to find the right Michigan life insurance policy? <a href="../../personal/life-insurance/" style="color:var(--navy);font-weight:600;">See our life insurance options →</a></p>
 
 <p class="lead">Most people who buy life insurance either guess at a round number or accept whatever the agent suggests. Both approaches usually leave families underinsured. Here&#39;s how to actually calculate what you need — based on your real situation, not a generic formula.</p>

@@ -11,8 +11,7 @@ image: "photo-1657069342866-2d11c2509b02.avif"
 summary: "Homeowners insurance doesn't cover flood damage in Michigan. Learn what NFIP and private flood policies cover, what they cost, and who really needs one."
 meta_description: "Homeowners insurance doesn't cover flood damage in Michigan. Learn what NFIP and private flood policies cover, what they cost, and who really needs one."
 ---
-    <figure style="margin:0 0 2rem;border-radius:12px;overflow:hidden;"><picture><source srcset="../../assets/img/blog/photo-1657069342866-2d11c2509b02.avif" type="image/avif"><img src="../../assets/img/blog/photo-1657069342866-2d11c2509b02.avif" alt="Michigan Flood Insurance: What Homeowners Insurance Doesn't Cover" style="width:100%;height:auto;display:block;" loading="eager" width="1200" height="630"></picture></figure>
-    
+
 <p style="font-size:.9rem;background:var(--gray-50);border-left:4px solid var(--navy);padding:.75rem 1rem;border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:1.5rem;">Wondering if you need flood insurance for your Michigan home? <a href="../../personal/home-insurance/" style="color:var(--navy);font-weight:600;">Talk to a Michigan home insurance agent →</a></p>
 
 <p class="lead">Your homeowners insurance covers a lot. Fire, theft, wind damage, a tree through the roof — all covered. Flood damage? Not a single dollar. Standard homeowners policies explicitly exclude flooding, and that gap catches Michigan homeowners off guard every single year.</p>

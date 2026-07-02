@@ -11,8 +11,7 @@ image: "photo-1585390062628-be8608aa7d83.avif"
 summary: "Gap insurance in Michigan covers what's owed on your loan vs. your car's value after a total loss. Learn when you need it and what it costs."
 meta_description: "Gap insurance in Michigan covers what's owed on your loan vs. your car's value after a total loss. Learn when you need it and what it costs."
 ---
-    <figure style="margin:0 0 2rem;border-radius:12px;overflow:hidden;"><picture><source srcset="../../assets/img/blog/photo-1585390062628-be8608aa7d83.avif" type="image/avif"><img src="../../assets/img/blog/photo-1585390062628-be8608aa7d83.avif" alt="Michigan Gap Insurance: When You Need It" style="width:100%;height:auto;display:block;" loading="eager" width="1200" height="630"></picture></figure>
-    
+
 <p style="font-size:.9rem;background:var(--gray-50);border-left:4px solid var(--navy);padding:.75rem 1rem;border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:1.5rem;">Adding a new vehicle to your Michigan policy? <a href="../../personal/auto-insurance/" style="color:var(--navy);font-weight:600;">Review your Michigan auto coverage →</a></p>
 
 <p class="lead">Your car gets totaled. Your insurance company pays you the vehicle&#39;s actual cash value — what it was worth the day of the accident. But you owe $4,000 more on the loan than that check covers. Gap insurance pays that difference. Without it, that $4,000 comes out of your pocket — for a car you can no longer drive.</p>

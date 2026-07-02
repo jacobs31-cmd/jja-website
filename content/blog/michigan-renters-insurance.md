@@ -11,8 +11,7 @@ image: "photo-1768941124460-6fa7161715ff.avif"
 summary: "Michigan renters insurance averages $18/month and covers your belongings, liability, and hotel costs if your unit becomes uninhabitable."
 meta_description: "Michigan renters insurance averages $18/month and covers your belongings, liability, and hotel costs if your unit becomes uninhabitable. Here's what to know."
 ---
-    <figure style="margin:0 0 2rem;border-radius:12px;overflow:hidden;"><img src="../../assets/img/blog/photo-1768941124460-6fa7161715ff.avif" alt="Michigan Renters Insurance Guide" style="width:100%;height:auto;display:block;" loading="eager" width="1200" height="630"></figure>
-    
+
 <p style="font-size:.9rem;background:var(--gray-50);border-left:4px solid var(--navy);padding:.75rem 1rem;border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:1.5rem;">
   Michigan renters insurance starts at $15/month. <a href="../../personal/" style="color:var(--navy);font-weight:600;">Get a renters insurance quote from JJA →</a>
 </p>

@@ -11,8 +11,7 @@ image: "photo-1574023240744-64c47c8c0676.avif"
 summary: "Using your personal vehicle for work in Michigan? Your personal policy may not cover you. Learn when you need commercial auto coverage."
 meta_description: "Using your personal vehicle for work in Michigan? Your personal policy may not cover you. Learn when you need commercial auto coverage."
 ---
-    <figure style="margin:0 0 2rem;border-radius:12px;overflow:hidden;"><picture><source srcset="../../assets/img/blog/photo-1574023240744-64c47c8c0676.avif" type="image/avif"><img src="../../assets/img/blog/photo-1574023240744-64c47c8c0676.avif" alt="Commercial Auto vs. Personal Auto Insurance in Michigan: Why the Difference Matters" style="width:100%;height:auto;display:block;" loading="eager" width="1200" height="630"></picture></figure>
-    
+
 <p style="font-size:.9rem;background:var(--gray-50);border-left:4px solid var(--navy);padding:.75rem 1rem;border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:1.5rem;">Need commercial auto coverage for your Michigan business? <a href="../../business/" style="color:var(--navy);font-weight:600;">Get a free commercial insurance quote →</a></p>
 
 <p class="lead">You drive your personal vehicle to job sites, client appointments, or deliveries. You&#39;ve had the same auto policy for years. What you may not know: if you&#39;re in an accident while using that vehicle for business purposes, your personal auto policy might deny the claim entirely. That gap catches Michigan workers and business owners off guard — often at the worst possible moment.</p>

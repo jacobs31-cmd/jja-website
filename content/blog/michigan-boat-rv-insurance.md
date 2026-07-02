@@ -11,8 +11,7 @@ image: "photo-1779078063955-8fbf934c358c.avif"
 summary: "Michigan boat insurance starts at $200/year. RV insurance from $180/year. Learn what's required, what's covered, and when your home policy won't protect you."
 meta_description: "Michigan boat insurance starts at $200/year. RV insurance from $180/year. Learn what's required, what's covered, and when your home policy won't protect you."
 ---
-    <figure style="margin:0 0 2rem;border-radius:12px;overflow:hidden;"><img src="../../assets/img/blog/photo-1779078063955-8fbf934c358c.avif" alt="Michigan Boat & RV Insurance: What You Need Before Summer Hits" style="width:100%;height:auto;display:block;" loading="eager" width="1200" height="630"></figure>
-    
+
 <p style="font-size:.9rem;background:var(--gray-50);border-left:4px solid var(--navy);padding:.75rem 1rem;border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:1.5rem;">
   Michigan boat and RV season is here. <a href="../../personal/" style="color:var(--navy);font-weight:600;">Get a watercraft or RV insurance quote from JJA →</a>
 </p>

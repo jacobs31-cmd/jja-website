@@ -11,8 +11,7 @@ image: "home-infograph.avif"
 summary: "Michigan home insurance rates are up 21% over two years. Learn the real reasons your premium rose in 2026 and 7 proven ways to lower it."
 meta_description: "Michigan home insurance rates are up 21% over two years. Learn the real reasons your premium rose in 2026 and 7 proven ways to lower it."
 ---
-    <figure style="margin:0 0 2rem;border-radius:12px;overflow:hidden;"><img src="../../assets/img/blog/home-infograph.avif" alt="Why Your Home Insurance Went Up in 2026" style="width:100%;height:auto;display:block;" loading="eager" width="1200" height="630"></figure>
-    
+
 <p style="font-size:.9rem;background:var(--gray-50);border-left:4px solid var(--navy);padding:.75rem 1rem;border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:1.5rem;">We can re-shop your Michigan homeowners policy across 10+ carriers. <a href="../../personal/home-insurance/" style="color:var(--navy);font-weight:600;">See if you can lower your home insurance rate →</a></p>
 <p class="lead">You didn't file a claim. You didn't move. Your house didn't change. So why is your insurance bill hundreds of dollars higher this year? Here's exactly what's driving Michigan home insurance rates up in 2026 — and what you can do right now to bring your premium back down.</p>
 

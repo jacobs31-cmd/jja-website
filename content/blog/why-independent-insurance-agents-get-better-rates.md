@@ -11,8 +11,7 @@ image: "photo-1526948531399-320e7e40f0ca.avif"
 summary: "One call to JJA Insurance compares 10+ Michigan carriers. See why independent agents consistently beat captive agents on price and coverage options."
 meta_description: "One call to JJA Insurance compares 10+ Michigan carriers. See why independent agents consistently beat captive agents on price and coverage options."
 ---
-    <figure style="margin:0 0 2rem;border-radius:12px;overflow:hidden;"><picture><source srcset="../../assets/img/blog/photo-1526948531399-320e7e40f0ca.avif" type="image/avif"><img src="../../assets/img/blog/photo-1526948531399-320e7e40f0ca.avif" alt="Why Independent Insurance Agents Get You Better Rates" style="width:100%;height:auto;display:block;" loading="eager" width="1200" height="630"></picture></figure>
-    
+
 <p style="font-size:.9rem;background:var(--gray-50);border-left:4px solid var(--navy);padding:.75rem 1rem;border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:1.5rem;">See how much you can save with one call to JJA Insurance. <a href="../../quotes/" style="color:var(--navy);font-weight:600;">Start a free Michigan insurance quote →</a></p>
 
 <p class="lead">Michigan auto insurance climbed <strong>12% in 2025</strong>. Home insurance jumped <strong>57%</strong> over the past year, pushing the state to 4th most expensive in the country for auto coverage. If you&#39;re getting your insurance from a captive agent — someone who works exclusively for one company like State Farm, Allstate, or Farmers — you&#39;re only seeing one number. Here&#39;s what you&#39;re missing, and why working with an independent agent changes the math entirely.</p>

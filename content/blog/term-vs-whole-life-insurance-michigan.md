@@ -11,8 +11,7 @@ image: "photo-1628676348963-f88c671333f6.avif"
 summary: "Term vs. whole life insurance in Michigan: a clear breakdown of cost, coverage length, cash value, and which one fits your family's needs."
 meta_description: "Term vs. whole life insurance in Michigan: a clear breakdown of cost, coverage length, cash value, and which one fits your family's needs."
 ---
-    <figure style="margin:0 0 2rem;border-radius:12px;overflow:hidden;"><picture><source srcset="../../assets/img/blog/photo-1628676348963-f88c671333f6.avif" type="image/avif"><img src="../../assets/img/blog/photo-1628676348963-f88c671333f6.avif" alt="Term vs. Whole Life Insurance in Michigan" style="width:100%;height:auto;display:block;" loading="eager" width="1200" height="630"></picture></figure>
-    
+
 <p style="font-size:.9rem;background:var(--gray-50);border-left:4px solid var(--navy);padding:.75rem 1rem;border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:1.5rem;">Comparing term vs. whole life options in Michigan? <a href="../../personal/life-insurance/" style="color:var(--navy);font-weight:600;">See our Michigan life insurance options →</a></p>
 
 <p class="lead">The life insurance industry has done a remarkable job of making a simple decision feel impossibly complicated. Term and whole life are the two main types — and for most Michigan families, the right choice is actually pretty clear once you strip away the jargon. Here&#39;s the honest breakdown.</p>

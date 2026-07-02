@@ -11,8 +11,7 @@ image: "photo-1551836022-aadb801c60ae.avif"
 summary: "A BOP bundles GL and property coverage for Michigan small businesses. Learn what it covers, what it doesn't, and what a policy costs in Michigan."
 meta_description: "A BOP bundles GL and property coverage for Michigan small businesses. Learn what it covers, what it doesn't, and what a policy costs in Michigan."
 ---
-    <figure style="margin:0 0 2rem;border-radius:12px;overflow:hidden;"><picture><source srcset="../../assets/img/blog/photo-1551836022-aadb801c60ae.avif" type="image/avif"><img src="../../assets/img/blog/photo-1551836022-aadb801c60ae.avif" alt="Michigan Business Owner's Policy (BOP) Guide" style="width:100%;height:auto;display:block;" loading="eager" width="1200" height="630"></picture></figure>
-    
+
 <p style="font-size:.9rem;background:var(--gray-50);border-left:4px solid var(--navy);padding:.75rem 1rem;border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:1.5rem;">JJA Insurance quotes Michigan BOPs across 20+ commercial carriers — one call covers you. <a href="../../business/" style="color:var(--navy);font-weight:600;">Get a free BOP quote →</a></p>
 
 <p class="lead">Most Michigan small business owners need at least two types of insurance from day one: general liability and commercial property. A Business Owner&#39;s Policy — called a BOP — bundles both into a single policy, usually at a lower combined price than buying them separately. Here&#39;s what&#39;s inside, what&#39;s not, and whether it&#39;s the right fit for your business.</p>

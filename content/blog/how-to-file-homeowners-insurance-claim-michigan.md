@@ -11,8 +11,7 @@ image: "photo-1720065609938-ec0e33ffd9ad.avif"
 summary: "Michigan homeowners: here's exactly how to file a home insurance claim step by step -- from documenting damage to getting your check."
 meta_description: "Michigan homeowners: here's exactly how to file a home insurance claim step by step — document damage, contact your agent, and work with the adjuster."
 ---
-    <figure style="margin:0 0 2rem;border-radius:12px;overflow:hidden;"><picture><source srcset="../../assets/img/blog/photo-1720065609938-ec0e33ffd9ad.avif" type="image/avif"><img src="../../assets/img/blog/photo-1720065609938-ec0e33ffd9ad.avif" alt="How to File a Homeowners Insurance Claim in Michigan: A Step-by-Step Guide" style="width:100%;height:auto;display:block;" loading="eager" width="1200" height="630"></picture></figure>
-    
+
 <p style="font-size:.9rem;background:var(--gray-50);border-left:4px solid var(--navy);padding:.75rem 1rem;border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:1.5rem;">
   Dealing with home damage in Michigan? Your JJA agent can guide you through the claims process. <a href="../../personal/home-insurance/" style="color:var(--navy);font-weight:600;">Contact a Michigan home insurance agent →</a>
 </p>

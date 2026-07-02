@@ -11,8 +11,7 @@ image: "photo-1562564055-71e051d33c19.avif"
 summary: "Michigan umbrella insurance costs $400-$600/year for $1M in coverage. Find out who needs it, what it covers, and what it doesn't."
 meta_description: "Michigan umbrella insurance costs $400–$600/year for $1M in coverage. Find out who needs it, what it covers, and what it doesn't."
 ---
-    <figure style="margin:0 0 2rem;border-radius:12px;overflow:hidden;"><picture><source srcset="../../assets/img/blog/photo-1562564055-71e051d33c19.avif" type="image/avif"><img src="../../assets/img/blog/photo-1562564055-71e051d33c19.avif" alt="Michigan Umbrella Insurance: Who Needs It?" style="width:100%;height:auto;display:block;" loading="eager" width="1200" height="630"></picture></figure>
-    
+
 <p style="font-size:.9rem;background:var(--gray-50);border-left:4px solid var(--navy);padding:.75rem 1rem;border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:1.5rem;">Michigan umbrella policies start at $400–$600/year. <a href="../../personal/" style="color:var(--navy);font-weight:600;">Talk to a Michigan agent about umbrella coverage →</a></p>
 
 <p class="lead">For about the cost of a nice dinner out each month, you can add $1 million in liability protection on top of your existing home and auto coverage. Michigan umbrella insurance is one of the most underutilized policies out there — and for most homeowners with any real assets, it&#39;s also one of the smartest buys you can make.</p>

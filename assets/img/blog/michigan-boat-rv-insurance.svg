@@ -1,0 +1,16 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14365e"/>
+      <stop offset="100%" stop-color="#0a2342"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="8" height="630" fill="#c8952a"/>
+  <text x="60" y="80" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="600" fill="#c8952a" letter-spacing="3">JJA INSURANCE · MICHIGAN</text>
+  <text x="600" y="260" font-family="Inter,Arial,sans-serif" font-size="52" font-weight="700" fill="#ffffff" text-anchor="middle">Michigan Boat & RV Insurance</text>
+<text x="600" y="318" font-family="Inter,Arial,sans-serif" font-size="52" font-weight="700" fill="#ffffff" text-anchor="middle">Guide</text>
+
+  <text x="600" y="396" font-family="Inter,Arial,sans-serif" font-size="28" fill="#e8f0f8" text-anchor="middle">What You Need Before Summer Hits</text>
+  <text x="60" y="590" font-family="Inter,Arial,sans-serif" font-size="20" fill="#e8f0f8" opacity="0.7">jjainsurance.com · (248) 693-6455 · Lake Orion, MI</text>
+</svg>

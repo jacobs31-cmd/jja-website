@@ -1,0 +1,9 @@
+{
+  // Deploys the JJA static site to the existing assets-only Worker "jjainsurance".
+  // Update the live site with:  cd C:\Website  &&  npx wrangler deploy
+  "name": "jjainsurance",
+  "compatibility_date": "2026-06-01",
+  "assets": {
+    "directory": "./"
+  }
+}

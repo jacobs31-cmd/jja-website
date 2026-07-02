@@ -1,0 +1,36 @@
+<svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" font-family="Inter,Arial,sans-serif">
+  <rect width="800" height="440" fill="#f9fafb" rx="12"/>
+  <text x="400" y="36" font-size="18" font-weight="700" fill="#14365e" text-anchor="middle">How Michigan Umbrella Insurance Works</text>
+  <text x="400" y="56" font-size="13" fill="#6b7280" text-anchor="middle">Three layers of protection — each kicks in when the one below is exhausted</text>
+
+  <!-- Layer 3: Umbrella (top, widest) -->
+  <rect x="60" y="80" width="680" height="80" rx="8" fill="#c8952a"/>
+  <text x="400" y="113" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">UMBRELLA INSURANCE</text>
+  <text x="400" y="135" font-size="13" fill="#fff8e6" text-anchor="middle">$1M–$5M+ in additional liability coverage · $400–$600/year in Michigan</text>
+
+  <!-- Arrow down -->
+  <text x="400" y="177" font-size="22" fill="#c8952a" text-anchor="middle">↓ kicks in when below is exhausted</text>
+
+  <!-- Layer 2: Home + Auto -->
+  <rect x="140" y="188" width="240" height="75" rx="8" fill="#14365e"/>
+  <text x="260" y="216" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">HOME INSURANCE</text>
+  <text x="260" y="235" font-size="12" fill="#e8f0f8" text-anchor="middle">Liability: $300K–$500K typical</text>
+  <text x="260" y="251" font-size="11" fill="#9db8d4" text-anchor="middle">Covers premises injury, dog bites</text>
+
+  <rect x="420" y="188" width="240" height="75" rx="8" fill="#1e4d8c"/>
+  <text x="540" y="216" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">AUTO INSURANCE</text>
+  <text x="540" y="235" font-size="12" fill="#e8f0f8" text-anchor="middle">BI Liability: $100K–$300K typical</text>
+  <text x="540" y="251" font-size="11" fill="#9db8d4" text-anchor="middle">Covers at-fault accident injuries</text>
+
+  <!-- Arrow down -->
+  <text x="400" y="288" font-size="22" fill="#14365e" text-anchor="middle">↓ covers first layer of any claim</text>
+
+  <!-- Layer 1: Your assets (bottom) -->
+  <rect x="200" y="300" width="400" height="70" rx="8" fill="#dc2626"/>
+  <text x="400" y="330" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">WITHOUT UMBRELLA: YOUR ASSETS AT RISK</text>
+  <text x="400" y="352" font-size="12" fill="#fca5a5" text-anchor="middle">Home equity · savings · investments · future wages</text>
+
+  <!-- Example -->
+  <rect x="60" y="390" width="680" height="36" rx="6" fill="#e8f0f8"/>
+  <text x="400" y="413" font-size="12" fill="#374151" text-anchor="middle">Example: $800K accident judgment → Auto pays $300K → Umbrella pays $500K → You pay $0</text>
+</svg>

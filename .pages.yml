@@ -1,0 +1,42 @@
+# Pages CMS configuration for J. Jacobs & Associates Insurance
+# Docs: https://pagescms.org/docs/
+#
+# After connecting your repo at pagescms.org, this config tells Pages CMS
+# what content to expose for editing.
+
+content:
+  - name: blog
+    label: Blog Posts
+    path: content/blog
+    type: collection
+    filename: '{slug}.md'
+    view:
+      fields: [date, title, category]
+      primary: title
+      sort: [date, title]
+    fields:
+      - { name: slug, label: URL slug (no spaces), type: string, required: true, pattern: '^[a-z0-9-]+$' }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: date, label: Publish date, type: date, required: true, options: { format: 'yyyy-MM-dd' } }
+      - { name: date_display, label: 'Date display (e.g., May 15, 2026)', type: string, required: true }
+      - { name: category, label: Category, type: select, required: true, options: { values: [Auto Insurance, Home Insurance, Life Insurance, Commercial Insurance, Workers Comp, Insurance Education, Industry News, Tips & Advice] } }
+      - { name: read_minutes, label: Estimated read time (minutes), type: number, required: true, default: 3 }
+      - { name: summary, label: Summary (1-2 sentences shown on blog index), type: text, required: true }
+      - { name: meta_description, label: Meta description (150-160 chars for Google), type: text, required: true }
+      - { name: body, label: Content, type: rich-text, required: true }
+
+  - name: site_settings
+    label: Site Settings
+    path: content/settings.yml
+    type: file
+    fields:
+      - { name: phone, label: Phone number, type: string }
+      - { name: email, label: Email address, type: string }
+      - { name: address, label: Office address, type: text }
+      - { name: hours, label: Office hours, type: string }
+
+media:
+  - name: blog_images
+    label: Blog Images
+    input: assets/img/blog
+    output: /assets/img/blog

@@ -1,0 +1,13 @@
+# Dependencies / tooling
+node_modules/
+.wrangler/
+__pycache__/
+*.pyc
+
+# OS noise
+Thumbs.db
+.DS_Store
+
+# NOTE: buffer_images_done.txt is deliberately TRACKED (it prevents
+# duplicate Buffer scheduling on reruns). _archive/ and wp-content/ are
+# deliberately TRACKED (history + live URL shims).

@@ -1,0 +1,47 @@
+# Files that must NOT be served as public website assets.
+# (gitignore-style. The site HTML/CSS/JS/images + llms.txt, robots.txt,
+#  sitemap.xml, _headers and 404.html are NOT listed here, so they ARE served.)
+
+# Build / automation scripts and caches
+*.py
+*.pyc
+__pycache__/
+.wrangler/
+*.ps1
+*.bat
+
+# OS / cloud-sync temp artifacts (Google Drive leaves these behind)
+.fuse_hidden*
+*.fuse_hidden*
+.tmp.driveupload/
+.tmp.drivedownload/
+desktop.ini
+Thumbs.db
+
+# Internal docs & notes
+*.md
+*.docx
+
+# Worker source / config that lives in this folder (not part of the site)
+*.toml
+*.yml
+*.yaml
+/contact-form-worker.js
+/generate-home-test.js
+/generateHomeAL3-snippet.js
+/wrangler.jsonc
+/.assetsignore
+
+# Archived/superseded material, blog markdown sources, and tooling
+_archive/
+content/
+email-signatures/
+
+# Local backups (zip + git bundles — never served; exceed the 25 MiB asset limit)
+backups/
+*.bundle
+*.zip
+
+# Local logs / state files
+/backup_log.txt
+/buffer_images_done.txt

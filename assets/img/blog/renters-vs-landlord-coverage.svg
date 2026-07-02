@@ -1,0 +1,76 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" font-family="Inter,Arial,sans-serif">
+  <rect width="800" height="400" fill="#f9fafb" rx="12"/>
+  <text x="400" y="38" font-size="18" font-weight="700" fill="#14365e" text-anchor="middle">What Renters Insurance Covers vs. Your Landlord's Policy</text>
+
+  <!-- Left column: Renters Insurance -->
+  <rect x="30" y="60" width="355" height="310" fill="#14365e" rx="10"/>
+  <text x="207" y="92" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">YOUR Renters Insurance</text>
+
+  <!-- Items covered by renters -->
+  <circle cx="60" cy="120" r="9" fill="#c8952a"/>
+  <text x="60" y="125" font-size="14" fill="#ffffff" text-anchor="middle">✓</text>
+  <text x="80" y="125" font-size="13" fill="#e8f0f8">Your furniture &amp; belongings</text>
+
+  <circle cx="60" cy="152" r="9" fill="#c8952a"/>
+  <text x="60" y="157" font-size="14" fill="#ffffff" text-anchor="middle">✓</text>
+  <text x="80" y="157" font-size="13" fill="#e8f0f8">Electronics, laptop, phone</text>
+
+  <circle cx="60" cy="184" r="9" fill="#c8952a"/>
+  <text x="60" y="189" font-size="14" fill="#ffffff" text-anchor="middle">✓</text>
+  <text x="80" y="189" font-size="13" fill="#e8f0f8">Clothing &amp; personal items</text>
+
+  <circle cx="60" cy="216" r="9" fill="#c8952a"/>
+  <text x="60" y="221" font-size="14" fill="#ffffff" text-anchor="middle">✓</text>
+  <text x="80" y="221" font-size="13" fill="#e8f0f8">Your personal liability</text>
+
+  <circle cx="60" cy="248" r="9" fill="#c8952a"/>
+  <text x="60" y="253" font-size="14" fill="#ffffff" text-anchor="middle">✓</text>
+  <text x="80" y="253" font-size="13" fill="#e8f0f8">Hotel costs if unit uninhabitable</text>
+
+  <circle cx="60" cy="280" r="9" fill="#c8952a"/>
+  <text x="60" y="285" font-size="14" fill="#ffffff" text-anchor="middle">✓</text>
+  <text x="80" y="285" font-size="13" fill="#e8f0f8">Theft from your car</text>
+
+  <circle cx="60" cy="312" r="9" fill="#c8952a"/>
+  <text x="60" y="317" font-size="14" fill="#ffffff" text-anchor="middle">✓</text>
+  <text x="80" y="317" font-size="13" fill="#e8f0f8">Dog bite liability</text>
+
+  <text x="207" y="355" font-size="13" fill="#c8952a" text-anchor="middle" font-weight="600">Avg. $18/month in Michigan</text>
+
+  <!-- Right column: Landlord policy -->
+  <rect x="415" y="60" width="355" height="310" fill="#ffffff" stroke="#d1d9e0" stroke-width="2" rx="10"/>
+  <text x="592" y="92" font-size="15" font-weight="700" fill="#374151" text-anchor="middle">Landlord's Policy</text>
+
+  <!-- Items covered by landlord -->
+  <circle cx="445" cy="120" r="9" fill="#16a34a"/>
+  <text x="445" y="125" font-size="14" fill="#ffffff" text-anchor="middle">✓</text>
+  <text x="465" y="125" font-size="13" fill="#374151">The building structure</text>
+
+  <circle cx="445" cy="152" r="9" fill="#16a34a"/>
+  <text x="445" y="157" font-size="14" fill="#ffffff" text-anchor="middle">✓</text>
+  <text x="465" y="157" font-size="13" fill="#374151">Landlord's appliances &amp; fixtures</text>
+
+  <circle cx="445" cy="184" r="9" fill="#16a34a"/>
+  <text x="445" y="189" font-size="14" fill="#ffffff" text-anchor="middle">✓</text>
+  <text x="465" y="189" font-size="13" fill="#374151">Landlord's liability (building defects)</text>
+
+  <!-- Items NOT covered -->
+  <circle cx="445" cy="232" r="9" fill="#dc2626"/>
+  <text x="445" y="237" font-size="14" fill="#ffffff" text-anchor="middle">✗</text>
+  <text x="465" y="232" font-size="13" fill="#9ca3af">Your furniture or belongings</text>
+
+  <circle cx="445" cy="264" r="9" fill="#dc2626"/>
+  <text x="445" y="269" font-size="14" fill="#ffffff" text-anchor="middle">✗</text>
+  <text x="465" y="264" font-size="13" fill="#9ca3af">Your electronics or clothing</text>
+
+  <circle cx="445" cy="296" r="9" fill="#dc2626"/>
+  <text x="445" y="301" font-size="14" fill="#ffffff" text-anchor="middle">✗</text>
+  <text x="465" y="296" font-size="13" fill="#9ca3af">Your personal liability</text>
+
+  <circle cx="445" cy="328" r="9" fill="#dc2626"/>
+  <text x="445" y="333" font-size="14" fill="#ffffff" text-anchor="middle">✗</text>
+  <text x="465" y="328" font-size="13" fill="#9ca3af">Your temporary housing costs</text>
+
+  <line x1="415" y1="212" x2="770" y2="212" stroke="#f3f4f6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="592" y="225" font-size="11" fill="#9ca3af" text-anchor="middle">Not covered by landlord →</text>
+</svg>

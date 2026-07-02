@@ -1,0 +1,79 @@
+<svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" font-family="Inter,Arial,sans-serif">
+  <!-- Background -->
+  <rect width="800" height="440" fill="#f8fafc" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="36" font-size="17" font-weight="700" fill="#14365e" text-anchor="middle">Michigan Boat &amp; RV Insurance — Annual Cost by Type (2026)</text>
+  <text x="400" y="55" font-size="12" fill="#6b7280" text-anchor="middle">Average annual premiums</text>
+
+  <!-- Grid lines + Y axis labels -->
+  <line x1="70" y1="80" x2="770" y2="80" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="62" y="84" font-size="11" fill="#9ca3af" text-anchor="end">$1,100</text>
+
+  <line x1="70" y1="130" x2="770" y2="130" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="62" y="134" font-size="11" fill="#9ca3af" text-anchor="end">$900</text>
+
+  <line x1="70" y1="180" x2="770" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="62" y="184" font-size="11" fill="#9ca3af" text-anchor="end">$600</text>
+
+  <line x1="70" y1="230" x2="770" y2="230" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="62" y="234" font-size="11" fill="#9ca3af" text-anchor="end">$400</text>
+
+  <line x1="70" y1="280" x2="770" y2="280" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="62" y="284" font-size="11" fill="#9ca3af" text-anchor="end">$200</text>
+
+  <!-- X axis -->
+  <line x1="70" y1="310" x2="770" y2="310" stroke="#9ca3af" stroke-width="1.5"/>
+
+  <!-- Scale: max value $1,100 → bar height 230px (y=80 to y=310) -->
+  <!-- Formula: bar_height = (value/1100) * 230, bar_y = 310 - bar_height -->
+
+  <!-- Fishing/Pontoon avg $350: h=(350/1100)*230=73px, y=237 -->
+  <rect x="90" y="237" width="75" height="73" fill="#14365e" rx="4"/>
+  <text x="127" y="228" font-size="12" fill="#14365e" text-anchor="middle" font-weight="700">$350</text>
+  <text x="127" y="328" font-size="11" fill="#374151" text-anchor="middle">Fishing/</text>
+  <text x="127" y="341" font-size="11" fill="#374151" text-anchor="middle">Pontoon</text>
+
+  <!-- Bass Boat avg $450: h=(450/1100)*230=94px, y=216 -->
+  <rect x="195" y="216" width="75" height="94" fill="#1e4d8c" rx="4"/>
+  <text x="232" y="207" font-size="12" fill="#14365e" text-anchor="middle" font-weight="700">$450</text>
+  <text x="232" y="328" font-size="11" fill="#374151" text-anchor="middle">Bass Boat/</text>
+  <text x="232" y="341" font-size="11" fill="#374151" text-anchor="middle">Runabout</text>
+
+  <!-- Cabin Cruiser avg $900: h=(900/1100)*230=188px, y=122 -->
+  <rect x="300" y="122" width="75" height="188" fill="#c8952a" rx="4"/>
+  <text x="337" y="113" font-size="12" fill="#14365e" text-anchor="middle" font-weight="700">$900</text>
+  <text x="337" y="328" font-size="11" fill="#374151" text-anchor="middle">Cabin</text>
+  <text x="337" y="341" font-size="11" fill="#374151" text-anchor="middle">Cruiser</text>
+
+  <!-- Personal Watercraft avg $300: h=(300/1100)*230=63px, y=247 -->
+  <rect x="405" y="247" width="75" height="63" fill="#0891b2" rx="4"/>
+  <text x="442" y="238" font-size="12" fill="#14365e" text-anchor="middle" font-weight="700">$300</text>
+  <text x="442" y="328" font-size="11" fill="#374151" text-anchor="middle">Personal</text>
+  <text x="442" y="341" font-size="11" fill="#374151" text-anchor="middle">Watercraft</text>
+
+  <!-- Travel Trailer avg $390: h=(390/1100)*230=82px, y=228 -->
+  <rect x="510" y="228" width="75" height="82" fill="#2563eb" rx="4"/>
+  <text x="547" y="219" font-size="12" fill="#14365e" text-anchor="middle" font-weight="700">$390</text>
+  <text x="547" y="328" font-size="11" fill="#374151" text-anchor="middle">Travel</text>
+  <text x="547" y="341" font-size="11" fill="#374151" text-anchor="middle">Trailer</text>
+
+  <!-- Motorhome avg $1,055: h=(1055/1100)*230=221px, y=89 -->
+  <rect x="615" y="89" width="75" height="221" fill="#dc2626" rx="4"/>
+  <text x="652" y="80" font-size="12" fill="#14365e" text-anchor="middle" font-weight="700">$1,055</text>
+  <text x="652" y="328" font-size="11" fill="#374151" text-anchor="middle">Class A/B/C</text>
+  <text x="652" y="341" font-size="11" fill="#374151" text-anchor="middle">Motorhome</text>
+
+  <!-- Range labels below category labels -->
+  <text x="127" y="357" font-size="10" fill="#9ca3af" text-anchor="middle">$200–$500</text>
+  <text x="232" y="357" font-size="10" fill="#9ca3af" text-anchor="middle">$300–$600</text>
+  <text x="337" y="357" font-size="10" fill="#9ca3af" text-anchor="middle">$600–$1,200</text>
+  <text x="442" y="357" font-size="10" fill="#9ca3af" text-anchor="middle">$200–$400</text>
+  <text x="547" y="357" font-size="10" fill="#9ca3af" text-anchor="middle">$180–$600</text>
+  <text x="652" y="357" font-size="10" fill="#9ca3af" text-anchor="middle">$600–$3,000</text>
+
+  <!-- Footer note -->
+  <rect x="70" y="375" width="660" height="50" fill="#eff6ff" rx="6"/>
+  <text x="400" y="397" font-size="11" fill="#1e4d8c" text-anchor="middle" font-weight="600">💡 Lay-up endorsements can reduce premiums 20–40% during Michigan's winter storage months.</text>
+  <text x="400" y="415" font-size="11" fill="#6b7280" text-anchor="middle">Rates vary by insurer, coverage limits, navigating waters, and claims history. JJA shops 10+ carriers to find your best rate.</text>
+</svg>

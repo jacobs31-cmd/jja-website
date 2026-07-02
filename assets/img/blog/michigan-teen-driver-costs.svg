@@ -1,0 +1,53 @@
+<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" font-family="Inter,Arial,sans-serif">
+  <rect width="800" height="380" fill="#f9fafb" rx="12"/>
+  <text x="400" y="36" font-size="18" font-weight="700" fill="#14365e" text-anchor="middle">Michigan Auto Insurance Cost: Adding a Teen Driver</text>
+  <text x="400" y="56" font-size="13" fill="#6b7280" text-anchor="middle">Annual premium increase estimates for a Michigan family policy</text>
+
+  <!-- Y axis -->
+  <line x1="100" y1="80" x2="100" y2="280" stroke="#d1d9e0" stroke-width="1"/>
+  <text x="96" y="88" font-size="10" fill="#6b7280" text-anchor="end">$3K</text>
+  <text x="96" y="138" font-size="10" fill="#6b7280" text-anchor="end">$2.5K</text>
+  <text x="96" y="188" font-size="10" fill="#6b7280" text-anchor="end">$2K</text>
+  <text x="96" y="238" font-size="10" fill="#6b7280" text-anchor="end">$1.5K</text>
+  <text x="96" y="280" font-size="10" fill="#6b7280" text-anchor="end">$1K</text>
+
+  <!-- Bars by age -->
+  <!-- Age 16: ~$3,000 extra -->
+  <rect x="120" y="88" width="80" height="192" rx="4" fill="#dc2626"/>
+  <text x="160" y="82" font-size="12" fill="#dc2626" text-anchor="middle" font-weight="600">+$3,000</text>
+  <text x="160" y="296" font-size="12" fill="#374151" text-anchor="middle">Age 16</text>
+  <text x="160" y="311" font-size="10" fill="#dc2626" text-anchor="middle">Highest risk</text>
+
+  <!-- Age 17: ~$2,800 extra -->
+  <rect x="230" y="97" width="80" height="183" rx="4" fill="#dc2626" opacity="0.85"/>
+  <text x="270" y="91" font-size="12" fill="#dc2626" text-anchor="middle" font-weight="600">+$2,800</text>
+  <text x="270" y="296" font-size="12" fill="#374151" text-anchor="middle">Age 17</text>
+
+  <!-- Age 18: ~$2,500 extra -->
+  <rect x="340" y="113" width="80" height="167" rx="4" fill="#c8952a"/>
+  <text x="380" y="107" font-size="12" fill="#c8952a" text-anchor="middle" font-weight="600">+$2,500</text>
+  <text x="380" y="296" font-size="12" fill="#374151" text-anchor="middle">Age 18</text>
+
+  <!-- Age 19: ~$2,000 extra -->
+  <rect x="450" y="138" width="80" height="142" rx="4" fill="#4b7fd4"/>
+  <text x="490" y="132" font-size="12" fill="#4b7fd4" text-anchor="middle" font-weight="600">+$2,000</text>
+  <text x="490" y="296" font-size="12" fill="#374151" text-anchor="middle">Age 19</text>
+
+  <!-- Age 21: ~$1,400 extra -->
+  <rect x="560" y="180" width="80" height="100" rx="4" fill="#16a34a"/>
+  <text x="600" y="174" font-size="12" fill="#16a34a" text-anchor="middle" font-weight="600">+$1,400</text>
+  <text x="600" y="296" font-size="12" fill="#374151" text-anchor="middle">Age 21</text>
+
+  <!-- Age 25: ~$300 extra or none -->
+  <rect x="670" y="250" width="80" height="30" rx="4" fill="#16a34a" opacity="0.7"/>
+  <text x="710" y="244" font-size="12" fill="#16a34a" text-anchor="middle" font-weight="600">+$300</text>
+  <text x="710" y="296" font-size="12" fill="#374151" text-anchor="middle">Age 25</text>
+  <text x="710" y="311" font-size="10" fill="#16a34a" text-anchor="middle">Rates normalize</text>
+
+  <!-- X axis -->
+  <line x1="100" y1="280" x2="760" y2="280" stroke="#d1d9e0" stroke-width="1"/>
+
+  <!-- Tips box -->
+  <rect x="100" y="330" width="600" height="36" rx="6" fill="#e8f0f8"/>
+  <text x="400" y="353" font-size="12" fill="#374151" text-anchor="middle">💡 Good student discount (3.0+ GPA) · Driver training · Higher deductible · Assign safest car to teen</text>
+</svg>

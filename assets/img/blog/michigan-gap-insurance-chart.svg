@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" font-family="Inter,Arial,sans-serif">
+  <rect width="800" height="400" fill="#f9fafb" rx="12"/>
+  <text x="400" y="36" font-size="18" font-weight="700" fill="#14365e" text-anchor="middle">Michigan Gap Insurance: Loan Balance vs. Car Value</text>
+  <text x="400" y="56" font-size="13" fill="#6b7280" text-anchor="middle">The "gap" is what you'd owe out of pocket after a total loss — without gap coverage</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="290" x2="720" y2="290" stroke="#d1d9e0" stroke-width="2"/>
+  <line x1="80" y1="80" x2="80" y2="290" stroke="#d1d9e0" stroke-width="2"/>
+
+  <!-- Y axis labels -->
+  <text x="74" y="88" font-size="11" fill="#6b7280" text-anchor="end">$35K</text>
+  <text x="74" y="138" font-size="11" fill="#6b7280" text-anchor="end">$28K</text>
+  <text x="74" y="188" font-size="11" fill="#6b7280" text-anchor="end">$21K</text>
+  <text x="74" y="238" font-size="11" fill="#6b7280" text-anchor="end">$14K</text>
+  <text x="74" y="290" font-size="11" fill="#6b7280" text-anchor="end">$0</text>
+
+  <!-- X axis labels -->
+  <text x="80" y="308" font-size="11" fill="#6b7280" text-anchor="middle">Buy</text>
+  <text x="240" y="308" font-size="11" fill="#6b7280" text-anchor="middle">Year 1</text>
+  <text x="400" y="308" font-size="11" fill="#6b7280" text-anchor="middle">Year 2</text>
+  <text x="560" y="308" font-size="11" fill="#6b7280" text-anchor="middle">Year 3</text>
+  <text x="720" y="308" font-size="11" fill="#6b7280" text-anchor="middle">Year 5</text>
+
+  <!-- Loan balance line (falls slowly at first due to interest front-loading) -->
+  <!-- Points: (80,88), (240,118), (400,155), (560,200), (720,248) -->
+  <polyline points="80,88 240,118 400,155 560,200 720,248" fill="none" stroke="#dc2626" stroke-width="3" stroke-dasharray="8,4"/>
+
+  <!-- Car value line (drops faster) -->
+  <!-- Points: (80,108), (240,148), (400,198), (560,238), (720,268) -->
+  <polyline points="80,108 240,158 400,205 560,243 720,268" fill="none" stroke="#14365e" stroke-width="3"/>
+
+  <!-- Gap fill area -->
+  <polygon points="80,88 240,118 400,155 560,200 720,248 720,268 560,243 400,205 240,158 80,108" fill="#dc2626" opacity="0.12"/>
+
+  <!-- GAP label -->
+  <text x="380" y="178" font-size="14" font-weight="700" fill="#dc2626" text-anchor="middle">THE GAP</text>
+  <text x="380" y="196" font-size="11" fill="#dc2626" text-anchor="middle">(out of pocket without coverage)</text>
+
+  <!-- Legend -->
+  <line x1="110" y1="340" x2="150" y2="340" stroke="#dc2626" stroke-width="3" stroke-dasharray="8,4"/>
+  <text x="160" y="345" font-size="12" fill="#374151">Loan balance (what you owe)</text>
+  <line x1="390" y1="340" x2="430" y2="340" stroke="#14365e" stroke-width="3"/>
+  <text x="440" y="345" font-size="12" fill="#374151">Actual cash value (what insurer pays)</text>
+
+  <!-- Note -->
+  <text x="400" y="375" font-size="11" fill="#9ca3af" text-anchor="middle">Gap is largest in first 2–3 years. Worth carrying until loan balance falls below car value.</text>
+</svg>

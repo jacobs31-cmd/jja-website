@@ -1,0 +1,11 @@
+J. JACOBS & ASSOCIATES - WEBSITE HEALTH CHECK
+Run: 2026-06-30 12:09   Site: https://jjainsurance.com
+============================================================
+Pages crawled (from sitemap): 119
+Internal links/images/assets checked: 199
+External links found (listed, not checked): 123
+
+RESULT: PASS - no broken pages, links, or images found.
+============================================================
+
+Everything resolves with HTTP 200 and every page ends in </html>.

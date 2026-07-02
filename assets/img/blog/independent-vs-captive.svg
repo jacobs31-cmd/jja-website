@@ -1,0 +1,53 @@
+<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" font-family="Inter,Arial,sans-serif">
+  <rect width="800" height="380" fill="#f9fafb" rx="12"/>
+  <text x="400" y="36" font-size="18" font-weight="700" fill="#14365e" text-anchor="middle">Independent Agent vs. Captive Agent</text>
+  <text x="400" y="56" font-size="13" fill="#6b7280" text-anchor="middle">Why the difference matters for Michigan families</text>
+
+  <!-- Left: Captive -->
+  <rect x="30" y="70" width="355" height="285" rx="10" fill="#f3f4f6" stroke="#d1d9e0" stroke-width="2"/>
+  <text x="207" y="100" font-size="15" font-weight="700" fill="#374151" text-anchor="middle">Captive Agent</text>
+  <text x="207" y="118" font-size="12" fill="#6b7280" text-anchor="middle">(State Farm, Allstate, Farmers, etc.)</text>
+
+  <text x="55" y="148" font-size="22" fill="#dc2626">✗</text>
+  <text x="80" y="148" font-size="13" fill="#374151">Represents ONE company only</text>
+
+  <text x="55" y="176" font-size="22" fill="#dc2626">✗</text>
+  <text x="80" y="176" font-size="13" fill="#374151">Takes you or leaves you with that carrier</text>
+
+  <text x="55" y="204" font-size="22" fill="#dc2626">✗</text>
+  <text x="80" y="204" font-size="13" fill="#374151">Can't re-shop if rates climb</text>
+
+  <text x="55" y="232" font-size="22" fill="#dc2626">✗</text>
+  <text x="80" y="232" font-size="13" fill="#374151">Limited product options</text>
+
+  <text x="55" y="260" font-size="22" fill="#6b7280">~</text>
+  <text x="80" y="260" font-size="13" fill="#374151">Employed by insurer</text>
+
+  <text x="55" y="288" font-size="22" fill="#6b7280">~</text>
+  <text x="80" y="288" font-size="13" fill="#374151">Brand recognition, consistent process</text>
+
+  <!-- Right: Independent -->
+  <rect x="415" y="70" width="355" height="285" rx="10" fill="#14365e"/>
+  <text x="592" y="100" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">Independent Agent (JJA)</text>
+  <text x="592" y="118" font-size="12" fill="#9db8d4" text-anchor="middle">Works for YOU, not one carrier</text>
+
+  <text x="440" y="148" font-size="22" fill="#c8952a">✓</text>
+  <text x="465" y="148" font-size="13" fill="#e8f0f8">Shops 10+ Michigan carriers at once</text>
+
+  <text x="440" y="176" font-size="22" fill="#c8952a">✓</text>
+  <text x="465" y="176" font-size="13" fill="#e8f0f8">Re-shops every renewal — keeps you competitive</text>
+
+  <text x="440" y="204" font-size="22" fill="#c8952a">✓</text>
+  <text x="465" y="204" font-size="13" fill="#e8f0f8">Switches carriers if yours raises rates</text>
+
+  <text x="440" y="232" font-size="22" fill="#c8952a">✓</text>
+  <text x="465" y="232" font-size="13" fill="#e8f0f8">Access to specialized markets</text>
+
+  <text x="440" y="260" font-size="22" fill="#c8952a">✓</text>
+  <text x="465" y="260" font-size="13" fill="#e8f0f8">Advocates for you at claims time</text>
+
+  <text x="440" y="288" font-size="22" fill="#c8952a">✓</text>
+  <text x="465" y="288" font-size="13" fill="#e8f0f8">One call = full market comparison</text>
+
+  <text x="592" y="335" font-size="13" fill="#c8952a" text-anchor="middle" font-weight="600">Call JJA: (248) 693-6455</text>
+</svg>

@@ -1,7 +1,10 @@
 # J. Jacobs & Associates Insurance — Project Handoff & Working Context
 
 **Single source of truth for the JJA website + blog + social media work.**
-Last fully reconciled: **2026-05-29** (against the live `C:\Website` folder, the
+Last fully reconciled: **2026-07-02** (full cross-project audit + roadmap execution:
+blog pipeline consolidated, predeploy gauntlet, Git Phase A, uptime monitoring,
+Resend key rotation, contact-worker honeypot — see `AUDIT-2026-07-02.md` and §12).
+Previous reconciliation: 2026-05-29 (against the live `C:\Website` folder, the
 deployed Cloudflare Workers, and the May 29 site audit).
 
 > Paste the body of this file into the **Project Instructions** field of any new
@@ -75,9 +78,13 @@ No deprecated strings (Formspree / OneDrive / etc.) found in live files. Clean.
 - **Site type**: Pure static HTML/CSS/JS. No framework, no WordPress, no build
   dependency beyond Python 3 (used only to generate blog HTML).
 - **Local working folder**: `C:\Website`
-- **Hosting**: Cloudflare Pages
-- **Deploy method**: Drag-and-drop folder upload to the Cloudflare Pages dashboard.
-  (Git + auto-deploy is a future migration — see §12.)
+- **Hosting**: Cloudflare **Worker** named `jjainsurance` serving the folder as static
+  assets (NOT Cloudflare Pages — see §9 for the confirmed detail).
+- **Deploy method**: `cd C:\Website && npx wrangler deploy` from a real Windows terminal,
+  ALWAYS preceded by `python predeploy_check.py` (must print PASS). Version control:
+  git repo in `C:\Website`, pushed to private GitHub `jacobs31-cmd/jja-website`
+  (history only — deploys are still manual; auto-deploy is optional Phase B, see
+  `GIT-MIGRATION.md`).
 - **Form handling**: **Two Cloudflare Workers** (see §5). Email delivery is via
   **Resend**.
 - **Email hosting**: Google Workspace (separate from website hosting).
@@ -481,7 +488,11 @@ The website only depends on `jjainsurance` (the site itself), `jja-al3-worker` (
     fingerprint on /quotes/, form→worker wiring, SEO files, and site.v2.js critical
     content. Run it on the real Windows machine — the Cowork sandbox mount can serve
     stale/truncated copies and produce false failures.
-14. **Checkpoint when you finish a piece of work.** Run `python checkpoint.py` from `C:\Website`
+14. **Commit to git when you finish a piece of work** (added 2026-07-02). The full
+    finish-work ritual, in order: `python predeploy_check.py` (PASS required) →
+    `git add -A && git commit -m "..." && git push` → `npx wrangler deploy` →
+    `python checkpoint.py`. Claude prepares local edits; Joseph runs the ritual.
+15. **Checkpoint when you finish a piece of work.** Run `python checkpoint.py` from `C:\Website`
     at the end of each work session. It regenerates this handoff (`update_handoff.py`) and runs the
     backup (`backup_website.py` → `C:\AI Backup`, Drive-synced). This keeps the handoff current and a
     fresh backup on hand "every time we finish something." (Do NOT run `update_handoff.py` from a

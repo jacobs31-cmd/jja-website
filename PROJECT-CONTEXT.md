@@ -1,7 +1,10 @@
 # J. Jacobs & Associates Insurance — Project Handoff & Working Context
 
 **Single source of truth for the JJA website + blog + social media work.**
-Last fully reconciled: **2026-05-29** (against the live `C:\Website` folder, the
+Last fully reconciled: **2026-07-02** (full cross-project audit + roadmap execution:
+blog pipeline consolidated, predeploy gauntlet, Git Phase A, uptime monitoring,
+Resend key rotation, contact-worker honeypot — see `AUDIT-2026-07-02.md` and §12).
+Previous reconciliation: 2026-05-29 (against the live `C:\Website` folder, the
 deployed Cloudflare Workers, and the May 29 site audit).
 
 > Paste the body of this file into the **Project Instructions** field of any new
@@ -75,9 +78,13 @@ No deprecated strings (Formspree / OneDrive / etc.) found in live files. Clean.
 - **Site type**: Pure static HTML/CSS/JS. No framework, no WordPress, no build
   dependency beyond Python 3 (used only to generate blog HTML).
 - **Local working folder**: `C:\Website`
-- **Hosting**: Cloudflare Pages
-- **Deploy method**: Drag-and-drop folder upload to the Cloudflare Pages dashboard.
-  (Git + auto-deploy is a future migration — see §12.)
+- **Hosting**: Cloudflare **Worker** named `jjainsurance` serving the folder as static
+  assets (NOT Cloudflare Pages — see §9 for the confirmed detail).
+- **Deploy method**: `cd C:\Website && npx wrangler deploy` from a real Windows terminal,
+  ALWAYS preceded by `python predeploy_check.py` (must print PASS). Version control:
+  git repo in `C:\Website`, pushed to private GitHub `jacobs31-cmd/jja-website`
+  (history only — deploys are still manual; auto-deploy is optional Phase B, see
+  `GIT-MIGRATION.md`).
 - **Form handling**: **Two Cloudflare Workers** (see §5). Email delivery is via
   **Resend**.
 - **Email hosting**: Google Workspace (separate from website hosting).
@@ -481,7 +488,11 @@ The website only depends on `jjainsurance` (the site itself), `jja-al3-worker` (
     fingerprint on /quotes/, form→worker wiring, SEO files, and site.v2.js critical
     content. Run it on the real Windows machine — the Cowork sandbox mount can serve
     stale/truncated copies and produce false failures.
-14. **Checkpoint when you finish a piece of work.** Run `python checkpoint.py` from `C:\Website`
+14. **Commit to git when you finish a piece of work** (added 2026-07-02). The full
+    finish-work ritual, in order: `python predeploy_check.py` (PASS required) →
+    `git add -A && git commit -m "..." && git push` → `npx wrangler deploy` →
+    `python checkpoint.py`. Claude prepares local edits; Joseph runs the ritual.
+15. **Checkpoint when you finish a piece of work.** Run `python checkpoint.py` from `C:\Website`
     at the end of each work session. It regenerates this handoff (`update_handoff.py`) and runs the
     backup (`backup_website.py` → `C:\AI Backup`, Drive-synced). This keeps the handoff current and a
     fresh backup on hand "every time we finish something." (Do NOT run `update_handoff.py` from a
@@ -561,26 +572,36 @@ Deployed and **verified live on 2026-06-15**: `https://jjainsurance.com/assets/j
       generators' unclosed `open(...,"w").write()` writes; now fixed with `safe_write()` +
       post-write `</html>` verification (§2). Running generators from a real Windows terminal
       (not the sandbox) remains the recommended practice.
-- [x] **Cache-bust strings standardized 2026-07-02**: all 120 pages now read `styles.css?v=20260529`
-      and `site.v2.js?v=20260614`. Root cause of the recurring drift was `build.py`'s single
-      `VERSION = "20260516q"` constant re-stamping stale versions on every blog build — replaced
-      with separate `CSS_VERSION` / `JS_VERSION` constants set to the canonical values. When
-      `styles.css` or `site.v2.js` next changes, bump the matching constant in `build.py` AND the
-      sitewide refs together (also check `VER` in `gen_product_pages.py` / `gen_cities.py`).
-- [ ] Migrate to Git-based deploys — **prep done 2026-07-02**: `.gitignore` +
-      `GIT-MIGRATION.md` (Phase A = history-only, zero deploy-path change; Phase B =
-      Workers Builds auto-deploy later). Joseph runs Phase A from a Windows terminal.
-      Then optionally Pages CMS for friendly blog editing (`.pages.yml` already configured).
+- [x] **Cache-bust strings standardized 2026-07-02**: all 120 pages uniform at
+      `styles.css?v=20260529` and `site.v2.js?v=20260702` (JS bumped sitewide 2026-07-02 by the
+      Marketing project; `build.py` matched). Root cause of the recurring drift was `build.py`'s
+      single `VERSION = "20260516q"` constant re-stamping stale versions on every blog build —
+      replaced with separate `CSS_VERSION` / `JS_VERSION` constants. When `styles.css` or
+      `site.v2.js` next changes, bump the matching constant in `build.py` AND the sitewide refs
+      together (also check `VER` in `gen_product_pages.py` / `gen_cities.py`).
+      `predeploy_check.py` enforces uniformity on every deploy.
+- [x] **Git Phase A COMPLETE 2026-07-02**: C:\Website is a git repo pushed to the PRIVATE
+      GitHub repo `jacobs31-cmd/jja-website`. `backups/` is git-ignored; `.git/` is in
+      `.assetsignore` (wrangler must never upload it — it broke a deploy before this was added).
+      **Finish-work ritual is now:** `python predeploy_check.py` (must PASS) → `git add -A` +
+      `git commit` + `git push` → `npx wrangler deploy` → `python checkpoint.py`.
+      Phase B (Workers Builds auto-deploy on push) and Pages CMS remain optional/later —
+      see `GIT-MIGRATION.md`.
 - [x] Point `jjainsurance.com` at the new Cloudflare site — **done**; it's served by the
       `jjainsurance` Worker (the from-scratch static site in `C:\Website`). Deploy command now
       confirmed and recorded in §9: `cd C:\Website && npx wrangler deploy` (via `wrangler.jsonc`).
 - [ ] DNS housekeeping in GoDaddy (Crypto Wallet template, Microsoft 365 TXT, SPF typo) — §9.
 - [ ] Replace the placeholder OG image (`assets/img/og-default.jpg`) with a branded card.
-- [x] **Blog pipeline consolidated 2026-07-02**: markdown back-filled for all 38 posts;
-      build.py is fully authoritative. **Pending: Joseph runs `python build.py` +
-      `python predeploy_check.py` + deploy from a Windows terminal** to publish the
-      regenerated posts (template convergence: ☰ menu, SVG utility bar, author bio,
-      article meta/speakable/FAQ schema on all posts; 3 old-nav posts get the standard nav).
+- [x] **Blog pipeline consolidated AND DEPLOYED 2026-07-02**: markdown back-filled for all
+      38 posts; build.py fully authoritative; regenerated site is live (template convergence:
+      ☰ menu, SVG utility bar, author bio — wording corrected to "family's agency founded 1981,
+      Joseph leads" — article meta/speakable/FAQ schema on all posts; 3 old-nav posts modernized).
+      Post-deploy bug found+fixed same day: the back-filled bodies each embedded their own hero
+      figure, so posts briefly showed DOUBLE heroes — embedded heroes removed from the .md
+      sources; the template's `hero_fig()` (driven by frontmatter `image:`) is now the ONLY hero.
+      **Never re-add a top hero `<figure>` inside a post body.**
+- [ ] Nice-to-have: add a duplicate-image check to `predeploy_check.py` (the text-diff
+      verification missed the doubled heroes — images have no text).
 - [ ] Work the audit punch list — see `JJA-Website-Audit.docx` (Section 5 is prioritized).
 - [ ] **Growth / lead-gen roadmap — see `GROWTH-ROADMAP.md`** (prioritized by revenue impact).
       In progress: Initiative 1 (high-value commercial product pages, cannabis first).

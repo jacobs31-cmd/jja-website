@@ -4,6 +4,9 @@ node_modules/
 __pycache__/
 *.pyc
 
+# Local backups — 100s of MB of zips; never belong in the repo
+backups/
+
 # OS noise
 Thumbs.db
 .DS_Store

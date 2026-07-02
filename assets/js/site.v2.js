@@ -37,6 +37,94 @@
     })(window, document, 'clarity', 'script', 'xfosckzgap');
   })();
 
+  // -------- Lead-source attribution (click-to-policy loop, added 2026-07-02) --------
+  // Captures how the visitor arrived (Google Ads click ID, UTMs, organic search,
+  // referral, direct) and stores it in localStorage for 90 days. When a quote or
+  // contact form is submitted, the attribution rides along as hidden attr_*
+  // fields → flows into the al3-worker's webFormData → survives the claim into
+  // the pipeline, so every lead (and every bound policy) traces to a channel.
+  // A newer PAID/tagged touch overwrites; an organic/direct visit never
+  // downgrades a stored paid touch. Best-effort: never breaks the page.
+  (function leadAttribution() {
+    var KEY = 'jja_attr', MAX_AGE = 90 * 86400000;
+    function readStored() {
+      try {
+        var raw = localStorage.getItem(KEY);
+        if (!raw) return null;
+        var a = JSON.parse(raw);
+        if (!a || !a.ts || (Date.now() - a.ts) > MAX_AGE) return null;
+        return a;
+      } catch (e) { return null; }
+    }
+    function channelOf(p, ref) {
+      if (p.gclid || p.gbraid || p.wbraid) return 'google-ads';
+      if (p.msclkid) return 'bing-ads';
+      if (p.fbclid) return 'meta';
+      var med = (p.utm_medium || '').toLowerCase();
+      if (/^(cpc|ppc|paid)/.test(med)) return 'paid-' + ((p.utm_source || 'other').toLowerCase());
+      if (p.utm_source) return (p.utm_source + (med ? '-' + med : '')).toLowerCase().slice(0, 40);
+      if (p.utm_campaign) return 'campaign';
+      var h = '';
+      try { h = ref ? new URL(ref).hostname : ''; } catch (e) { /* ignore */ }
+      if (h === location.hostname) return ''; // internal navigation — not a touch
+      if (/google\./.test(h)) return 'google-organic';
+      if (/bing\./.test(h)) return 'bing-organic';
+      if (/(duckduckgo|yahoo|yandex)\./.test(h)) return 'search-organic';
+      if (h) return 'referral';
+      return 'direct';
+    }
+    // 1) Capture this visit's touch (if it is one)
+    try {
+      var q = new URLSearchParams(location.search);
+      var p = {};
+      ['gclid', 'gbraid', 'wbraid', 'msclkid', 'fbclid',
+       'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'
+      ].forEach(function (k) { var v = q.get(k); if (v) p[k] = v.slice(0, 120); });
+      var ch = channelOf(p, document.referrer || '');
+      var isPaidOrTagged = !!(p.gclid || p.gbraid || p.wbraid || p.msclkid || p.fbclid || p.utm_source || p.utm_campaign);
+      var stored = readStored();
+      var storedIsPaid = !!(stored && (stored.gclid || stored.msclkid || /^(google-ads|bing-ads|meta|paid-)/.test(stored.ch || '')));
+      var shouldStore = ch && (isPaidOrTagged ? true : (!stored));
+      if (shouldStore && !(storedIsPaid && !isPaidOrTagged)) {
+        var rec = {
+          v: 1, ch: ch, ts: Date.now(),
+          gclid: p.gclid || p.gbraid || p.wbraid || '',
+          msclkid: p.msclkid || '',
+          src: p.utm_source || '', med: p.utm_medium || '',
+          cmp: p.utm_campaign || '', term: p.utm_term || '', cnt: p.utm_content || '',
+          lp: (location.pathname || '/').slice(0, 200),
+          ref: (document.referrer || '').slice(0, 200)
+        };
+        try { localStorage.setItem(KEY, JSON.stringify(rec)); } catch (e) { /* private mode */ }
+      }
+    } catch (e) { /* never break the page */ }
+    // 2) Inject hidden attr_* fields into lead forms so the touch rides along
+    function injectAttr() {
+      var a = readStored();
+      if (!a) return;
+      var fields = {
+        attr_channel: a.ch, attr_gclid: a.gclid, attr_msclkid: a.msclkid,
+        attr_source: a.src, attr_medium: a.med, attr_campaign: a.cmp,
+        attr_term: a.term, attr_content: a.cnt, attr_landing: a.lp,
+        attr_referrer: a.ref, attr_ts: new Date(a.ts).toISOString()
+      };
+      $$('#quote-form, form[action*="jja-contact"]').forEach(function (form) {
+        Object.keys(fields).forEach(function (name) {
+          if (!fields[name]) return;
+          var el = form.querySelector('[name="' + name + '"]');
+          if (!el) {
+            el = document.createElement('input');
+            el.type = 'hidden'; el.name = name;
+            form.appendChild(el);
+          }
+          el.value = fields[name];
+        });
+      });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', injectAttr);
+    else injectAttr();
+  })();
+
   // -------- Phone-call click tracking (GA4) --------
   // Fires a GA4 "phone_call" event whenever a visitor taps a tel: link.
   // Mark this as a Key Event in GA4 and import it into Google Ads so that

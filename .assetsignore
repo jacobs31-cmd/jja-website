@@ -42,6 +42,9 @@ backups/
 *.bundle
 *.zip
 
+# Git repository data (added 2026-07-02 — must never upload as assets)
+.git/
+
 # Local logs / state files
 /backup_log.txt
 /buffer_images_done.txt

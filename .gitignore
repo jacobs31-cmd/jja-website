@@ -11,6 +11,12 @@ backups/
 Thumbs.db
 .DS_Store
 
+# FUSE mount / cloud-sync temp artifacts (never belong in the repo)
+.fuse_hidden*
+*.fuse_hidden*
+.tmp.driveupload/
+.tmp.drivedownload/
+
 # NOTE: buffer_images_done.txt is deliberately TRACKED (it prevents
 # duplicate Buffer scheduling on reruns). _archive/ and wp-content/ are
 # deliberately TRACKED (history + live URL shims).

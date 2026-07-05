@@ -21,7 +21,7 @@ pieces are done (reviews page, schema, 4.9/808 badge). The rest is in the GBP da
 - [ ] **Primary category:** Insurance agency. **Secondary** as applicable: Auto insurance agency, Home insurance agency, Life insurance agency, Commercial agent.
 - [ ] Hours: Mon–Fri 9:00 AM – 5:00 PM.
 - [ ] **Services:** mirror your product pages — Auto, Home, Life, Umbrella, Renters/Condo, Boat/RV/Motorcycle, Business/Commercial, Workers' Comp, General Liability, BOP, Commercial Auto, Cannabis, etc.
-- [ ] **Description:** plain-language, Michigan-specific — independent agency since 1981, 50+ carriers, Lake Orion Review "Best of the Best" 8 years running (2018–2025).
+- [ ] **Description:** plain-language, Michigan-specific — independent agency since 1981, 20+ carriers, Lake Orion Review "Best of the Best" 8 years running (2018–2025).
 - [ ] **Photos:** logo, storefront/exterior, office interior, team. (Real photos beat stock for conversion.)
 
 **B. Systematic review-ask process** (this is the engine — most agencies skip it)

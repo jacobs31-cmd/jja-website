@@ -355,7 +355,7 @@ def footer():
       <div class="footer-brand">
         <div class="footer-logo"><img src="{r}assets/img/logo.jpeg" alt="J. Jacobs and Associates"></div>
         <h4>J. Jacobs &amp; Associates</h4>
-        <p>Family-owned independent insurance agency serving Michigan since 1981. We shop 35+ carriers so you don&rsquo;t have to.</p>
+        <p>Family-owned independent insurance agency serving Michigan since 1981. We shop 20+ carriers so you don&rsquo;t have to.</p>
         <p style="margin-top:1rem;"><strong style="color:#fff;">4301 S. Baldwin Rd</strong><br>
           Lake Orion, Michigan 48359<br><a href="tel:{PHONE_TEL}">{PHONE}</a><br>
           <a href="mailto:{EMAIL}">{EMAIL}</a></p>
@@ -402,7 +402,7 @@ def footer():
 """
 def body(cfg):
     sec_name="Commercial Insurance" if cfg["section"]=="business" else "Personal Insurance"
-    trust = "20+ commercial carriers" if cfg["section"]=="business" else "15+ personal lines carriers"
+    trust = "20+ commercial carriers" if cfg["section"]=="business" else "20+ personal lines carriers"
     img=cfg["hero"]; src=f"{REL}assets/img/blog/{img}.avif"
     whatwedo="".join(f"<li><strong>{esc(b)}</strong> — {esc(rest)}</li>" for b,rest in cfg["whatwedo"])
     cov="".join(f"<li><strong>{esc(t)}</strong> — {esc(d)}</li>" for t,d in cfg["cov"])

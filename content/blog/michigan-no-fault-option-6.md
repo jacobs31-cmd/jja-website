@@ -44,7 +44,7 @@ meta_description: "Choosing Option 6 to use Medicare instead of PIP in Michigan?
   <li><strong>Medicare's Right to Reimbursement:</strong> If you receive a personal injury settlement, Medicare has a right to be reimbursed for any payments it made on your behalf.</li>
 </ul>
 
-<p>Choosing the right PIP tier is one of the most consequential decisions in a <a href="../../personal/auto-insurance/">Michigan auto insurance</a> policy. Our agents will review your Medicare coverage, household health insurance, and risk tolerance to help you choose the right option. <a href="../../quotes/">Request a free auto insurance quote</a> — we'll compare rates across 15+ carriers.</p>
+<p>Choosing the right PIP tier is one of the most consequential decisions in a <a href="../../personal/auto-insurance/">Michigan auto insurance</a> policy. Our agents will review your Medicare coverage, household health insurance, and risk tolerance to help you choose the right option. <a href="../../quotes/">Request a free auto insurance quote</a> — we'll compare rates across 20+ carriers.</p>
 
 <h2>What your auto policy still covers</h2>
 <p>Even with Option 6, your auto policy still provides important benefits:</p>

@@ -39,7 +39,7 @@ meta_description: "How much does adding a teen driver cost in Michigan? See the 
 </ul>
 
 <h2>Why an independent agent helps here</h2>
-<p>When a teen is added, the ranking of "cheapest carrier" often reshuffles completely. As an independent agency, we can re-shop your <a href="../../personal/auto-insurance/">auto insurance</a> across 10+ carriers at once and find the one that prices your specific teen and vehicles best — instead of you accepting a single company's increase. For more on the coverage itself, see our <a href="../michigan-teen-driver-insurance/">Michigan teen driver insurance</a> overview.</p>
+<p>When a teen is added, the ranking of "cheapest carrier" often reshuffles completely. As an independent agency, we can re-shop your <a href="../../personal/auto-insurance/">auto insurance</a> across 20+ carriers at once and find the one that prices your specific teen and vehicles best — instead of you accepting a single company's increase. For more on the coverage itself, see our <a href="../michigan-teen-driver-insurance/">Michigan teen driver insurance</a> overview.</p>
 
 <h2>The bottom line</h2>
 <p>Budget for a real increase — commonly a few hundred dollars a month in Michigan — but don't accept the first number you're handed. Between discounts, the right vehicle assignment, your PIP choice, and shopping the market, the gap between a well-built policy and a default one can be thousands of dollars a year. Let us re-quote your policy with your teen added and we'll show you the lowest legitimate option across our carriers.</p>

@@ -24,12 +24,12 @@ FORCE=(len(sys.argv)>2 and sys.argv[2]=="force")
 CONFIG=[
 {"slug":"rochester-hills-insurance","name":"Rochester Hills","county":"Oakland County","geo":[42.658,-83.150],
  "title":"Rochester Hills Insurance Agent | J. Jacobs & Associates",
- "meta":"Independent insurance agent for Rochester Hills, MI. We shop 35+ carriers for auto, home, life, and business coverage across Oakland County.",
- "ogdesc":"Independent insurance agent serving Rochester Hills, MI families and businesses. We shop 35+ carriers for the best auto, home, life, and commercial coverage.",
+ "meta":"Independent insurance agent for Rochester Hills, MI. We shop 20+ carriers for auto, home, life, and business coverage across Oakland County.",
+ "ogdesc":"Independent insurance agent serving Rochester Hills, MI families and businesses. We shop 20+ carriers for the best auto, home, life, and commercial coverage.",
  "areas":[("City","Rochester Hills, Michigan"),("City","Rochester, Michigan"),("AdministrativeArea","Oakland Township, Michigan"),("City","Auburn Hills, Michigan"),("AdministrativeArea","Oakland County, Michigan")],
  "eyebrow":"Serving Rochester Hills since 1981",
- "h1":"Rochester Hills insurance — local, independent, and shopped across 35+ carriers",
- "lead":"We're a family-owned independent agency a short drive up the road in Lake Orion. For more than 40 years we've shopped 35+ carriers for Rochester Hills families and business owners — from the neighborhoods off Tienken and Adams to the homes near the Clinton River and Stony Creek — finding the best mix of price, coverage, and service.",
+ "h1":"Rochester Hills insurance — local, independent, and shopped across 20+ carriers",
+ "lead":"We're a family-owned independent agency a short drive up the road in Lake Orion. For more than 40 years we've shopped 20+ carriers for Rochester Hills families and business owners — from the neighborhoods off Tienken and Adams to the homes near the Clinton River and Stony Creek — finding the best mix of price, coverage, and service.",
  "cover_intro":"Whether you're near Oakland University, along the Clinton River, or out toward Stony Creek Metropark, we write the full lineup of personal insurance through 15+ personal-lines carriers:",
  "rec":"Stony Creek Lake, the Clinton River, Clear Spring Lake, and Emerald Lake — plus the boats, jet skis, and ATVs Rochester Hills families trailer up north",
  "biz_intro":"Rochester Hills has a deep base of professional offices, medical and dental practices, and contractors. We write commercial insurance through 20+ markets:",
@@ -39,12 +39,12 @@ CONFIG=[
 
 {"slug":"auburn-hills-insurance","name":"Auburn Hills","county":"Oakland County","geo":[42.687,-83.234],
  "title":"Auburn Hills Insurance Agent | J. Jacobs & Associates",
- "meta":"Independent insurance agent for Auburn Hills, MI. Personal and commercial coverage shopped across 35+ carriers — homes, autos, and the businesses that power Oakland County.",
- "ogdesc":"Independent insurance agent serving Auburn Hills, MI families and businesses. We shop 35+ carriers for auto, home, life, and commercial coverage.",
+ "meta":"Independent insurance agent for Auburn Hills, MI. Personal and commercial coverage shopped across 20+ carriers — homes, autos, and the businesses that power Oakland County.",
+ "ogdesc":"Independent insurance agent serving Auburn Hills, MI families and businesses. We shop 20+ carriers for auto, home, life, and commercial coverage.",
  "areas":[("City","Auburn Hills, Michigan"),("City","Rochester Hills, Michigan"),("City","Pontiac, Michigan"),("AdministrativeArea","Orion Township, Michigan"),("AdministrativeArea","Oakland County, Michigan")],
  "eyebrow":"Serving Auburn Hills since 1981",
  "h1":"Auburn Hills insurance for families — and the businesses that power Oakland County",
- "lead":"Our office is about ten minutes north in Lake Orion, and we've insured Auburn Hills families and companies for over 40 years. From the neighborhoods near Oakland University to the corporate corridor along I-75, we shop 35+ carriers to find the right coverage at the right price.",
+ "lead":"Our office is about ten minutes north in Lake Orion, and we've insured Auburn Hills families and companies for over 40 years. From the neighborhoods near Oakland University to the corporate corridor along I-75, we shop 20+ carriers to find the right coverage at the right price.",
  "cover_intro":"Whether you live near Oakland University, off Squirrel Road, or along the Clinton River downtown, we write the full lineup of personal insurance through 15+ personal-lines carriers:",
  "rec":"the Clinton River and the lakes around neighboring Lake Angelus and Pontiac, plus boats, motorcycles, and ATVs",
  "biz_intro":"Auburn Hills is one of Michigan's busiest commercial hubs — home to Stellantis North America, Oakland University, BorgWarner, Great Lakes Crossing, and 80+ international companies, plus the contractors, restaurants, and service firms that support them. We write commercial insurance through 20+ markets:",
@@ -54,12 +54,12 @@ CONFIG=[
 
 {"slug":"waterford-insurance","name":"Waterford","county":"Oakland County","geo":[42.660,-83.412],
  "title":"Waterford Insurance Agent | J. Jacobs & Associates",
- "meta":"Independent insurance agent for Waterford, MI. Lake-home, boat, auto, and business coverage shopped across 35+ carriers — built for Waterford's 30+ lakes.",
- "ogdesc":"Independent insurance agent serving Waterford, MI. Lake-home and boat specialists — we shop 35+ carriers for auto, home, watercraft, life, and commercial coverage.",
+ "meta":"Independent insurance agent for Waterford, MI. Lake-home, boat, auto, and business coverage shopped across 20+ carriers — built for Waterford's 30+ lakes.",
+ "ogdesc":"Independent insurance agent serving Waterford, MI. Lake-home and boat specialists — we shop 20+ carriers for auto, home, watercraft, life, and commercial coverage.",
  "areas":[("AdministrativeArea","Waterford Township, Michigan"),("City","Pontiac, Michigan"),("City","Keego Harbor, Michigan"),("AdministrativeArea","White Lake, Michigan"),("AdministrativeArea","Oakland County, Michigan")],
  "eyebrow":"Serving Waterford since 1981",
  "h1":"Waterford insurance — lake homes, boats, and everything else, done locally",
- "lead":"With more than 30 lakes, Waterford is boat-and-lake-home country — and that's exactly the coverage most agencies underprice or miss. We're a family-owned independent agency that shops 35+ carriers for Waterford families and business owners, including the marine and lakefront markets your home and boat actually need.",
+ "lead":"With more than 30 lakes, Waterford is boat-and-lake-home country — and that's exactly the coverage most agencies underprice or miss. We're a family-owned independent agency that shops 20+ carriers for Waterford families and business owners, including the marine and lakefront markets your home and boat actually need.",
  "cover_intro":"Whether you're on Cass Lake, Elizabeth Lake, or anywhere across Waterford Township, we write the full lineup of personal insurance through 15+ personal-lines carriers:",
  "rec":"Cass Lake, Elizabeth Lake, Sylvan Lake, Williams Lake, Loon Lake, Lotus Lake, and Pontiac Lake — with real hull and liability limits, not the token boat rider on a home policy",
  "biz_intro":"From marinas and lakeside restaurants to contractors and retail along Dixie and Highland, we write commercial insurance for Waterford businesses through 20+ markets:",
@@ -69,8 +69,8 @@ CONFIG=[
 
 {"slug":"orion-township-insurance","name":"Orion Township","county":"Oakland County","geo":[42.784,-83.259],
  "title":"Orion Township & Lake Orion Insurance | J. Jacobs & Associates",
- "meta":"Your hometown independent insurance agency in Orion Township & Lake Orion, MI. We shop 35+ carriers for auto, home, lake-home, boat, life, and business coverage.",
- "ogdesc":"Hometown independent insurance agency in Orion Township and Lake Orion, MI. We shop 35+ carriers for auto, home, boat, life, and commercial coverage.",
+ "meta":"Your hometown independent insurance agency in Orion Township & Lake Orion, MI. We shop 20+ carriers for auto, home, lake-home, boat, life, and business coverage.",
+ "ogdesc":"Hometown independent insurance agency in Orion Township and Lake Orion, MI. We shop 20+ carriers for auto, home, boat, life, and commercial coverage.",
  "areas":[("AdministrativeArea","Orion Township, Michigan"),("City","Lake Orion, Michigan"),("AdministrativeArea","Oakland Township, Michigan"),("City","Auburn Hills, Michigan"),("AdministrativeArea","Oakland County, Michigan")],
  "eyebrow":"Right here at home since 1981",
  "h1":"Orion Township & Lake Orion insurance — from your hometown agency",
@@ -80,27 +80,27 @@ CONFIG=[
  "biz_intro":"From the shops in downtown Lake Orion to contractors and service businesses across Orion Township, we write commercial insurance through 20+ markets:",
  "serve":[("Lake Orion / Orion Township","48359, 48360, 48362"),("Oakland Township",""),("Auburn Hills",""),("Oxford",""),("Lake Angelus",""),("Independence Township","")],
  "faq_local_q":"You're actually located in Orion Township, right?",
- "faq_local_a":"Yes — our office is at 4301 S. Baldwin Rd, right here in Orion Township, and we've been family-owned and local since 1981. We're not a call center or a one-carrier branch office. When you call (248) 693-6455 you get a real person who lives and works in the community, knows Lake Orion's lakefront market, and can shop your coverage across 35+ carriers."},
+ "faq_local_a":"Yes — our office is at 4301 S. Baldwin Rd, right here in Orion Township, and we've been family-owned and local since 1981. We're not a call center or a one-carrier branch office. When you call (248) 693-6455 you get a real person who lives and works in the community, knows Lake Orion's lakefront market, and can shop your coverage across 20+ carriers."},
 
 {"slug":"troy-insurance","name":"Troy","county":"Oakland County","geo":[42.580,-83.143],
  "title":"Troy Insurance Agent | J. Jacobs & Associates",
- "meta":"Independent insurance agent for Troy, MI. We shop 35+ carriers for auto, home, life, and commercial coverage across one of Michigan's busiest suburbs.",
- "ogdesc":"Independent insurance agent serving Troy, MI families and businesses. We shop 35+ carriers for the best auto, home, life, and commercial coverage.",
+ "meta":"Independent insurance agent for Troy, MI. We shop 20+ carriers for auto, home, life, and commercial coverage across one of Michigan's busiest suburbs.",
+ "ogdesc":"Independent insurance agent serving Troy, MI families and businesses. We shop 20+ carriers for the best auto, home, life, and commercial coverage.",
  "areas":[("City","Troy, Michigan"),("City","Rochester Hills, Michigan"),("City","Birmingham, Michigan"),("City","Sterling Heights, Michigan"),("AdministrativeArea","Oakland County, Michigan")],
  "eyebrow":"Serving Troy since 1981",
  "h1":"Troy insurance — independent coverage for one of Michigan's busiest suburbs",
- "lead":"Troy is a corporate and retail powerhouse with some of Oakland County's most desirable neighborhoods — and plenty of competition for your insurance dollar. As a family-owned independent agency, we shop 35+ carriers so Troy families and businesses get the best combination of price and coverage, not one company's quote.",
+ "lead":"Troy is a corporate and retail powerhouse with some of Oakland County's most desirable neighborhoods — and plenty of competition for your insurance dollar. As a family-owned independent agency, we shop 20+ carriers so Troy families and businesses get the best combination of price and coverage, not one company's quote.",
  "cover_intro":"From the neighborhoods near Big Beaver and Long Lake to the homes by the Troy schools, we write the full lineup of personal insurance through 15+ personal-lines carriers:",
  "rec":"the boats, motorcycles, and collector cars Troy households store and trailer to the lakes up north",
  "biz_intro":"Troy is home to Somerset Collection, countless corporate headquarters, medical and professional offices, tech and finance firms, and the contractors who serve them. We write commercial insurance through 20+ markets:",
  "serve":[("Troy","48083, 48084, 48085, 48098"),("Rochester Hills",""),("Birmingham",""),("Bloomfield",""),("Sterling Heights",""),("Clawson","")],
  "faq_local_q":"Why use an independent agent in a city with so many insurance offices?",
- "faq_local_a":"Because most of those offices are captive — they only sell one company's products (State Farm, Allstate, Farmers). We represent 35+ carriers, so instead of one quote you get the best of the whole market, and we re-shop your coverage every renewal. In a competitive market like Troy, that's how you actually keep your rate down year after year."},
+ "faq_local_a":"Because most of those offices are captive — they only sell one company's products (State Farm, Allstate, Farmers). We represent 20+ carriers, so instead of one quote you get the best of the whole market, and we re-shop your coverage every renewal. In a competitive market like Troy, that's how you actually keep your rate down year after year."},
 
 {"slug":"bloomfield-insurance","name":"Bloomfield","county":"Oakland County","geo":[42.583,-83.245],
  "title":"Bloomfield Insurance Agent | High-Value Home & HNW | J. Jacobs",
- "meta":"Independent insurance agent for Bloomfield Hills & Bloomfield Township, MI. High-value home, valuables, auto, and high-net-worth coverage through Chubb, PURE, and 35+ carriers.",
- "ogdesc":"Independent insurance agent serving Bloomfield Hills and Bloomfield Township, MI. High-value home and high-net-worth specialists across 35+ carriers.",
+ "meta":"Independent insurance agent for Bloomfield Hills & Bloomfield Township, MI. High-value home, valuables, auto, and high-net-worth coverage through Chubb, PURE, and 20+ carriers.",
+ "ogdesc":"Independent insurance agent serving Bloomfield Hills and Bloomfield Township, MI. High-value home and high-net-worth specialists across 20+ carriers.",
  "areas":[("AdministrativeArea","Bloomfield Township, Michigan"),("City","Bloomfield Hills, Michigan"),("City","Birmingham, Michigan"),("AdministrativeArea","West Bloomfield, Michigan"),("AdministrativeArea","Oakland County, Michigan")],
  "eyebrow":"Serving Bloomfield since 1981",
  "h1":"Bloomfield insurance — high-value homes, valuables, and the coverage they deserve",
@@ -114,12 +114,12 @@ CONFIG=[
 
 {"slug":"pontiac-insurance","name":"Pontiac","county":"Oakland County","geo":[42.638,-83.291],
  "title":"Pontiac Insurance Agent | J. Jacobs & Associates",
- "meta":"Independent insurance agent for Pontiac, MI. We shop 35+ carriers for auto, home, life, and business coverage in the heart of Oakland County.",
- "ogdesc":"Independent insurance agent serving Pontiac, MI families and businesses. We shop 35+ carriers for auto, home, life, and commercial coverage.",
+ "meta":"Independent insurance agent for Pontiac, MI. We shop 20+ carriers for auto, home, life, and business coverage in the heart of Oakland County.",
+ "ogdesc":"Independent insurance agent serving Pontiac, MI families and businesses. We shop 20+ carriers for auto, home, life, and commercial coverage.",
  "areas":[("City","Pontiac, Michigan"),("City","Auburn Hills, Michigan"),("AdministrativeArea","Waterford, Michigan"),("AdministrativeArea","Bloomfield Township, Michigan"),("AdministrativeArea","Oakland County, Michigan")],
  "eyebrow":"Serving Pontiac since 1981",
  "h1":"Pontiac insurance — independent coverage for the heart of Oakland County",
- "lead":"As the Oakland County seat, Pontiac is a community on the rise — and whether you own a home, rent, drive for work, or run a business here, you deserve an agent who shops the whole market for you. We're a family-owned independent agency that compares 35+ carriers to find Pontiac residents the best combination of price and coverage.",
+ "lead":"As the Oakland County seat, Pontiac is a community on the rise — and whether you own a home, rent, drive for work, or run a business here, you deserve an agent who shops the whole market for you. We're a family-owned independent agency that compares 20+ carriers to find Pontiac residents the best combination of price and coverage.",
  "cover_intro":"From the historic neighborhoods downtown to the homes near Sylvan Lake and the Clinton River, we write the full lineup of personal insurance through 15+ personal-lines carriers:",
  "rec":"the Clinton River, nearby Sylvan Lake, and the boats and motorcycles Pontiac-area riders enjoy",
  "biz_intro":"From small businesses and contractors to the firms revitalizing downtown and the M1 Concourse corridor, we write commercial insurance for Pontiac through 20+ markets:",
@@ -129,12 +129,12 @@ CONFIG=[
 
 {"slug":"holly-insurance","name":"Holly","county":"Oakland County","geo":[42.793,-83.625],
  "title":"Holly Insurance Agent | J. Jacobs & Associates",
- "meta":"Independent insurance agent for Holly, MI. We shop 35+ carriers for auto, home, boat, life, and business coverage — small-town service from a local agency.",
- "ogdesc":"Independent insurance agent serving Holly, MI families and businesses. We shop 35+ carriers for auto, home, boat, life, and commercial coverage.",
+ "meta":"Independent insurance agent for Holly, MI. We shop 20+ carriers for auto, home, boat, life, and business coverage — small-town service from a local agency.",
+ "ogdesc":"Independent insurance agent serving Holly, MI families and businesses. We shop 20+ carriers for auto, home, boat, life, and commercial coverage.",
  "areas":[("Place","Holly, Michigan"),("AdministrativeArea","Holly Township, Michigan"),("City","Fenton, Michigan"),("AdministrativeArea","Springfield Township, Michigan"),("AdministrativeArea","Oakland County, Michigan")],
  "eyebrow":"Serving Holly since 1981",
  "h1":"Holly insurance — small-town service from a local independent agency",
- "lead":"Holly has the kind of historic, close-knit, small-town character that deserves an agent who treats you like a neighbor, not a policy number. We're a family-owned independent agency in nearby Lake Orion that shops 35+ carriers for Holly families and business owners — from the homes near Battle Alley to the lake properties in the Holly Recreation Area.",
+ "lead":"Holly has the kind of historic, close-knit, small-town character that deserves an agent who treats you like a neighbor, not a policy number. We're a family-owned independent agency in nearby Lake Orion that shops 20+ carriers for Holly families and business owners — from the homes near Battle Alley to the lake properties in the Holly Recreation Area.",
  "cover_intro":"Whether you're in the Village of Holly, out toward Mt. Holly, or on one of the area lakes, we write the full lineup of personal insurance through 15+ personal-lines carriers:",
  "rec":"Bush Lake, Bevins Lake, McGinnis Lake, and the Holly Recreation Area waters — plus boats, ATVs, and snowmobiles for the Mt. Holly crowd",
  "biz_intro":"From the shops and restaurants along Battle Alley to contractors and the businesses around the Michigan Renaissance Festival, we write commercial insurance for Holly through 20+ markets:",
@@ -144,12 +144,12 @@ CONFIG=[
 
 {"slug":"shelby-township-insurance","name":"Shelby Township","county":"Macomb County","geo":[42.670,-83.034],
  "title":"Shelby Township Insurance Agent | J. Jacobs & Associates",
- "meta":"Independent insurance agent for Shelby Township, MI (Macomb County). We shop 35+ carriers for auto, home, life, and business coverage.",
- "ogdesc":"Independent insurance agent serving Shelby Township, MI. We shop 35+ carriers for the best auto, home, life, and commercial coverage in Macomb County.",
+ "meta":"Independent insurance agent for Shelby Township, MI (Macomb County). We shop 20+ carriers for auto, home, life, and business coverage.",
+ "ogdesc":"Independent insurance agent serving Shelby Township, MI. We shop 20+ carriers for the best auto, home, life, and commercial coverage in Macomb County.",
  "areas":[("AdministrativeArea","Shelby Township, Michigan"),("City","Utica, Michigan"),("City","Rochester Hills, Michigan"),("AdministrativeArea","Washington Township, Michigan"),("AdministrativeArea","Macomb County, Michigan")],
  "eyebrow":"Serving Shelby Township since 1981",
  "h1":"Shelby Township insurance — independent coverage for western Macomb County",
- "lead":"Shelby Township is one of Macomb County's fastest-growing communities, and we've served Macomb-area clients for decades from our office just across the county line in Lake Orion. As a family-owned independent agency, we shop 35+ carriers so Shelby Township families and businesses get the best combination of price and coverage.",
+ "lead":"Shelby Township is one of Macomb County's fastest-growing communities, and we've served Macomb-area clients for decades from our office just across the county line in Lake Orion. As a family-owned independent agency, we shop 20+ carriers so Shelby Township families and businesses get the best combination of price and coverage.",
  "cover_intro":"From the subdivisions near Stony Creek Metropark to the homes along the Clinton River, we write the full lineup of personal insurance through 15+ personal-lines carriers:",
  "rec":"Stony Creek's waters and the Clinton River, plus the boats, ATVs, and motorcycles Shelby Township families enjoy",
  "biz_intro":"From retail and restaurants along Van Dyke and Hall Road to contractors and professional offices, we write commercial insurance for Shelby Township through 20+ markets:",
@@ -159,12 +159,12 @@ CONFIG=[
 
 {"slug":"washington-township-insurance","name":"Washington Township","county":"Macomb County","geo":[42.738,-83.010],
  "title":"Washington Township Insurance Agent | J. Jacobs & Associates",
- "meta":"Independent insurance agent for Washington Township, MI (Macomb County). Home, acreage, auto, and business coverage shopped across 35+ carriers.",
- "ogdesc":"Independent insurance agent serving Washington Township and Romeo, MI. We shop 35+ carriers for auto, home, acreage, life, and commercial coverage.",
+ "meta":"Independent insurance agent for Washington Township, MI (Macomb County). Home, acreage, auto, and business coverage shopped across 20+ carriers.",
+ "ogdesc":"Independent insurance agent serving Washington Township and Romeo, MI. We shop 20+ carriers for auto, home, acreage, life, and commercial coverage.",
  "areas":[("AdministrativeArea","Washington Township, Michigan"),("Place","Romeo, Michigan"),("AdministrativeArea","Bruce Township, Michigan"),("AdministrativeArea","Shelby Township, Michigan"),("AdministrativeArea","Macomb County, Michigan")],
  "eyebrow":"Serving Washington Township since 1981",
  "h1":"Washington Township insurance — coverage for Macomb County's countryside",
- "lead":"With its rolling hills, vineyards, golf courses, and larger properties, Washington Township needs an agent who understands acreage, outbuildings, and semi-rural coverage — not a cookie-cutter city policy. We're a family-owned independent agency that shops 35+ carriers for Washington Township and Romeo-area families and businesses.",
+ "lead":"With its rolling hills, vineyards, golf courses, and larger properties, Washington Township needs an agent who understands acreage, outbuildings, and semi-rural coverage — not a cookie-cutter city policy. We're a family-owned independent agency that shops 20+ carriers for Washington Township and Romeo-area families and businesses.",
  "cover_intro":"From the estates and acreage near Romeo to the newer subdivisions, we write the full lineup of personal insurance through 15+ personal-lines carriers:",
  "rec":"the boats, ATVs, and recreational vehicles common out here, plus coverage for barns, outbuildings, and hobby farms",
  "biz_intro":"From the wineries, orchards, and golf courses to contractors and Main Street businesses in Romeo, we write commercial insurance for Washington Township through 20+ markets:",
@@ -260,7 +260,7 @@ def page(cfg):
     <div class="trust-band">
       <span class="trust-band-item"><span class="stars">★★★★★</span> 4.9 on Google</span>
       <span class="trust-band-item">Best of the Best &mdash; 8 years running <span class="sub">(2018&ndash;2025)</span></span>
-      <span class="trust-band-item">35+ carriers shopped</span>
+      <span class="trust-band-item">20+ carriers shopped</span>
       <span class="trust-band-item">Family-owned since 1981</span>
     </div>
     <div style="margin-top:1.5rem; display:flex; gap:.75rem; flex-wrap:wrap;">
@@ -292,7 +292,7 @@ def page(cfg):
     </ul>
 
     <h2 class="mt-2">Why {esc(name)} residents choose an independent agent</h2>
-    <p>Most local insurance offices represent only one carrier — State Farm, Allstate, Farmers. As an independent agency, we represent <strong>35+ carriers</strong> including Michigan-based companies like <a href="{REL}carriers/">Citizens, Frankenmuth, Wolverine Mutual, and Michigan Millers</a>, plus national A-rated names like The Hartford, Liberty Mutual, Hanover, Hagerty, and Hiscox.</p>
+    <p>Most local insurance offices represent only one carrier — State Farm, Allstate, Farmers. As an independent agency, we represent <strong>20+ carriers</strong> including Michigan-based companies like <a href="{REL}carriers/">Citizens, Frankenmuth, Wolverine Mutual, and Michigan Millers</a>, plus national A-rated names like The Hartford, Liberty Mutual, Hanover, Hagerty, and Hiscox.</p>
     <p>What that means for you: we shop your coverage every renewal. When a carrier raises rates or tightens underwriting, we have other markets to compare against — so most of our clients stay for decades because they don't have to call around themselves.</p>
 
     <h2>Areas we serve around {esc(name)}</h2>
@@ -303,7 +303,7 @@ def page(cfg):
     {faq_html}
     <div class="callout">
       <h2>Ready to compare {esc(name)} insurance quotes?</h2>
-      <p>It takes 2 minutes for a quick quote. We'll shop your coverage across 35+ carriers and get back to you within one business day.</p>
+      <p>It takes 2 minutes for a quick quote. We'll shop your coverage across 20+ carriers and get back to you within one business day.</p>
       <a class="btn btn-primary btn-lg" href="{REL}quotes/">Start My Quote</a>
     </div>
     <p class="text-center" style="margin-top:1.5rem; color:var(--text-muted); font-size:.9rem;">Prefer to talk? Call us at <a href="tel:{PHONE_TEL}"><strong>{PHONE}</strong></a>, Monday-Friday 9am-5pm.</p>
@@ -313,7 +313,7 @@ def page(cfg):
 <footer class="site-footer"><div class="container"><div class="footer-grid">
       <div class="footer-brand"><div class="footer-logo"><img src="{REL}assets/img/logo.jpeg" alt="J. Jacobs and Associates"></div>
         <h4>J. Jacobs &amp; Associates</h4>
-        <p>Family-owned independent insurance agency serving Michigan since 1981. We shop 35+ carriers so you don&rsquo;t have to.</p>
+        <p>Family-owned independent insurance agency serving Michigan since 1981. We shop 20+ carriers so you don&rsquo;t have to.</p>
         <p style="margin-top:1rem;"><strong style="color:#fff;">4301 S. Baldwin Rd</strong><br>Lake Orion, Michigan 48359<br><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a></p></div>
       <div><h4>Insurance</h4><ul><li><a href="{REL}personal/">Personal Insurance</a></li><li><a href="{REL}personal/auto-insurance/">Auto Insurance</a></li><li><a href="{REL}personal/home-insurance/">Home Insurance</a></li><li><a href="{REL}personal/life-insurance/">Life Insurance</a></li><li><a href="{REL}business/">Commercial Insurance</a></li><li><a href="{REL}business/workers-compensation/">Workers Compensation</a></li></ul></div>
       <div><h4>Agency</h4><ul><li><a href="{REL}about/">About Us</a></li><li><a href="{REL}team/">Our Team</a></li><li><a href="{REL}carriers/">Our Carriers</a></li><li><a href="{REL}reviews/">Reviews</a></li><li><a href="{REL}service/">Service Center</a></li><li><a href="{REL}billing-claims/">Billing &amp; Claims</a></li><li><a href="{REL}faq/">FAQ</a></li></ul></div>

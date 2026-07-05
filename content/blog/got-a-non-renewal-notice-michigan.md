@@ -31,7 +31,7 @@ meta_description: "Got a non-renewal notice in Michigan? Learn what it means, wh
 <h2>What to do — step by step</h2>
 <ol>
   <li><strong>Don't wait.</strong> The day you get the notice, start the clock. The worst outcome is a <strong>lapse</strong> in coverage, which can raise every future rate and may violate your mortgage or lease.</li>
-  <li><strong>Call an independent agent.</strong> This is exactly what an independent agency is for — we shop 35+ carriers to find one whose underwriting fits your situation.</li>
+  <li><strong>Call an independent agent.</strong> This is exactly what an independent agency is for — we shop 20+ carriers to find one whose underwriting fits your situation.</li>
   <li><strong>Have the details ready.</strong> Your current policy, the non-renewal letter, and any specifics (roof age, claims, etc.). The more we know, the faster we place you.</li>
   <li><strong>Fix what's fixable.</strong> If it's a roof or a specific hazard, sometimes a small repair opens up better options. We'll tell you what actually moves the needle.</li>
   <li><strong>Bind new coverage before the deadline.</strong> We set the new policy to start the moment the old one ends — no gap.</li>

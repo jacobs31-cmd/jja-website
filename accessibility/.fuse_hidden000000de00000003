@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accessibility Statement | J. Jacobs & Associates Insurance</title>
+<meta name="description" content="J. Jacobs & Associates Insurance accessibility statement and contact information for accessibility support.">
+<link rel="canonical" href="https://jjainsurance.com/accessibility/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#1a3a5c">
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Accessibility Statement | J. Jacobs & Associates Insurance">
+<meta property="og:description" content="J. Jacobs & Associates Insurance accessibility statement and contact information for accessibility support.">
+<meta property="og:url" content="https://jjainsurance.com/accessibility/">
+<meta property="og:site_name" content="J. Jacobs & Associates">
+<meta property="og:image" content="https://jjainsurance.com/assets/img/og/accessibility.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Accessibility Statement | J. Jacobs & Associates Insurance">
+<meta name="twitter:description" content="J. Jacobs & Associates Insurance accessibility statement and contact information for accessibility support.">
+<meta name="twitter:image" content="https://jjainsurance.com/assets/img/og/accessibility.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styles.css?v=20260529">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://jjainsurance.com/"}, {"@type": "ListItem", "position": 2, "name": "Accessibility", "item": "https://jjainsurance.com/accessibility/"}]}
+</script>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="utility-bar">
+  <div class="container">
+    <span class="utility-item"><svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg> 4301 S. Baldwin Rd, Lake Orion, MI 48359</span>
+    <span class="utility-item"><svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .7-.2 1l-2.3 2.2z"/></svg> <a href="tel:+12486936455">(248) 693-6455</a></span>
+    <span class="utility-item"><svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> <a href="mailto:Support@jjainsurance.com">Support@jjainsurance.com</a></span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="../" aria-label="J. Jacobs and Associates Insurance home">
+      <img class="brand-logo-img" src="../assets/img/logo.jpeg" alt="J. Jacobs and Associates Insurance">
+    </a>
+
+    <button class="menu-toggle" aria-controls="primary-nav" aria-expanded="false">☰ Menu</button>
+
+    <nav class="main-nav" id="primary-nav" aria-label="Primary">
+      <ul>
+        <li class="has-submenu">
+          <details class="submenu-wrap"><summary class="nav-toggle">Our Agency</summary>
+          <ul class="submenu">
+            <li><a href="../about/">About Us</a></li>
+            <li><a href="../team/">Our Team</a></li>
+            <li><a href="../carriers/">Our Carriers</a></li>
+            <li><a href="../reviews/">Reviews</a></li>
+          </ul></details></li>
+        <li class="has-submenu">
+          <details class="submenu-wrap"><summary class="nav-toggle">Products</summary>
+          <ul class="submenu">
+            <li><a href="../personal/">Personal Insurance</a></li>
+            <li><a href="../personal/auto-insurance/">Auto Insurance</a></li>
+            <li><a href="../personal/home-insurance/">Home Insurance</a></li>
+            <li><a href="../personal/life-insurance/">Life Insurance</a></li>
+            <li><a href="../business/">Commercial Insurance</a></li>
+            <li><a href="../business/workers-compensation/">Workers Compensation</a></li>
+          </ul></details></li>
+        <li class="has-submenu">
+          <details class="submenu-wrap"><summary class="nav-toggle">Service</summary>
+          <ul class="submenu">
+            <li><a href="../service/">Service Center</a></li>
+            <li><a href="../billing-claims/">Billing &amp; Claims</a></li>
+          </ul></details></li>
+        <li><a href="../blog/">Blog</a></li>
+        <li><a href="../faq/">FAQ</a></li>
+        <li><a href="../contact/">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-cta">
+      <a class="btn btn-outline" href="tel:+12486936455">Call</a>
+      <a class="btn btn-primary" href="../quotes/">Start a Quote</a>
+    </div>
+  </div>
+</header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="../">Home</a></li><li>Accessibility</li></ol></div></nav><main id="main">
+
+<section class="section">
+  <div class="container" style="max-width:820px;">
+    <h1>Accessibility Statement</h1>
+    <p style="font-size:.9rem; color: var(--text-muted);">Last updated: May 16, 2026</p>
+
+    <h2>General</h2>
+    <p><strong>J. Jacobs &amp; Associates</strong> strives to ensure that its services are accessible to people with disabilities. J. Jacobs &amp; Associates has invested significant resources to help ensure that its website is made easier to use and more accessible for people with disabilities, with the strong belief that every person has the right to live with dignity, equality, comfort, and independence.</p>
+
+    <h2>Accessibility on www.jjainsurance.com</h2>
+    <p>www.jjainsurance.com makes available an on-site <strong>Accessibility Toolbar Widget</strong> for website users that aims to improve website navigation, usability, and compliance with the Web Content Accessibility Guidelines &amp; Recommendations (WCAG 2.1 Level AA).</p>
+
+    <h2>Enabling the accessibility toolbar</h2>
+    <p>The www.jjainsurance.com accessibility toolbar menu can be enabled by clicking or tapping the accessibility menu icon that appears on our website. After triggering the accessibility menu, a variety of tools will be available to the user/visitor to help improve their browsing experience, including:</p>
+    <ul>
+      <li>Font size adjustments</li>
+      <li>Color contrast and dark mode</li>
+      <li>Highlighting links and titles</li>
+      <li>Readable font modes</li>
+      <li>Cursor enlargement</li>
+      <li>Page zoom</li>
+      <li>Stop animations</li>
+    </ul>
+
+    <h2>Accessibility features built into this site</h2>
+    <p>In addition to the toolbar widget, this site has been built with accessibility in mind. Specific features include:</p>
+    <ul>
+      <li>Semantic HTML with labeled landmarks (header, navigation, main, footer)</li>
+      <li>"Skip to content" link at the top of every page for keyboard users</li>
+      <li>Alt text on informational images</li>
+      <li>Color contrast ratios meeting WCAG 2.1 AA</li>
+      <li>Visible focus indicators for keyboard navigation</li>
+      <li>Form fields with associated labels and required-field indicators</li>
+      <li>Respect for the operating system's "reduced motion" preference</li>
+      <li>Responsive design that adapts to screen sizes and zoom up to 200%</li>
+      <li>ARIA attributes to enhance screen reader compatibility</li>
+    </ul>
+
+    <h2>Compatible technologies</h2>
+    <p>This website is designed to be compatible with the last two versions of major browsers (Chrome, Firefox, Safari, Edge) and modern assistive technologies including screen readers (NVDA, JAWS, VoiceOver, TalkBack).</p>
+
+    <h2>Disclaimer</h2>
+    <p>J. Jacobs &amp; Associates continues its efforts to constantly improve the accessibility of its site and services in the belief that it is our collective moral obligation to allow seamless, accessible, and unhindered use for everyone, including those with disabilities.</p>
+    <p>Despite our efforts to make all pages and content on www.jjainsurance.com fully accessible, some content may not yet have been fully adapted to the strictest accessibility standards. This may be a result of not having found or identified the most appropriate technological solution. Third-party content — including carrier logos, claims portals, and billing pages we link to — is controlled by those carriers and not under our direct control.</p>
+
+    <h2>Here for you</h2>
+    <p>If you are experiencing difficulty with any content on www.jjainsurance.com or require assistance with any part of our site, please contact us during normal business hours as detailed below and we will be happy to assist. We can provide information by phone, mail, email, or in person at our Lake Orion office.</p>
+
+    <h2>Contact us</h2>
+    <p>If you wish to report an accessibility issue, have any questions, or need assistance, please contact our customer support:</p>
+    <p>
+      <strong>Email:</strong> <a href="mailto:jacobs31@jjainsurance.com">jacobs31@jjainsurance.com</a><br>
+      <strong>Phone:</strong> <a href="tel:+12486936455">(248) 693-6455</a><br>
+      <strong>Mail:</strong> J. Jacobs &amp; Associates Insurance<br>
+      4301 S. Baldwin Rd<br>
+      Lake Orion, Michigan 48359
+    </p>
+    <p>Please include the page where you experienced the issue, your contact information, and a description of the problem. We aim to respond to accessibility inquiries within two business days.</p>
+
+    <h2>Formal complaints</h2>
+    <p>If you wish to file a formal complaint about the accessibility of this site, you may contact us using the information above and we will respond promptly. You also have the right to contact the U.S. Department of Justice Civil Rights Division under Title III of the Americans with Disabilities Act.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="../assets/img/logo.jpeg" alt="J. Jacobs and Associates"></div>
+        <h4>J. Jacobs &amp; Associates</h4>
+        <p>Family-owned independent insurance agency serving Michigan since 1981. We shop 35+ carriers so you don&rsquo;t have to.</p>
+        <p style="margin-top:1rem;">
+          <strong style="color:#fff;">4301 S. Baldwin Rd</strong><br>
+          Lake Orion, Michigan 48359<br>
+          <a href="tel:+12486936455">(248) 693-6455</a><br>
+          <a href="mailto:Support@jjainsurance.com">Support@jjainsurance.com</a>
+        </p>
+      </div>
+      <div>
+        <h4>Insurance</h4>
+        <ul>
+          <li><a href="../personal/">Personal Insurance</a></li>
+          <li><a href="../personal/auto-insurance/">Auto Insurance</a></li>
+          <li><a href="../personal/home-insurance/">Home Insurance</a></li>
+          <li><a href="../personal/life-insurance/">Life Insurance</a></li>
+          <li><a href="../business/">Commercial Insurance</a></li>
+          <li><a href="../business/workers-compensation/">Workers Compensation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Agency</h4>
+        <ul>
+          <li><a href="../about/">About Us</a></li>
+          <li><a href="../team/">Our Team</a></li>
+          <li><a href="../carriers/">Our Carriers</a></li>
+          <li><a href="../reviews/">Reviews</a></li>
+          <li><a href="../service/">Service Center</a></li>
+          <li><a href="../billing-claims/">Billing &amp; Claims</a></li>
+          <li><a href="../faq/">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-row">
+          <a href="https://www.facebook.com/JacobsandAssociates/" aria-label="Facebook" rel="noopener" target="_blank">f</a>
+          <a href="https://www.instagram.com/jjacobs_and_associates/" aria-label="Instagram" rel="noopener" target="_blank">IG</a>
+          <a href="https://www.linkedin.com/in/joe-jacobs-7a354422/" aria-label="LinkedIn" rel="noopener" target="_blank">in</a>
+        </div>
+        <ul style="margin-top:1.25rem;">
+          <li><a href="../contact/">Contact Us</a></li>
+          <li><a href="../privacy-policy/">Privacy Policy</a></li>
+          <li><a href="../accessibility/">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-current-year>2026</span> J. Jacobs &amp; Associates Insurance. All rights reserved.</span>
+      <span>Independent Insurance Agency · Lake Orion, Michigan</span>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/site.v2.js?v=20260702" defer></script>
+</body>
+</html>

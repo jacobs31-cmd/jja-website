@@ -39,4 +39,4 @@ meta_description: "How to switch insurance agents in Michigan: a simple step-by-
 <p>No. Changing agents doesn't ding your credit or your insurance history. What matters to carriers is continuous coverage — which is exactly what a proper switch preserves. The only thing that changes is that you finally have someone shopping the market for you.</p>
 
 <h2>The bottom line</h2>
-<p>Switching insurance agents in Michigan takes one conversation and a few minutes of your time, and it can't leave you uncovered when it's done right. If your premium keeps creeping up and nobody's fighting for you at renewal, it's worth a no-obligation second opinion. We shop 35+ carriers, we'll tell you honestly whether you can do better, and we handle the whole transition for you.</p>
+<p>Switching insurance agents in Michigan takes one conversation and a few minutes of your time, and it can't leave you uncovered when it's done right. If your premium keeps creeping up and nobody's fighting for you at renewal, it's worth a no-obligation second opinion. We shop 20+ carriers, we'll tell you honestly whether you can do better, and we handle the whole transition for you.</p>

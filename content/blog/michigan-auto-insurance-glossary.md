@@ -66,4 +66,4 @@ meta_description: "Confused by the no-fault system? J. Jacobs and Associates exp
   <dt>Policy Period</dt><dd>The dates during which coverage is in force, typically six months or one year for personal auto policies.</dd>
 </dl>
 
-<p>Now that you know the terminology, put it to work. Our licensed Michigan agents will walk through every option with you — no jargon, no pressure. <a href="../../personal/auto-insurance/">Learn about Michigan auto insurance</a> or <a href="../../quotes/">get a free comparison quote</a> from 15+ carriers in minutes.</p>
+<p>Now that you know the terminology, put it to work. Our licensed Michigan agents will walk through every option with you — no jargon, no pressure. <a href="../../personal/auto-insurance/">Learn about Michigan auto insurance</a> or <a href="../../quotes/">get a free comparison quote</a> from 20+ carriers in minutes.</p>

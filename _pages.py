@@ -41,10 +41,10 @@ ABOUT_BODY = '''
     <p>Joseph has been in the insurance business since 2000. He holds a degree in Finance (with a minor in Computer Science) from the University of Michigan, and is licensed in Property, Casualty, Commercial, Annuities, and Life Insurance. Today, he leads a team of more than a dozen licensed agents and account managers, with combined experience spanning hundreds of years across every line of insurance.</p>
 
     <h2>Why independent matters</h2>
-    <p>Captive agents (think State Farm, Allstate, Farmers) and direct carriers (GEICO, Progressive direct) only sell one company's products. We sell <strong>more than 50</strong> commercial lines carriers and 15+ personal lines carriers — so we shop your coverage every renewal and switch you when another carrier offers better value. You never have to call around or start over.</p>
+    <p>Captive agents (think State Farm, Allstate, Farmers) and direct carriers (GEICO, Progressive direct) only sell one company's products. We sell <strong>more than 50</strong> commercial lines carriers and 20+ personal lines carriers — so we shop your coverage every renewal and switch you when another carrier offers better value. You never have to call around or start over.</p>
 
     <ul class="checklist mt-2">
-      <li><strong>Access to 50+ carriers</strong> — including Michigan-based insurers like Citizens, Frankenmuth, Wolverine Mutual, Michigan Millers, and AAA of Michigan, plus national A-rated carriers.</li>
+      <li><strong>Access to 20+ carriers</strong> — including Michigan-based insurers like Citizens, Frankenmuth, Wolverine Mutual, Michigan Millers, and AAA of Michigan, plus national A-rated carriers.</li>
       <li><strong>We re-shop at renewal</strong> — if your premium goes up, we re-quote across our markets so you don't have to call around.</li>
       <li><strong>One stop, every line</strong> — bundle your business, auto, home, and life coverage in one place for the best pricing.</li>
       <li><strong>Local, family-owned</strong> — a real Michigan agency answering a real Michigan phone.</li>
@@ -151,14 +151,14 @@ CARRIERS_BODY = f'''
   <div class="container">
     <span class="eyebrow">Our markets</span>
     <h1>The carriers we work with</h1>
-    <p class="lead" style="max-width:760px;">As an independent agency, we have access to <strong>50+ commercial lines carriers</strong> and <strong>15+ personal lines carriers</strong>. That means real choice, real competition for your business, and real savings.</p>
+    <p class="lead" style="max-width:760px;">As an independent agency, we have access to <strong>20+ commercial lines carriers</strong> and <strong>20+ personal lines carriers</strong>. That means real choice, real competition for your business, and real savings.</p>
 
     <h2 class="mt-2">Featured carriers</h2>
     <ul class="carriers-list">{carrier_items}</ul>
     <p class="text-center" style="margin-top:1.5rem; color: var(--text-muted); font-size:.9rem;">Don't see your current carrier? We likely have access — just call us at <a href="tel:+12486936455">(248) 693-6455</a>.</p>
 
     <h2 class="mt-2">Why so many carriers?</h2>
-    <p>Insurance pricing is a moving target. Carriers tighten or loosen underwriting, raise or drop rates, and re-evaluate territory risk on different schedules. The carrier that was cheapest for you three years ago is rarely still the cheapest today. With 50+ markets, we can almost always find someone willing to compete for your business — and that's how we keep your premium in check year after year.</p>
+    <p>Insurance pricing is a moving target. Carriers tighten or loosen underwriting, raise or drop rates, and re-evaluate territory risk on different schedules. The carrier that was cheapest for you three years ago is rarely still the cheapest today. With 20+ markets, we can almost always find someone willing to compete for your business — and that's how we keep your premium in check year after year.</p>
 
     <h2>Michigan-based and national A-rated</h2>
     <p>Many of our markets are Michigan-based companies (Citizens, Frankenmuth, Wolverine Mutual, Michigan Millers, AAA of Michigan) — keeping premium dollars in the state. We also have access to top-rated national carriers like The Hartford, Liberty Mutual, Progressive, and Travelers. Every carrier we work with is A-rated or better for financial strength.</p>
@@ -261,7 +261,7 @@ PERSONAL_BODY = f'''
   <div class="container">
     <span class="eyebrow">Personal insurance</span>
     <h1>Personal &amp; family insurance in Michigan</h1>
-    <p class="lead" style="max-width:760px;">At J. Jacobs &amp; Associates, we help individuals and families worry less about their insurance protection — so they can spend more time on the things that matter most. Our 15+ personal lines carriers let us shop your coverage and find a real fit.</p>
+    <p class="lead" style="max-width:760px;">At J. Jacobs &amp; Associates, we help individuals and families worry less about their insurance protection — so they can spend more time on the things that matter most. Our 20+ personal lines carriers let us shop your coverage and find a real fit.</p>
 
     <h2 class="mt-2">Coverage options</h2>
     <div class="grid grid-3" style="margin-top:1rem;">{personal_cards}</div>
@@ -278,7 +278,7 @@ PERSONAL_BODY = f'''
       </div>
       <div class="card">
         <h3>Carrier selection</h3>
-        <p>15+ A-rated personal lines carriers means we can almost always find a better fit than a single direct carrier.</p>
+        <p>20+ A-rated personal lines carriers means we can almost always find a better fit than a single direct carrier.</p>
       </div>
     </div>
 
@@ -377,7 +377,7 @@ HOME_BODY = f'''
   <div class="container" style="max-width:1000px;">
     <span class="eyebrow">Personal insurance / Home</span>
     <h1>Michigan Home Insurance That Actually Protects You</h1>
-    <p class="lead">Whether you own a starter home in Lake Orion, a lakefront cottage in northern Michigan, or a multi-family in metro Detroit, we'll shop your homeowners coverage across 15+ carriers to find the right protection at the right price.</p>
+    <p class="lead">Whether you own a starter home in Lake Orion, a lakefront cottage in northern Michigan, or a multi-family in metro Detroit, we'll shop your homeowners coverage across 20+ carriers to find the right protection at the right price.</p>
 
     <h2>What our home insurance covers</h2>
     <p>A J. Jacobs &amp; Associates homeowners policy is built around six core coverages:</p>
@@ -492,7 +492,7 @@ BIZ_BODY = f'''
   <div class="container">
     <span class="eyebrow">Commercial insurance</span>
     <h1>Michigan Business &amp; Commercial Insurance</h1>
-    <p class="lead" style="max-width:780px;">From sole proprietors to multi-location operations, we protect Michigan businesses across every industry. With access to <strong>50+ commercial carriers</strong>, we find coverage other agencies can't.</p>
+    <p class="lead" style="max-width:780px;">From sole proprietors to multi-location operations, we protect Michigan businesses across every industry. With access to <strong>20+ commercial carriers</strong>, we find coverage other agencies can't.</p>
 
     <h2 class="mt-2">Lines of commercial coverage</h2>
     <div class="grid grid-3" style="margin-top:1rem;">{commercial_cards}</div>
@@ -512,7 +512,7 @@ BIZ_BODY = f'''
 
     <div class="callout">
       <h2>Get a commercial insurance quote</h2>
-      <p>Tell us about your business and we'll shop your coverage across our 50+ commercial markets.</p>
+      <p>Tell us about your business and we'll shop your coverage across our 20+ commercial markets.</p>
       <a class="btn btn-primary btn-lg" href="/quotes/">Start My Business Quote</a>
     </div>
   </div>
@@ -961,7 +961,7 @@ CONTACT_BODY = '''
 # ----------------------------------------------------------------------
 MAIN_FAQS = [
     ("What is an independent insurance agency?",
-     "An independent insurance agency represents many different insurance carriers rather than selling for just one. We can compare quotes from 50+ companies and choose the best fit for each client, whereas a captive agent (like State Farm or Allstate) can only sell their one company's products."),
+     "An independent insurance agency represents many different insurance carriers rather than selling for just one. We can compare quotes from 20+ companies and choose the best fit for each client, whereas a captive agent (like State Farm or Allstate) can only sell their one company's products."),
     ("Where is J. Jacobs and Associates located?",
      "Our office is at 4301 S. Baldwin Rd, Lake Orion, Michigan 48359. We're licensed throughout the state of Michigan and serve clients from across the state."),
     ("How long has J. Jacobs and Associates been in business?",
@@ -969,7 +969,7 @@ MAIN_FAQS = [
     ("What types of insurance do you offer?",
      "We write Personal Lines: auto, home, condo, renters, life, umbrella, boat, motorcycle, RV, ATV, collector car, flood, mobile home, pet, high net worth. And Commercial Lines: general liability, commercial property, commercial auto, workers compensation, BOP, professional liability, restaurant, cannabis, fitness, contractors, builders risk, bonds, cyber liability, and more."),
     ("How does the quote process work?",
-     "Step 1: Fill out our online quote form (takes 2-15 minutes depending on detail). Step 2: We shop your coverage across our markets — typically 4-6 carriers for personal lines, more for commercial. Step 3: A licensed agent reviews the options with you, you pick what you like, and we bind coverage. The entire process can be same-day for simple personal lines and 1-2 weeks for complex commercial accounts."),
+     "Step 1: Fill out our online quote form (takes 2-15 minutes depending on detail). Step 2: We shop your coverage across our markets — typically 4-20+ carriers for personal lines, more for commercial. Step 3: A licensed agent reviews the options with you, you pick what you like, and we bind coverage. The entire process can be same-day for simple personal lines and 1-2 weeks for complex commercial accounts."),
     ("Do you serve clients outside of Lake Orion?",
      "Yes, throughout the entire state of Michigan. While our office is in Lake Orion (Oakland County), most of our work is done by phone, email, and online. We have clients in metro Detroit, Grand Rapids, Lansing, Traverse City, the Upper Peninsula, and everywhere in between."),
     ("What carriers do you work with?",
@@ -1105,7 +1105,7 @@ PAGES = [
     {
         "path": "/carriers/",
         "title": "Our Insurance Carriers | J. Jacobs & Associates",
-        "description": "We work with 50+ commercial and 15+ personal lines insurance carriers — including Citizens, Auto-Owners, Frankenmuth, Progressive, Liberty Mutual, AAA of Michigan, and more.",
+        "description": "We work with 50+ commercial and 20+ personal lines insurance carriers — including Citizens, Auto-Owners, Frankenmuth, Progressive, Liberty Mutual, AAA of Michigan, and more.",
         "body": CARRIERS_BODY,
         "breadcrumb_items": [("Home", "/"), ("Our Agency", "/about/"), ("Carriers", "/carriers/")],
     },
@@ -1119,7 +1119,7 @@ PAGES = [
     {
         "path": "/personal/",
         "title": "Personal Insurance in Michigan | Auto, Home, Life | J. Jacobs",
-        "description": "Personal insurance for Michigan families: auto, home, life, umbrella, boat, motorcycle, RV, condo, renters, and more. We shop 15+ personal lines carriers.",
+        "description": "Personal insurance for Michigan families: auto, home, life, umbrella, boat, motorcycle, RV, condo, renters, and more. We shop 20+ personal lines carriers.",
         "body": PERSONAL_BODY,
         "breadcrumb_items": [("Home", "/"), ("Personal Insurance", "/personal/")],
         "extra_schema": faq_schema(PERSONAL_FAQS),
@@ -1127,7 +1127,7 @@ PAGES = [
     {
         "path": "/personal/auto-insurance/",
         "title": "Michigan Auto Insurance | J. Jacobs & Associates",
-        "description": "Michigan auto insurance done right. We shop 15+ carriers, explain No-Fault PIP options, and find the best coverage for Michigan drivers. Call (248) 693-6455.",
+        "description": "Michigan auto insurance done right. We shop 20+ carriers, explain No-Fault PIP options, and find the best coverage for Michigan drivers. Call (248) 693-6455.",
         "body": AUTO_BODY,
         "breadcrumb_items": [("Home", "/"), ("Personal Insurance", "/personal/"), ("Auto Insurance", "/personal/auto-insurance/")],
         "extra_schema": faq_schema(AUTO_FAQS),
@@ -1135,7 +1135,7 @@ PAGES = [
     {
         "path": "/personal/home-insurance/",
         "title": "Michigan Home Insurance | J. Jacobs & Associates",
-        "description": "Michigan home insurance from an independent agency that shops 15+ carriers. Real protection, real prices, real Michigan agents. Get a quote in minutes.",
+        "description": "Michigan home insurance from an independent agency that shops 20+ carriers. Real protection, real prices, real Michigan agents. Get a quote in minutes.",
         "body": HOME_BODY,
         "breadcrumb_items": [("Home", "/"), ("Personal Insurance", "/personal/"), ("Home Insurance", "/personal/home-insurance/")],
         "extra_schema": faq_schema(HOME_FAQS),
@@ -1151,7 +1151,7 @@ PAGES = [
     {
         "path": "/business/",
         "title": "Michigan Business & Commercial Insurance | J. Jacobs",
-        "description": "Commercial insurance for Michigan businesses. 50+ carriers for general liability, commercial property, workers comp, restaurants, contractors, cannabis, and more.",
+        "description": "Commercial insurance for Michigan businesses. 20+ carriers for general liability, commercial property, workers comp, restaurants, contractors, cannabis, and more.",
         "body": BIZ_BODY,
         "breadcrumb_items": [("Home", "/"), ("Commercial Insurance", "/business/")],
         "extra_schema": faq_schema(BIZ_FAQS),
@@ -1174,7 +1174,7 @@ PAGES = [
     {
         "path": "/quotes/",
         "title": "Get an Insurance Quote | J. Jacobs & Associates",
-        "description": "Get a free auto, home, life, or business insurance quote from J. Jacobs & Associates. We shop 50+ carriers and find the best Michigan coverage.",
+        "description": "Get a free auto, home, life, or business insurance quote from J. Jacobs & Associates. We shop 20+ carriers and find the best Michigan coverage.",
         "body": QUOTE_BODY,
         "breadcrumb_items": [("Home", "/"), ("Start a Quote", "/quotes/")],
     },

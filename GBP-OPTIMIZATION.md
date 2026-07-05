@@ -103,7 +103,7 @@ and social content — just repurpose it. Each Post should link to the matching 
    markets. → [link to /business/cannabis-insurance/]"
 
 4. **(Tip → product page)** "Adding a teen driver or buying a boat this summer? One call
-   lets us shop 35+ carriers so you don't have to. Call (248) 693-6455 for a free quote."
+   lets us shop 20+ carriers so you don't have to. Call (248) 693-6455 for a free quote."
 
 > Tip: the social posts you already schedule in Buffer can be reused here almost verbatim —
 > just add the page link.
@@ -120,7 +120,7 @@ answers straight from your site's FAQs.
    Genesee, and Lapeer counties. Most work is done by phone, email, and online.
 
 2. **Q: Why use an independent agency instead of going direct?**
-   A: We represent 35+ carriers and shop them every renewal, so we find the best price and
+   A: We represent 20+ carriers and shop them every renewal, so we find the best price and
    coverage instead of one company's quote — and we advocate for you at claim time.
 
 3. **Q: What types of insurance do you offer?**

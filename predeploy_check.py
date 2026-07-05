@@ -112,6 +112,15 @@ def check_sitemap():
         dirs[:] = [d for d in dirs
                    if d not in SKIP_DIRS and d not in NON_PAGE_DIRS]
         if "index.html" in files:
+            # noindex pages (e.g. paid-campaign landing pages) are intentionally
+            # kept out of the sitemap, so don't require them to be listed.
+            try:
+                _head = open(os.path.join(root, "index.html"),
+                             encoding="utf-8", errors="replace").read(4000)
+            except Exception:
+                _head = ""
+            if re.search(r'name=["\']robots["\'][^>]*noindex', _head):
+                continue
             r = os.path.relpath(root, ROOT).replace("\\", "/")
             pages.add("/" if r == "." else "/%s/" % r)
     missing = sorted(pages - urls)

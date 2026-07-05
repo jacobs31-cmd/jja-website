@@ -1,0 +1,2346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get a Free Michigan Insurance Quote | J. Jacobs & Associates</title>
+<meta name="description" content="Get a free Michigan insurance quote from J. Jacobs & Associates. We shop 20+ carriers for auto, home, life, and business coverage. Quick quote in 2 minutes.">
+<link rel="canonical" href="https://jjainsurance.com/free-quote/">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#1a3a5c">
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Get an Insurance Quote | J. Jacobs & Associates">
+<meta property="og:description" content="Get a free auto, home, life, or business insurance quote from J. Jacobs & Associates. Choose a 2-minute Quick Quote or a 15-minute Full Quote.">
+<meta property="og:url" content="https://jjainsurance.com/free-quote/">
+<meta property="og:site_name" content="J. Jacobs & Associates">
+<meta property="og:image" content="https://jjainsurance.com/assets/img/og/quotes.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styles.css?v=20260529">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<style>
+/* Quote form — repeatable vehicle/driver rows */
+.repeatable-row{background:#f8f9fa;border:1px solid #e9ecef;border-radius:8px;padding:1rem;margin-bottom:.75rem;}
+.row-label{font-size:.78rem;font-weight:700;color:var(--primary,#14365e);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.6rem;}
+.btn-row-add{display:inline-flex;align-items:center;gap:.4rem;background:none;border:2px dashed var(--primary,#14365e);color:var(--primary,#14365e);border-radius:6px;padding:.42rem 1rem;font-size:.88rem;font-weight:600;cursor:pointer;margin-top:.25rem;transition:background .15s,color .15s;}
+.btn-row-add:hover{background:var(--primary,#14365e);color:#fff;}
+.btn-row-remove{background:none;border:1px solid #d0d5dd;color:#6b7280;border-radius:4px;padding:.28rem .55rem;font-size:.78rem;cursor:pointer;white-space:nowrap;transition:border-color .15s,color .15s;align-self:flex-end;margin-bottom:.28rem;}
+.btn-row-remove:hover{border-color:#b91c1c;color:#b91c1c;}
+.select-locked{pointer-events:none;opacity:.65;background:#f3f4f6 !important;}
+#comp-lock-note{display:none;font-size:.82rem;color:var(--primary,#14365e);font-weight:600;margin-top:.35rem;}
+#comp-lock-note.visible{display:block;}
+
+/* ── Intake-style question cards ─────────────────────────────────── */
+.iq-card{background:#f8f9fa;border:1px solid #dde3ec;border-radius:10px;margin-bottom:1.25rem;overflow:hidden;}
+.iq-head{background:var(--primary,#14365e);color:#fff;padding:.55rem 1rem;font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;}
+.iq-body{padding:1rem 1rem .85rem;}
+.iq-grid{display:grid;gap:.65rem;align-items:start;}
+.iq-c1{grid-template-columns:1fr;}
+.iq-c2{grid-template-columns:repeat(2,1fr);}
+.iq-c3{grid-template-columns:repeat(3,1fr);}
+.iq-c4{grid-template-columns:repeat(4,1fr);}
+@media(max-width:720px){.iq-c4{grid-template-columns:repeat(2,1fr);}.iq-c3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.iq-c4,.iq-c3,.iq-c2{grid-template-columns:1fr;}}
+.iq-f{display:flex;flex-direction:column;gap:.25rem;}
+.iq-f>label:first-child{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.055em;color:#5a6474;line-height:1.2;}
+.iq-f input,.iq-f select,.iq-f textarea{width:100%;padding:.35rem .5rem;border:1px solid #ced4da;border-radius:5px;font-size:.88rem;background:#fff;font-family:inherit;box-sizing:border-box;}
+.iq-f input::placeholder,.iq-f textarea::placeholder,input::placeholder,textarea::placeholder{color:#b8c0cc;}
+.iq-rg{display:flex;flex-wrap:wrap;gap:.3rem .5rem;margin-top:.1rem;}
+.iq-ri{display:inline-flex;align-items:center;gap:.35rem;font-size:.86rem;font-weight:500;cursor:pointer;white-space:nowrap;line-height:1.3;}
+.iq-ri input[type=radio],.iq-ri input[type=checkbox]{accent-color:var(--primary,#14365e);flex-shrink:0;width:15px;height:15px;margin:0;cursor:pointer;}
+.iq-sec-label{font-size:.72rem;font-weight:700;color:var(--primary,#14365e);text-transform:uppercase;letter-spacing:.06em;grid-column:1/-1;border-bottom:1px solid #dde3ec;padding-bottom:.3rem;margin-top:.25rem;}
+.iq-span2{grid-column:span 2;}
+.iq-span3{grid-column:span 3;}
+.iq-span4{grid-column:1/-1;}
+.bundle-hint{display:inline-flex;align-items:center;gap:.45rem;background:#eef4fb;color:var(--navy-cta,#1c4e8c);font-size:.82rem;font-weight:600;padding:.3rem .7rem;border-radius:999px;margin:.1rem 0 .75rem;}
+.award-strip{margin:1rem 0 .5rem;padding:.35rem 0 0;text-align:center;}
+.award-strip .cap{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted,#5a6776);margin:0 0 .55rem;}
+.award-strip .cap b{color:var(--navy,#14365e);}
+.award-strip .badges{display:flex;flex-wrap:wrap;gap:.4rem .7rem;align-items:center;justify-content:center;}
+.award-strip .badges img{height:46px;width:auto;}
+@media(max-width:520px){.award-strip .badges img{height:38px;}}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://jjainsurance.com/"}, {"@type": "ListItem", "position": 2, "name": "Start a Quote", "item": "https://jjainsurance.com/quotes/"}]}
+</script>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="utility-bar">
+  <div class="container">
+    <span class="utility-item">📍 4301 S. Baldwin Rd, Lake Orion, MI 48359</span>
+    <span class="utility-item">📞 <a href="tel:+12486936455">(248) 693-6455</a></span>
+    <span class="utility-item">✉️ <a href="mailto:Support@jjainsurance.com">Support@jjainsurance.com</a></span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="../" aria-label="J. Jacobs and Associates Insurance home">
+      <img class="brand-logo-img" src="../assets/img/logo.jpeg" alt="J. Jacobs and Associates Insurance">
+    </a>
+
+    <button class="menu-toggle" aria-controls="primary-nav" aria-expanded="false">☰ Menu</button>
+
+    <nav class="main-nav" id="primary-nav" aria-label="Primary">
+      <ul>
+        <li class="has-submenu">
+          <details class="submenu-wrap"><summary class="nav-toggle">Our Agency</summary>
+          <ul class="submenu">
+            <li><a href="../about/">About Us</a></li>
+            <li><a href="../team/">Our Team</a></li>
+            <li><a href="../carriers/">Our Carriers</a></li>
+            <li><a href="../reviews/">Reviews</a></li>
+          </ul></details></li>
+        <li class="has-submenu">
+          <details class="submenu-wrap"><summary class="nav-toggle">Products</summary>
+          <ul class="submenu">
+            <li><a href="../personal/">Personal Insurance</a></li>
+            <li><a href="../personal/auto-insurance/">Auto Insurance</a></li>
+            <li><a href="../personal/home-insurance/">Home Insurance</a></li>
+            <li><a href="../personal/life-insurance/">Life Insurance</a></li>
+            <li><a href="../business/">Commercial Insurance</a></li>
+            <li><a href="../business/workers-compensation/">Workers Compensation</a></li>
+          </ul></details></li>
+        <li class="has-submenu">
+          <details class="submenu-wrap"><summary class="nav-toggle">Service</summary>
+          <ul class="submenu">
+            <li><a href="../service/">Service Center</a></li>
+            <li><a href="../billing-claims/">Billing &amp; Claims</a></li>
+          </ul></details></li>
+        <li><a href="../blog/">Blog</a></li>
+        <li><a href="../faq/">FAQ</a></li>
+        <li><a href="../contact/">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-cta">
+      <a class="btn btn-outline" href="tel:+12486936455">Call</a>
+      <a class="btn btn-primary" href="../quotes/">Start a Quote</a>
+    </div>
+  </div>
+</header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="../">Home</a></li><li>Start a Quote</li></ol></div></nav><main id="main">
+
+<section class="section page-hero">
+  <div class="container" style="max-width:920px;">
+    <span class="eyebrow">Start a quote</span>
+    <h1>Get Your Free Insurance Quote</h1>
+    <p class="lead">Tell us what you need and we’ll shop <strong>20+ carriers</strong> for your best coverage. A licensed Michigan agent — not a call center — follows up personally, usually within one business day.</p>
+    <div class="trust-band">
+      <span class="trust-band-item"><span class="stars">★★★★★</span> 4.9 on Google <span class="sub">(808 reviews)</span></span>
+      <span class="trust-band-item">Best of the Best &mdash; 8 years running <span class="sub">(2018&ndash;2025)</span></span>
+      <span class="trust-band-item">20+ carriers shopped</span>
+      <span class="trust-band-item">Family-owned since 1981</span>
+    </div>
+    <div class="award-strip">
+      <p class="cap">Voted <b>&ldquo;Best of the Best&rdquo;</b> insurance agency &mdash; 8 years running (2018&ndash;2025)</p>
+      <div class="badges">
+        <img src="../assets/img/award-2018.png" alt="Best of the Best 2018">
+        <img src="../assets/img/award-2019.png" alt="Best of the Best 2019">
+        <img src="../assets/img/award-2020.png" alt="Best of the Best 2020">
+        <img src="../assets/img/award-2021.png" alt="Best of the Best 2021">
+        <img src="../assets/img/award-2022.png" alt="Best of the Best 2022">
+        <img src="../assets/img/award-2023.png" alt="Best of the Best 2023">
+        <img src="../assets/img/award-2024.png" alt="Best of the Best 2024">
+        <img src="../assets/img/award-2025.png" alt="Best of the Best 2025">
+      </div>
+    </div>
+
+    <!-- Quote mode chooser -->
+    <div class="quote-mode-chooser">
+      <h2 class="quote-mode-title">Choose your quote type</h2>
+      <p class="quote-mode-intro">Pick whichever works for you. You can switch between them at any time.</p>
+      <div class="quote-mode-toggle" role="tablist" aria-label="Choose quote length">
+        <button type="button" class="quote-mode-btn is-active" data-mode="quick" role="tab" aria-selected="true">
+          <span class="quote-mode-time">~2 min</span>
+          <span class="quote-mode-name">Quick Quote</span>
+          <span class="quote-mode-desc">Just the basics. We'll call you to fill in the rest.</span>
+          <span class="quote-mode-bullets">
+            <span class="quote-mode-bullet">Your contact info</span>
+            <span class="quote-mode-bullet">What you want quoted</span>
+            <span class="quote-mode-bullet">Agent calls you for the details</span>
+          </span>
+        </button>
+        <button type="button" class="quote-mode-btn" data-mode="full" role="tab" aria-selected="false">
+          <span class="quote-mode-time">~15 min</span>
+          <span class="quote-mode-name">Full Quote</span>
+          <span class="quote-mode-desc">Tell us everything up front for faster turnaround.</span>
+          <span class="quote-mode-bullets">
+            <span class="quote-mode-bullet">Spouse &amp; address details</span>
+            <span class="quote-mode-bullet">Coverage amounts &amp; deductibles</span>
+            <span class="quote-mode-bullet">Discount eligibility checklist</span>
+            <span class="quote-mode-bullet">Often quoted same business day</span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <div class="quote-intro">
+      <strong>How this works</strong>
+      <ol>
+        <li>Pick what you'd like a quote for (check all that apply).</li>
+        <li>Tell us about you — just the basics for a Quick Quote, or more detail for a Full Quote.</li>
+        <li>We'll only ask the questions needed for what you selected.</li>
+        <li>A licensed agent gets back to you within one business day.</li>
+      </ol>
+    </div>
+
+    <form id="quote-form" class="form-wrap" data-mode="quick"
+          action="https://jja-al3-worker.jacobs31.workers.dev"
+          data-worker="https://jja-al3-worker.jacobs31.workers.dev"
+          method="POST" novalidate>
+
+      <input type="hidden" name="_subject" value="New Quote Request — jjainsurance.com">
+      <!-- Honeypot — hidden from real users; the Worker drops any submission that fills it -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_format" value="plain">
+      <input type="hidden" name="_next" value="https://jjainsurance.com/free-quote/?submitted=1">
+      <input type="hidden" id="quote_type" name="quote_type" value="Quick Quote">
+
+      <!-- Customer auto-reply message returned to the email they entered -->
+      <input type="hidden" name="_autoresponse" value="Hi! Thank you for submitting your quote request to J. Jacobs &amp; Associates Insurance. We've received your information and a licensed agent will get back to you within one business day with your options.
+
+To help us prepare the most accurate quote, it would be a big help if you could reply to this email with a copy of your current insurance declarations page — that's a one-page summary showing your existing coverage. Most carriers make it available through your online policyholder portal, or you can call your current agent and ask for it.
+
+If you have any questions in the meantime, feel free to call our office at (248) 693-6455, Monday through Friday, 9am-5pm.
+
+Thanks again for thinking of us — we look forward to working with you.
+
+— The team at J. Jacobs &amp; Associates Insurance
+4301 S. Baldwin Rd, Lake Orion, MI 48359
+(248) 693-6455">
+
+      <!-- PRODUCT SELECTION -->
+      <fieldset style="background:transparent; border:0; padding:0;">
+        <legend style="padding:0;">What would you like a quote for? <span class="req">*</span></legend>
+        <p class="help" style="margin-top:-.25rem; margin-bottom:.75rem; font-style:normal;">Check all that apply. We'll only ask the questions needed for what you select.</p>
+        <span class="bundle-hint">★ Most clients bundle home + auto and save</span>
+        <div class="product-picker">
+          <label class="product-pick"><input type="checkbox" id="line_auto" name="line_auto" value="Auto" data-section="section-auto"><span class="pick-name">Auto Insurance</span><span class="pick-desc">Cars, trucks, SUVs</span></label>
+          <label class="product-pick"><input type="checkbox" id="line_home" name="line_home" value="Home" data-section="section-home"><span class="pick-name">Home Insurance</span><span class="pick-desc">House or property you own</span></label>
+          <label class="product-pick"><input type="checkbox" id="line_condo" name="line_condo" value="Condo" data-section="section-condo"><span class="pick-name">Condo Insurance</span><span class="pick-desc">HO-6 condo unit coverage</span></label>
+          <label class="product-pick"><input type="checkbox" id="line_renters" name="line_renters" value="Renters" data-section="section-renters"><span class="pick-name">Renters Insurance</span><span class="pick-desc">For your rented home or apartment</span></label>
+          <label class="product-pick"><input type="checkbox" id="line_rental" name="line_rental" value="Rental Property" data-section="section-rental"><span class="pick-name">Rental Property</span><span class="pick-desc">Property you rent to others (DP-1/DP-3)</span></label>
+          <label class="product-pick"><input type="checkbox" id="line_life" name="line_life" value="Life" data-section="section-life"><span class="pick-name">Life Insurance</span><span class="pick-desc">Term, whole, or universal life</span></label>
+          <label class="product-pick"><input type="checkbox" id="line_umbrella" name="line_umbrella" value="Umbrella" data-section="section-umbrella"><span class="pick-name">Umbrella Insurance</span><span class="pick-desc">Extra liability over your other policies</span></label>
+          <label class="product-pick"><input type="checkbox" id="line_recreational" name="line_recreational" value="Recreational" data-section="section-recreational"><span class="pick-name">Boat / Motorcycle / RV / ATV</span><span class="pick-desc">Toys and recreational vehicles</span></label>
+          <label class="product-pick"><input type="checkbox" id="line_business" name="line_business" value="Business Owners Package" data-section="section-business"><span class="pick-name">Business / Commercial</span><span class="pick-desc">BOP, GL, commercial property, more</span></label>
+          <label class="product-pick"><input type="checkbox" id="line_workcomp" name="line_workcomp" value="Workers Comp" data-section="section-workcomp"><span class="pick-name">Workers Compensation</span><span class="pick-desc">Coverage for your employees</span></label>
+        </div>
+        <p class="product-selected-count" id="productSelectedCount" aria-live="polite">No products selected yet. Check one or more above.</p>
+        <div class="product-continue" id="productContinue" hidden>
+          <button type="button" class="btn btn-primary product-continue-btn" id="productContinueBtn">
+            Continue
+            <span aria-hidden="true" class="product-continue-arrow">↓</span>
+          </button>
+          <p class="product-continue-help">Take your time picking products. When you're ready, click Continue and you'll jump to your information — then scroll down through the rest.</p>
+        </div>
+      </fieldset>
+
+      <!-- YOUR INFO -->
+      <h2 id="your-information" style="margin-top:2rem; scroll-margin-top:1rem;">Your information</h2>
+
+      <!-- Card: Contact Information -->
+      <div class="iq-card">
+        <div class="iq-head">Contact Information</div>
+        <div class="iq-body">
+          <div class="iq-grid iq-c4">
+            <div class="iq-f">
+              <label for="first_name">First name <span class="req">*</span></label>
+              <input type="text" id="first_name" name="first_name" required data-required="true">
+            </div>
+            <div class="iq-f">
+              <label for="last_name">Last name <span class="req">*</span></label>
+              <input type="text" id="last_name" name="last_name" required data-required="true">
+            </div>
+            <div class="iq-f">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" required data-required="true">
+            </div>
+            <div class="iq-f">
+              <label for="phone">Phone <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" required data-required="true" placeholder="(248) 555-0100" maxlength="14">
+            </div>
+            <div class="iq-f">
+              <label for="dob">Date of birth</label>
+              <input type="date" id="dob" name="dob">
+            </div>
+            <div class="iq-f">
+              <label for="zip">ZIP code <span class="req">*</span></label>
+              <input type="text" id="zip" name="zip" pattern="[0-9]{5}" required data-required="true">
+            </div>
+            <div class="iq-f iq-span2">
+              <label for="occupation">Occupation</label>
+              <input type="text" id="occupation" name="occupation" placeholder="e.g., Teacher, Engineer, Small business owner, Retired">
+            </div>
+            <div class="iq-f">
+              <label for="referrer">How did you hear about us?</label>
+              <select id="referrer" name="referrer">
+                <option value="">Select…</option>
+                <option>Customer referral</option>
+                <option>Google search</option>
+                <option>Google ad</option>
+                <option>Facebook</option>
+                <option>Instagram</option>
+                <option>Mailer / flyer</option>
+                <option>Newspaper</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="iq-f">
+              <label for="referrer_name">Referred by <span style="font-weight:400;text-transform:none;">(if applicable)</span></label>
+              <input type="text" id="referrer_name" name="referrer_name" placeholder="Name of person or business">
+            </div>
+            <div class="iq-f iq-span2">
+              <label for="current_carrier">Current insurance carrier</label>
+              <input type="text" id="current_carrier" name="current_carrier" placeholder="e.g., Auto-Owners, State Farm, none">
+            </div>
+            <div class="iq-f">
+              <label for="renewal_date">Current policy renewal date</label>
+              <input type="date" id="renewal_date" name="renewal_date">
+            </div>
+          </div>
+          <!-- Full-mode: address + current premium -->
+          <div data-mode-only="full">
+            <div class="iq-grid iq-c4" style="padding:.5rem 0 0;">
+              <div class="iq-f iq-span2">
+                <label for="street_address">Street address</label>
+                <input type="text" id="street_address" name="street_address" placeholder="e.g., 123 Main St">
+              </div>
+              <div class="iq-f">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city">
+              </div>
+              <div class="iq-f">
+                <label for="address_line_2">Apt / Suite / Unit</label>
+                <input type="text" id="address_line_2" name="address_line_2">
+              </div>
+              <input type="hidden" name="state" value="MI">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FULL ONLY: spouse -->
+      <div data-mode-only="full">
+        <div class="iq-card">
+          <div class="iq-head">Additional Named Insured</div>
+          <div class="iq-body">
+            <div class="iq-grid iq-c4">
+              <div class="iq-f">
+                <label for="spouse_first_name">Second Named Insured / Spouse — first name</label>
+                <input type="text" id="spouse_first_name" name="spouse_first_name">
+              </div>
+              <div class="iq-f">
+                <label for="spouse_last_name">Second Named Insured / Spouse — last name</label>
+                <input type="text" id="spouse_last_name" name="spouse_last_name">
+              </div>
+              <div class="iq-f">
+                <label for="spouse_dob">Second Named Insured / Spouse — date of birth</label>
+                <input type="date" id="spouse_dob" name="spouse_dob">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AUTO -->
+      <div id="section-auto" class="quote-section" hidden>
+        <div class="quote-section-head">
+          <h2>Auto details</h2>
+          <p class="section-sub">Tell us about your vehicles and drivers. Year, make, and model are all we need — we can look up the VIN.</p>
+        </div>
+        <div class="quote-section-body">
+
+          <!-- VEHICLES -->
+          <div class="iq-card">
+          <div class="iq-head">Vehicles</div>
+          <div class="iq-body">
+          <div id="vehicle-list">
+            <div class="repeatable-row vehicle-row" data-idx="1">
+              <div class="row-label">Vehicle 1</div>
+              <div class="field-group" style="align-items:flex-end; flex-wrap:wrap;">
+                <div class="field" style="flex:0 0 88px; min-width:80px;">
+                  <label for="vehicle_1_year">Year</label>
+                  <input type="number" id="vehicle_1_year" name="vehicle_1_year" min="1960" max="2027" placeholder="2022">
+                </div>
+                <div class="field">
+                  <label for="vehicle_1_make">Make</label>
+                  <input type="text" id="vehicle_1_make" name="vehicle_1_make" placeholder="e.g., Ford">
+                </div>
+                <div class="field">
+                  <label for="vehicle_1_model">Model</label>
+                  <input type="text" id="vehicle_1_model" name="vehicle_1_model" placeholder="e.g., F-150">
+                </div>
+                <button type="button" class="btn-row-remove" data-target="vehicle-list" aria-label="Remove vehicle 1">✕ Remove</button>
+              </div>
+              <div class="field-group" style="margin-top:.5rem;">
+                <div class="field">
+                  <label for="vehicle_1_collision">Collision coverage on this vehicle?</label>
+                  <select id="vehicle_1_collision" name="vehicle_1_collision" class="vehicle-collision">
+                    <option value="">Select…</option>
+                    <option value="Yes">Yes — include collision</option>
+                    <option value="No">No — liability only</option>
+                  </select>
+                </div>
+              </div>
+              <!-- Full Quote: additional vehicle detail -->
+              <div data-mode-only="full" style="margin-top:.6rem;">
+                <div class="iq-grid iq-c4">
+                  <div class="iq-f">
+                    <label for="vehicle_1_vin">VIN</label>
+                    <input type="text" id="vehicle_1_vin" name="vehicle_1_vin" placeholder="optional" maxlength="17">
+                  </div>
+                  <div class="iq-f">
+                    <label for="vehicle_1_title">Title held by</label>
+                    <select id="vehicle_1_title" name="vehicle_1_title">
+                      <option value="">Select…</option>
+                      <option>Insured</option><option>Spouse</option><option>Both</option><option>Other</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label>Garaged at home address?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="vehicle_1_gar" value="Yes"> Yes</label>
+                      <label class="iq-ri"><input type="radio" name="vehicle_1_gar" value="No"> No</label>
+                    </div>
+                  </div>
+                  <div class="iq-f">
+                    <label>Lien / lease?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="vehicle_1_lien" value="None"> None</label>
+                      <label class="iq-ri"><input type="radio" name="vehicle_1_lien" value="Lien"> Lien</label>
+                      <label class="iq-ri"><input type="radio" name="vehicle_1_lien" value="Lease"> Lease</label>
+                    </div>
+                  </div>
+                  <div class="iq-f">
+                    <label>Rideshare / delivery use?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="vehicle_1_rs" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="vehicle_1_rs" value="Yes"> Yes</label>
+                    </div>
+                  </div>
+                  <div class="iq-f">
+                    <label>Business use?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="vehicle_1_biz" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="vehicle_1_biz" value="Yes"> Yes</label>
+                    </div>
+                  </div>
+                  <div class="iq-f iq-span2">
+                    <label>Collision type on this vehicle</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="vehicle_1_coll_type" value="Broad"> Broad</label>
+                      <label class="iq-ri"><input type="radio" name="vehicle_1_coll_type" value="Standard"> Standard</label>
+                      <label class="iq-ri"><input type="radio" name="vehicle_1_coll_type" value="None"> None</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" id="add-vehicle" class="btn-row-add">+ Add another vehicle</button>
+          </div><!-- /iq-body vehicles -->
+          </div><!-- /iq-card vehicles -->
+
+          <!-- DRIVERS -->
+          <div class="iq-card">
+          <div class="iq-head">Drivers</div>
+          <div class="iq-body">
+          <p style="font-size:.85rem;color:var(--text-muted,#555);margin:0 0 .75rem;">List everyone in the household who drives. Date of birth helps us rate accurately.</p>
+          <div id="driver-list">
+            <div class="repeatable-row driver-row" data-idx="1">
+              <div class="row-label">Driver 1</div>
+              <div class="field-group" style="align-items:flex-end; flex-wrap:wrap;">
+                <div class="field">
+                  <label for="driver_1_first">First name</label>
+                  <input type="text" id="driver_1_first" name="driver_1_first" placeholder="First name">
+                </div>
+                <div class="field">
+                  <label for="driver_1_last">Last name</label>
+                  <input type="text" id="driver_1_last" name="driver_1_last" placeholder="Last name">
+                </div>
+                <div class="field" style="flex:0 0 155px; min-width:130px;">
+                  <label for="driver_1_dob">Date of birth</label>
+                  <input type="date" id="driver_1_dob" name="driver_1_dob">
+                </div>
+                <div class="field" style="flex:0 0 115px; min-width:100px;">
+                  <label for="driver_1_gender">Gender</label>
+                  <select id="driver_1_gender" name="driver_1_gender">
+                    <option value="">Select…</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                </div>
+                <button type="button" class="btn-row-remove" data-target="driver-list" aria-label="Remove driver 1">✕ Remove</button>
+              </div>
+              <div class="field-group" style="margin-top:.5rem;">
+                <div class="field">
+                  <label for="driver_1_incidents">Any violations or claims in the last 3 years?</label>
+                  <select id="driver_1_incidents" name="driver_1_incidents" class="incident-select">
+                    <option value="">Select…</option>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                  </select>
+                </div>
+                <div class="field incident-detail" style="display:none;">
+                  <label for="driver_1_incidents_detail">Brief description</label>
+                  <input type="text" id="driver_1_incidents_detail" name="driver_1_incidents_detail" placeholder="e.g., Speeding ticket 06/2024, At-fault accident 01/2023">
+                </div>
+              </div>
+              <!-- Full Quote: additional driver detail -->
+              <div data-mode-only="full" style="margin-top:.6rem;">
+                <div class="iq-grid iq-c4">
+                  <div class="iq-f">
+                    <label for="driver_1_occ">Occupation</label>
+                    <input type="text" id="driver_1_occ" name="driver_1_occ" placeholder="e.g., Teacher">
+                  </div>
+                  <div class="iq-f">
+                    <label>License status</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="driver_1_lic" value="Licensed"> Licensed</label>
+                      <label class="iq-ri"><input type="radio" name="driver_1_lic" value="Permit"> Permit</label>
+                      <label class="iq-ri"><input type="radio" name="driver_1_lic" value="None"> None</label>
+                    </div>
+                  </div>
+                  <div class="iq-f">
+                    <label for="driver_1_edu">Education level</label>
+                    <select id="driver_1_edu" name="driver_1_edu">
+                      <option value="">Select…</option>
+                      <option>No HS Diploma</option><option>HS Diploma</option>
+                      <option>Some College</option><option>4-yr Degree</option>
+                      <option>Graduate Degree</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label>Good student discount?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="driver_1_gs" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="driver_1_gs" value="Yes"> Yes</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" id="add-driver" class="btn-row-add">+ Add another driver</button>
+          </div><!-- /iq-body drivers -->
+          </div><!-- /iq-card drivers -->
+
+          <!-- FULL QUOTE: CURRENT INSURANCE + DESIRED COVERAGE + DISCOUNTS -->
+          <div data-mode-only="full">
+
+            <!-- Card: Current Auto Insurance -->
+            <div class="iq-card" style="margin-top:1.5rem;">
+              <div class="iq-head">Current Auto Insurance</div>
+              <div class="iq-body">
+                <div class="iq-grid iq-c4">
+                  <div class="iq-f">
+                    <label for="auto_prior_carrier">Prior carrier</label>
+                    <input type="text" id="auto_prior_carrier" name="auto_prior_carrier" placeholder="e.g., State Farm">
+                  </div>
+                  <div class="iq-f">
+                    <label for="auto_prior_prem">Annual premium</label>
+                    <input type="text" id="auto_prior_prem" name="auto_prior_prem" placeholder="e.g., $1,400">
+                  </div>
+                  <div class="iq-f">
+                    <label for="auto_prior_exp">Expiration / renewal date</label>
+                    <input type="date" id="auto_prior_exp" name="auto_prior_exp">
+                  </div>
+                  <div class="iq-f">
+                    <label>Coverage lapse in last 5 yrs?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="a_lapse" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="a_lapse" value="Yes"> Yes</label>
+                    </div>
+                  </div>
+                  <div class="iq-f">
+                    <label for="a_bipd">Current BI/PD limits</label>
+                    <input type="text" id="a_bipd" name="a_bipd" placeholder="e.g., 100/300/100">
+                  </div>
+                  <div class="iq-f">
+                    <label for="a_pip_cur">Current PIP</label>
+                    <input type="text" id="a_pip_cur" name="a_pip_cur" placeholder="e.g., Unlimited">
+                  </div>
+                  <div class="iq-f iq-span2">
+                    <label>License suspension or revocation ever?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="a_lic_issue" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="a_lic_issue" value="Yes"> Yes</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card: Desired Coverage -->
+            <div class="iq-card">
+              <div class="iq-head">Desired Coverage</div>
+              <div class="iq-body">
+                <div class="iq-grid iq-c4">
+                  <div class="iq-f">
+                    <label for="auto_liability">Bodily injury / property damage</label>
+                    <select id="auto_liability" name="auto_liability">
+                      <option value="">Select…</option>
+                      <option value="50/100">50/100</option>
+                      <option value="100/300">100/300</option>
+                      <option value="250/500">250/500</option>
+                      <option value="500/500">500/500</option>
+                      <option value="500/1000">500/1000</option>
+                      <option value="1000/1000">1000/1000</option>
+                      <option value="Not sure">Not sure — recommend</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label for="a_um">Uninsured / Underinsured Motorist (UM/UIM)</label>
+                    <select id="a_um" name="a_um">
+                      <option value="">Select…</option>
+                      <option>Same as BI</option>
+                      <option value="50/100">50/100</option>
+                      <option value="100/300">100/300</option>
+                      <option value="250/500">250/500</option>
+                      <option value="500/500">500/500</option>
+                      <option value="500/1000">500/1000</option>
+                      <option value="1000/1000">1000/1000</option>
+                      <option value="Combined UM/UIM">Combined UM/UIM</option>
+                      <option>None</option>
+                      <option>Not sure — recommend</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label for="auto_comp_ded">Comp deductible</label>
+                    <select id="auto_comp_ded" name="auto_comp_ded">
+                      <option value="">Select…</option>
+                      <option>$100</option><option>$250</option><option>$500</option>
+                      <option>$1,000</option><option>$2,500</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label for="auto_collision_ded">Collision deductible</label>
+                    <select id="auto_collision_ded" name="auto_collision_ded">
+                      <option value="">Select…</option>
+                      <option>$500</option><option>$1,000</option><option>$2,500</option>
+                    </select>
+                  </div>
+                  <div class="iq-f iq-span2">
+                    <label for="auto_pip">PIP — Personal Injury Protection</label>
+                    <select id="auto_pip" name="auto_pip">
+                      <option value="">Select…</option>
+                      <option>Unlimited</option>
+                      <option>$500,000</option>
+                      <option>$250,000</option>
+                      <option>Qualified Health Plan Opt Out</option>
+                      <option value="50K Medicaid Only — QHP Opt Out">50K Medicaid Only — QHP Opt Out</option>
+                      <option>Medicare Parts A &amp; B Opt Out</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label>Glass coverage?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="a_glass" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="a_glass" value="Yes"> Yes</label>
+                    </div>
+                  </div>
+                  <div class="iq-f">
+                    <label>Towing &amp; roadside?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="auto_towing" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="auto_towing" value="Yes"> Yes</label>
+                    </div>
+                  </div>
+                  <div class="iq-f">
+                    <label>Rental car coverage?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="a_rent" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="a_rent" value="Yes"> Yes</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- Hidden comp lock note — still used by JS -->
+                <p id="comp-lock-note" style="font-size:.82rem;color:var(--primary,#14365e);font-weight:600;margin-top:.5rem;">&#128274; Comp required — automatically included when collision is selected on any vehicle.</p>
+                <input type="hidden" id="auto_comp" name="auto_comp" value="Yes">
+                <input type="hidden" id="auto_collision" name="auto_collision" value="">
+                <input type="hidden" id="comp-ded-wrap" name="" value="">
+                <input type="hidden" id="collision-ded-wrap" name="" value="">
+              </div>
+            </div>
+
+            <!-- Card: Cross-sells & Discounts -->
+            <div class="iq-card">
+              <div class="iq-head">Cross-sells &amp; Discounts</div>
+              <div class="iq-body">
+                <div class="iq-grid iq-c4">
+                  <div class="iq-f iq-span2">
+                    <label>Do you own a home?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="auto_own_home" value="Yes"> Yes</label>
+                      <label class="iq-ri"><input type="radio" name="auto_own_home" value="No"> No</label>
+                    </div>
+                  </div>
+                  <div class="iq-f">
+                    <label for="auto_want_home_quote">Add a home quote?</label>
+                    <select id="auto_want_home_quote" name="auto_want_home_quote" data-cross-sell="line_home">
+                      <option value="">Select…</option>
+                      <option>Yes</option><option>No</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label for="auto_want_umbrella">Add an umbrella quote?</label>
+                    <select id="auto_want_umbrella" name="auto_want_umbrella" data-cross-sell="line_umbrella">
+                      <option value="">Select…</option>
+                      <option>Yes</option><option>No</option>
+                    </select>
+                  </div>
+                </div>
+                <div style="margin-top:.85rem;">
+                  <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--primary,#14365e);border-bottom:1px solid #dde3ec;padding-bottom:.3rem;margin-bottom:.5rem;">Applicable discounts (check all that apply)</div>
+                  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.25rem .75rem;">
+                    <div class="checkbox-row"><input type="checkbox" id="auto_disc_good_student" name="auto_disc_good_student" value="Good Student (3.0+)"><label for="auto_disc_good_student">Good Student (3.0 GPA+)</label></div>
+                    <div class="checkbox-row"><input type="checkbox" id="auto_disc_alumni" name="auto_disc_alumni" value="Alumni (4-yr degree)"><label for="auto_disc_alumni">Alumni (4-year degree)</label></div>
+                    <div class="checkbox-row"><input type="checkbox" id="auto_disc_aarp" name="auto_disc_aarp" value="AARP Member"><label for="auto_disc_aarp">AARP Member</label></div>
+                    <div class="checkbox-row"><input type="checkbox" id="auto_disc_cpa" name="auto_disc_cpa" value="CPA"><label for="auto_disc_cpa">CPA</label></div>
+                    <div class="checkbox-row"><input type="checkbox" id="auto_disc_mea" name="auto_disc_mea" value="MEA Member"><label for="auto_disc_mea">MEA Member</label></div>
+                    <div class="checkbox-row"><input type="checkbox" id="auto_disc_sae" name="auto_disc_sae" value="SAE Member"><label for="auto_disc_sae">SAE Member</label></div>
+                    <div class="checkbox-row"><input type="checkbox" id="auto_disc_homeowner" name="auto_disc_homeowner" value="Owns home/condo"><label for="auto_disc_homeowner">Own a home or condo</label></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- end full-only -->
+
+        </div>
+      </div>
+
+      <!-- HOME -->
+      <div id="section-home" class="quote-section" hidden>
+        <div class="quote-section-head">
+          <h2>Home details</h2>
+          <p class="section-sub">Tell us about your home — most homeowners can fill this out in about 5 minutes.</p>
+        </div>
+        <div class="quote-section-body">
+
+          <!-- ALWAYS VISIBLE: Quick Quote basics -->
+          <div class="iq-grid iq-c3" style="margin-bottom:.65rem;">
+            <div class="iq-f iq-span2">
+              <label for="home_address">Property address <span style="font-weight:400;text-transform:none;">(leave blank if same as Your Information above)</span></label>
+              <input type="text" id="home_address" name="home_address" placeholder="Street, City, ZIP">
+            </div>
+            <div class="iq-f">
+              <label for="year_built">Year built</label>
+              <input type="number" id="year_built" name="year_built" placeholder="e.g., 1998" min="1800" max="2027">
+            </div>
+          </div>
+          <div class="iq-f" style="margin-bottom:1.25rem;">
+            <label>Residence type</label>
+            <div class="iq-rg" style="margin-top:.35rem;gap:.5rem 1.5rem;">
+              <label class="iq-ri"><input type="radio" name="h_res_type" value="Home"> Home (primary)</label>
+              <label class="iq-ri"><input type="radio" name="h_res_type" value="Condo"> Condo</label>
+              <label class="iq-ri"><input type="radio" name="h_res_type" value="2nd Home"> 2nd home / seasonal</label>
+              <label class="iq-ri"><input type="radio" name="h_res_type" value="Landlord"> Landlord / rental</label>
+              <label class="iq-ri"><input type="radio" name="h_res_type" value="Renters"> Renters</label>
+              <label class="iq-ri"><input type="radio" name="h_res_type" value="Vacant"> Vacant</label>
+            </div>
+          </div>
+
+          <!-- Landlord extra questions — visible any time Landlord is selected -->
+          <div id="home-landlord-wrap" style="display:none;">
+            <div class="iq-card">
+              <div class="iq-head">Landlord / Rental Property Details</div>
+              <div class="iq-body">
+                <div class="iq-grid iq-c4">
+                  <div class="iq-f">
+                    <label for="ll_units">Number of units</label>
+                    <select id="ll_units" name="ll_units" disabled>
+                      <option value="">Select…</option>
+                      <option>1</option><option>2</option><option>3</option><option>4</option>
+                      <option>5–10</option><option>11+</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label for="ll_monthly_rent">Monthly rent per unit</label>
+                    <input type="text" id="ll_monthly_rent" name="ll_monthly_rent" placeholder="e.g., $1,200" disabled>
+                  </div>
+                  <div class="iq-f">
+                    <label for="ll_loss_rents">Loss of rents coverage desired</label>
+                    <select id="ll_loss_rents" name="ll_loss_rents" disabled>
+                      <option value="">Select…</option>
+                      <option>12 months</option><option>24 months</option>
+                      <option>Not sure — recommend</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label>Policy form preference</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="ll_form" value="DP-1" disabled> DP-1 (basic)</label>
+                      <label class="iq-ri"><input type="radio" name="ll_form" value="DP-3" disabled> DP-3 (special)</label>
+                      <label class="iq-ri"><input type="radio" name="ll_form" value="Not sure" disabled> Not sure</label>
+                    </div>
+                  </div>
+                  <div class="iq-f">
+                    <label>Vandalism coverage?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="ll_vandalism" value="Yes" disabled> Yes</label>
+                      <label class="iq-ri"><input type="radio" name="ll_vandalism" value="No" disabled> No</label>
+                    </div>
+                  </div>
+                  <div class="iq-f">
+                    <label for="ll_liability">Premises liability limit</label>
+                    <select id="ll_liability" name="ll_liability" disabled>
+                      <option value="">Select…</option>
+                      <option>$100,000</option><option>$300,000</option>
+                      <option>$500,000</option><option>$1,000,000</option>
+                      <option>Not sure — recommend</option>
+                    </select>
+                  </div>
+                  <div class="iq-f iq-span2">
+                    <label for="ll_notes">Anything else about the rental property?</label>
+                    <input type="text" id="ll_notes" name="ll_notes" placeholder="e.g., tenant currently in place, recent renovation, multiple buildings" disabled>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FULL QUOTE ONLY -->
+          <div data-mode-only="full">
+
+            <!-- Card: Purchase & Prior Insurance -->
+            <div class="iq-card">
+              <div class="iq-head">Purchase &amp; Prior Insurance</div>
+              <div class="iq-body">
+                <div class="iq-grid iq-c4">
+                  <div class="iq-f">
+                    <label for="home_purchase_date">Purchase / closing date</label>
+                    <input type="date" id="home_purchase_date" name="home_purchase_date">
+                  </div>
+                  <div class="iq-f">
+                    <label for="home_mortgage">Mortgage?</label>
+                    <select id="home_mortgage" name="home_mortgage">
+                      <option value="">Select…</option>
+                      <option>Yes</option>
+                      <option>No — free &amp; clear</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label for="h_mkt_val">Market value (approx)</label>
+                    <input type="text" id="h_mkt_val" name="h_mkt_val" placeholder="e.g., $350,000">
+                  </div>
+                  <div class="iq-f">
+                    <label for="home_deeded">Deed holder(s)</label>
+                    <input type="text" id="home_deeded" name="home_deeded" placeholder="e.g., John &amp; Jane Smith">
+                  </div>
+                  <div class="iq-f">
+                    <label for="h_prior_carrier">Prior carrier</label>
+                    <input type="text" id="h_prior_carrier" name="h_prior_carrier" placeholder="e.g., Citizens">
+                  </div>
+                  <div class="iq-f">
+                    <label for="h_prior_len">Yrs with prior carrier</label>
+                    <input type="text" id="h_prior_len" name="h_prior_len" placeholder="e.g., 5">
+                  </div>
+                  <div class="iq-f">
+                    <label for="h_prior_exp">Prior policy expiration</label>
+                    <input type="date" id="h_prior_exp" name="h_prior_exp">
+                  </div>
+                  <div class="iq-f">
+                    <label for="h_cur_prem">Current annual premium</label>
+                    <input type="text" id="h_cur_prem" name="h_cur_prem" placeholder="e.g., $1,200">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card: Coverage Requested -->
+            <div class="iq-card">
+              <div class="iq-head">Coverage Requested</div>
+              <div class="iq-body">
+                <div class="iq-grid iq-c4">
+                  <div class="iq-f" id="home-cov-a-wrap">
+                    <label for="home_cov_a">Cov A — Dwelling (rebuild cost)</label>
+                    <input type="text" id="home_cov_a" name="home_cov_a" placeholder="e.g., $350,000">
+                  </div>
+                  <div class="iq-f" id="home-cov-b-wrap">
+                    <label for="home_cov_b">Cov B — Other structures</label>
+                    <input type="text" id="home_cov_b" name="home_cov_b" placeholder="e.g., $35,000">
+                  </div>
+                  <div class="iq-f">
+                    <label for="home_cov_c">Cov C — Personal property</label>
+                    <input type="text" id="home_cov_c" name="home_cov_c" placeholder="e.g., $100,000">
+                  </div>
+                  <div class="iq-f">
+                    <label for="home_cov_d">Cov D — Loss of use</label>
+                    <input type="text" id="home_cov_d" name="home_cov_d" placeholder="e.g., $30,000">
+                  </div>
+                  <div class="iq-f">
+                    <label for="home_liability">Liability</label>
+                    <select id="home_liability" name="home_liability">
+                      <option value="">Select…</option>
+                      <option>$300,000</option><option>$500,000</option>
+                      <option>$1,000,000</option>
+                      <option>Not sure — recommend</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label for="home_deductible">Deductible</label>
+                    <select id="home_deductible" name="home_deductible">
+                      <option value="">Select…</option>
+                      <option>$1,000</option><option>$2,500</option>
+                      <option>$5,000</option><option>$10,000</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label for="home_water_backup">Water backup coverage</label>
+                    <select id="home_water_backup" name="home_water_backup">
+                      <option value="">Select…</option>
+                      <option>No thanks</option>
+                      <option>$5,000</option><option>$10,000</option>
+                      <option>$25,000</option><option>$50,000</option>
+                      <option>$75,000</option><option>$100,000</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label>Service line coverage?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="home_service_line" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="home_service_line" value="Yes"> Yes</label>
+                      <label class="iq-ri"><input type="radio" name="home_service_line" value="Not sure"> Not sure</label>
+                    </div>
+                  </div>
+                  <div class="iq-f">
+                    <label>Personal Injury endorsement?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="home_personal_injury" value="Yes" checked> Yes</label>
+                      <label class="iq-ri"><input type="radio" name="home_personal_injury" value="No"> No</label>
+                    </div>
+                  </div>
+                  <div class="iq-f">
+                    <label for="h_pay_plan">Payment plan preference</label>
+                    <select id="h_pay_plan" name="h_pay_plan">
+                      <option value="">Select…</option>
+                      <option>Annual (one payment)</option>
+                      <option>Semi-annual</option>
+                      <option>Monthly EFT</option>
+                      <option>No preference</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card: Structure -->
+            <div class="iq-card" id="home-structure-card">
+              <div class="iq-head">Structure</div>
+              <div class="iq-body">
+                <div class="iq-grid iq-c4">
+                  <div class="iq-f">
+                    <label for="square_feet">Square footage (above ground)</label>
+                    <input type="number" id="square_feet" name="square_feet" placeholder="e.g., 2,200">
+                  </div>
+                  <div class="iq-f">
+                    <label for="home_stories">Stories</label>
+                    <select id="home_stories" name="home_stories">
+                      <option value="">Select…</option>
+                      <option>1 story (ranch)</option>
+                      <option>1.5 story</option>
+                      <option>2 stories</option>
+                      <option>Tri-level / split</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label for="home_construction">Construction type</label>
+                    <select id="home_construction" name="home_construction">
+                      <option value="">Select…</option>
+                      <option>Wood frame</option>
+                      <option>Brick</option>
+                      <option>Brick &amp; wood frame</option>
+                      <option>Log</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label for="siding">Exterior siding</label>
+                    <select id="siding" name="siding">
+                      <option value="">Select…</option>
+                      <option>Vinyl</option>
+                      <option>Brick</option>
+                      <option>Brick &amp; vinyl</option>
+                      <option>Wood</option>
+                      <option>Cement / fiber cement</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label for="home_bathrooms">Bathrooms</label>
+                    <select id="home_bathrooms" name="home_bathrooms">
+                      <option value="">Select…</option>
+                      <option>1</option><option>1.5</option><option>2</option>
+                      <option>2.5</option><option>3</option><option>3.5</option><option>4+</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label for="h_gar_cars">Garage cars</label>
+                    <select id="h_gar_cars" name="h_gar_cars">
+                      <option value="">Select…</option>
+                      <option>0 — no garage</option>
+                      <option>1</option><option>2</option><option>3+</option>
+                    </select>
+                  </div>
+                  <div class="iq-f iq-span2">
+                    <label>Garage type</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="h_gar_type" value="Attached"> Attached</label>
+                      <label class="iq-ri"><input type="radio" name="h_gar_type" value="Detached"> Detached</label>
+                      <label class="iq-ri"><input type="radio" name="h_gar_type" value="Built-in"> Built-in</label>
+                      <label class="iq-ri"><input type="radio" name="h_gar_type" value="None"> None</label>
+                    </div>
+                  </div>
+                  <div class="iq-f">
+                    <label>Basement?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="home_basement" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="home_basement" value="Yes"> Yes</label>
+                    </div>
+                  </div>
+                  <div class="iq-f" id="home-bsmt-pct-wrap" style="display:none;">
+                    <label for="h_bsmt_pct">Basement % finished</label>
+                    <select id="h_bsmt_pct" name="h_bsmt_pct">
+                      <option value="">Select…</option>
+                      <option>0% — unfinished</option>
+                      <option>Under 50%</option>
+                      <option>50–75%</option>
+                      <option>Over 75% — fully finished</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label>Walkout basement?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="home_basement_walkout" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="home_basement_walkout" value="Yes"> Yes</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card: Systems & Updates -->
+            <div class="iq-card" id="home-systems-card">
+              <div class="iq-head">Systems &amp; Updates</div>
+              <div class="iq-body">
+                <div class="iq-grid iq-c4">
+                  <div class="iq-f">
+                    <label for="home_roof_type">Roof type</label>
+                    <select id="home_roof_type" name="home_roof_type">
+                      <option value="">Select…</option>
+                      <option>Asphalt shingle</option>
+                      <option>Composite / synthetic shingle</option>
+                      <option>Metal</option>
+                      <option>Wood shake / wood shingle</option>
+                      <option>Tile</option><option>Slate</option><option>Other</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label for="home_roof_year">Roof last replaced (year)</label>
+                    <input type="number" id="home_roof_year" name="home_roof_year" placeholder="e.g., 2018" min="1950" max="2027">
+                  </div>
+                  <div class="iq-f">
+                    <label for="home_heat">Heating type</label>
+                    <select id="home_heat" name="home_heat">
+                      <option value="">Select…</option>
+                      <option>Natural gas (forced air)</option>
+                      <option>Natural gas (boiler / radiator)</option>
+                      <option>Electric</option>
+                      <option>Fuel oil</option>
+                      <option>Heat pump</option>
+                      <option>Geothermal</option>
+                      <option>Propane</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label for="h_heat_upd">Heating updated (year)</label>
+                    <input type="number" id="h_heat_upd" name="h_heat_upd" placeholder="e.g., 2015" min="1950" max="2027">
+                  </div>
+                  <div class="iq-f">
+                    <label>Fireplace?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="h_fire_pl" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="h_fire_pl" value="Yes"> Yes</label>
+                    </div>
+                  </div>
+                  <div class="iq-f">
+                    <label>Wood-burning stove?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="home_stove" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="home_stove" value="Yes"> Yes</label>
+                    </div>
+                  </div>
+                  <div class="iq-f" id="home-stove-room-wrap" style="display:none;">
+                    <label for="home_stove_room">Stove / insert location</label>
+                    <input type="text" id="home_stove_room" name="home_stove_room" placeholder="e.g., Living room" disabled>
+                  </div>
+                  <div class="iq-f">
+                    <label>Alarm monitored?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="home_alarm" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="home_alarm" value="Professional"> Professional</label>
+                      <label class="iq-ri"><input type="radio" name="home_alarm" value="Self"> Self-monitored</label>
+                    </div>
+                  </div>
+                  <div class="iq-f">
+                    <label>Circuit breakers (not fuse box)?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="h_breakers" value="Yes"> Yes</label>
+                      <label class="iq-ri"><input type="radio" name="h_breakers" value="No"> No (fuses)</label>
+                    </div>
+                  </div>
+                  <div class="iq-f">
+                    <label for="h_elec_upd">Electrical updated (year)</label>
+                    <input type="number" id="h_elec_upd" name="h_elec_upd" placeholder="e.g., 2010" min="1950" max="2027">
+                  </div>
+                  <div class="iq-f">
+                    <label for="h_plumb">Plumbing type</label>
+                    <select id="h_plumb" name="h_plumb">
+                      <option value="">Select…</option>
+                      <option>Copper</option><option>PEX</option>
+                      <option>PVC</option><option>Galvanized steel</option>
+                      <option>Cast iron</option><option>Mixed</option>
+                      <option>Not sure</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label for="h_plumb_upd">Plumbing updated (year)</label>
+                    <input type="number" id="h_plumb_upd" name="h_plumb_upd" placeholder="e.g., 2005" min="1950" max="2027">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card: Schedules — Valuable Items -->
+            <div class="iq-card">
+              <div class="iq-head">Schedules — Valuable Items</div>
+              <div class="iq-body">
+                <p style="font-size:.85rem;color:var(--text-muted,#555);margin:0 0 .75rem;">Standard home insurance limits payouts on certain items. Enter approximate values so we can add a rider if needed, or enter "none."</p>
+                <div class="iq-grid iq-c4">
+                  <div class="iq-f">
+                    <label for="home_jewelry_amt">Jewelry (total value)</label>
+                    <input type="text" id="home_jewelry_amt" name="home_jewelry_amt" placeholder="e.g., $8,000 or none">
+                  </div>
+                  <div class="iq-f">
+                    <label for="home_firearms_amt">Firearms (total value)</label>
+                    <input type="text" id="home_firearms_amt" name="home_firearms_amt" placeholder="e.g., $3,000 or none">
+                  </div>
+                  <div class="iq-f">
+                    <label for="home_fineart_amt">Fine art / antiques</label>
+                    <input type="text" id="home_fineart_amt" name="home_fineart_amt" placeholder="e.g., $5,000 or none">
+                  </div>
+                  <div class="iq-f">
+                    <label for="home_other_valuables">Furs / collectibles / other</label>
+                    <input type="text" id="home_other_valuables" name="home_other_valuables" placeholder="e.g., $2,000 or none">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card: Additional Risk -->
+            <div class="iq-card">
+              <div class="iq-head">Additional Risk</div>
+              <div class="iq-body">
+                <div class="iq-grid iq-c4">
+
+                  <div class="iq-sec-label">Dogs</div>
+
+                  <div class="iq-f">
+                    <label>Do you have a dog?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="home_dogs" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="home_dogs" value="Yes"> Yes</label>
+                    </div>
+                  </div>
+                  <div id="home-dog-count-wrap" class="iq-f" style="display:none;">
+                    <label for="home_dog_count">How many dogs?</label>
+                    <select id="home_dog_count" name="home_dog_count" disabled>
+                      <option value="">Select…</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4+">4 or more</option>
+                    </select>
+                  </div>
+                  <div id="home-dog-details-wrap" class="iq-span4" style="display:none;">
+                    <div id="home-dog-rows" style="display:flex;flex-direction:column;gap:.5rem;margin-top:.25rem;"></div>
+                  </div>
+
+                  <div class="iq-sec-label pool-tramp-item">Pool &amp; Trampoline</div>
+
+                  <div class="iq-f pool-tramp-item">
+                    <label>Pool / Hot Tub? <span style="font-weight:400;text-transform:none;">(check all that apply)</span></label>
+                    <div style="display:flex;flex-direction:column;gap:.3rem;margin-top:.3rem;">
+                      <label class="iq-ri"><input type="checkbox" id="home_pool_ig" name="home_pool_ig" value="Yes" class="pool-cb"> In-ground pool</label>
+                      <label class="iq-ri"><input type="checkbox" id="home_pool_ag" name="home_pool_ag" value="Yes" class="pool-cb"> Above-ground pool</label>
+                      <label class="iq-ri"><input type="checkbox" id="home_pool_hottub" name="home_pool_hottub" value="Yes" class="pool-cb"> Hot tub / spa</label>
+                    </div>
+                  </div>
+                  <div id="home-pool-features-wrap" class="iq-f iq-span3" style="display:none;">
+                    <div class="iq-grid iq-c3">
+                      <div id="home-pool-only-wrap" class="iq-span3" style="display:none;">
+                        <div class="iq-grid iq-c4" style="margin-bottom:.5rem;">
+                          <div class="iq-f">
+                            <label>Slide?</label>
+                            <div class="iq-rg">
+                              <label class="iq-ri"><input type="radio" name="h_slide" value="No" disabled> No</label>
+                              <label class="iq-ri"><input type="radio" name="h_slide" value="Yes" disabled> Yes</label>
+                            </div>
+                          </div>
+                          <div class="iq-f">
+                            <label>Diving board?</label>
+                            <div class="iq-rg">
+                              <label class="iq-ri"><input type="radio" name="h_dive" value="No" disabled> No</label>
+                              <label class="iq-ri"><input type="radio" name="h_dive" value="Yes" disabled> Yes</label>
+                            </div>
+                          </div>
+                          <div class="iq-f">
+                            <label>Pool fenced?</label>
+                            <div class="iq-rg">
+                              <label class="iq-ri"><input type="radio" name="h_pool_fence" value="No" disabled> No</label>
+                              <label class="iq-ri"><input type="radio" name="h_pool_fence" value="Yes" disabled> Yes</label>
+                            </div>
+                          </div>
+                          <div class="iq-f">
+                            <label>Locking gate?</label>
+                            <div class="iq-rg">
+                              <label class="iq-ri"><input type="radio" name="h_pool_gate" value="No" disabled> No</label>
+                              <label class="iq-ri"><input type="radio" name="h_pool_gate" value="Yes" disabled> Yes</label>
+                            </div>
+                          </div>
+                        </div><!-- /iq-c4 pool-only -->
+                      </div><!-- /home-pool-only-wrap -->
+                    </div><!-- /iq-c3 features inner -->
+                  </div><!-- /home-pool-features-wrap -->
+
+                  <div class="iq-f pool-tramp-item">
+                    <label>Trampoline?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="home_trampoline" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="home_trampoline" value="Yes"> Yes</label>
+                    </div>
+                  </div>
+                  <div id="home-tramp-features-wrap" class="iq-f iq-span3" style="display:none;">
+                    <div class="iq-grid iq-c2">
+                      <div class="iq-f">
+                        <label>Safety net enclosure?</label>
+                        <div class="iq-rg">
+                          <label class="iq-ri"><input type="radio" name="h_tramp_net" value="No" disabled> No</label>
+                          <label class="iq-ri"><input type="radio" name="h_tramp_net" value="Yes" disabled> Yes</label>
+                        </div>
+                      </div>
+                      <div class="iq-f">
+                        <label>In fenced yard?</label>
+                        <div class="iq-rg">
+                          <label class="iq-ri"><input type="radio" name="h_tramp_fence" value="No" disabled> No</label>
+                          <label class="iq-ri"><input type="radio" name="h_tramp_fence" value="Yes" disabled> Yes</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="iq-sec-label">Smart Home &amp; Safety</div>
+
+                  <div class="iq-f">
+                    <label>Water leak sensors?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="h_wsens" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="h_wsens" value="Yes"> Yes</label>
+                    </div>
+                  </div>
+                  <div class="iq-f">
+                    <label>Auto water shutoff?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="h_wshut" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="h_wshut" value="Yes"> Yes</label>
+                    </div>
+                  </div>
+                  <div class="iq-f iq-span2">
+                    <label>Whole-house generator?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="h_gen" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="h_gen" value="Permanent"> Permanently installed</label>
+                      <label class="iq-ri"><input type="radio" name="h_gen" value="Portable"> Portable</label>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Card: Home Use -->
+            <div class="iq-card">
+              <div class="iq-head">Home Use</div>
+              <div class="iq-body">
+                <div class="iq-grid iq-c4">
+                  <div class="iq-f iq-span2">
+                    <label>Business run from home?</label>
+                    <div class="iq-rg" style="flex-direction:column;gap:.15rem;">
+                      <label class="iq-ri"><input type="radio" name="home_business" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="home_business" value="Yes — office only"> Yes — office only (no customers)</label>
+                      <label class="iq-ri"><input type="radio" name="home_business" value="Yes — customers visit"> Yes — customers or employees visit</label>
+                    </div>
+                  </div>
+                  <div class="iq-f iq-span2">
+                    <label>Home rented to others?</label>
+                    <div class="iq-rg" style="flex-direction:column;gap:.15rem;">
+                      <label class="iq-ri"><input type="radio" name="home_rental_use" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="home_rental_use" value="Yes — occasionally"> Yes — occasionally (Airbnb / VRBO)</label>
+                      <label class="iq-ri"><input type="radio" name="home_rental_use" value="Yes — regularly"> Yes — regularly (long-term tenant)</label>
+                    </div>
+                  </div>
+                  <div class="iq-f">
+                    <label>Marijuana grown on property?</label>
+                    <div class="iq-rg">
+                      <label class="iq-ri"><input type="radio" name="h_mj" value="No"> No</label>
+                      <label class="iq-ri"><input type="radio" name="h_mj" value="Yes"> Yes</label>
+                    </div>
+                  </div>
+                  <div class="iq-f">
+                    <label for="home_claims_count">Claims in past 5 years</label>
+                    <select id="home_claims_count" name="home_claims_count">
+                      <option value="">Select…</option>
+                      <option>0 — none</option>
+                      <option>1</option><option>2</option>
+                      <option>3 or more</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card: Cross-sells -->
+            <div class="iq-card">
+              <div class="iq-head">Other Coverage</div>
+              <div class="iq-body">
+                <div class="iq-grid iq-c3">
+                  <div id="home-auto-crosssell-wrap" class="iq-f">
+                    <label for="home_want_auto">Add an auto quote?</label>
+                    <select id="home_want_auto" name="home_want_auto" data-cross-sell="line_auto">
+                      <option value="">Select…</option>
+                      <option>Yes</option><option>No</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label for="home_want_umbrella">Add an umbrella quote?</label>
+                    <select id="home_want_umbrella" name="home_want_umbrella" data-cross-sell="line_umbrella">
+                      <option value="">Select…</option>
+                      <option>Yes</option><option>No</option>
+                    </select>
+                  </div>
+                  <div class="iq-f">
+                    <label for="home_want_recreational">Own motorcycles, boats, ATVs, or snowmobiles?</label>
+                    <select id="home_want_recreational" name="home_want_recreational" data-cross-sell="line_recreational">
+                      <option value="">Select…</option>
+                      <option value="Yes">Yes — add a quote on those too</option>
+                      <option value="Yes — no quote">Yes, but no quote right now</option>
+                      <option value="No">No</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- end data-mode-only="full" -->
+
+        </div>
+      </div>
+
+      <!-- CONDO -->
+      <div id="section-condo" class="quote-section" hidden>
+        <div class="quote-section-head"><h2>Condo details</h2><p class="section-sub">For HO-6 policies that wrap around your association's master policy.</p></div>
+        <div class="quote-section-body">
+          <div class="field"><label for="condo_address">Condo address</label><input type="text" id="condo_address" name="condo_address" placeholder="Street, Unit, City, ZIP"></div>
+          <div class="field-group">
+            <div class="field"><label for="condo_year_built">Year built</label><input type="number" id="condo_year_built" name="condo_year_built"></div>
+            <div class="field"><label for="condo_square_feet">Square footage</label><input type="number" id="condo_square_feet" name="condo_square_feet"></div>
+          </div>
+          <div data-mode-only="full">
+            <div class="field-group">
+              <div class="field"><label for="condo_cov_a">Building improvements/betterments — Coverage A</label><input type="text" id="condo_cov_a" name="condo_cov_a" placeholder="e.g., $25,000"></div>
+              <div class="field"><label for="condo_cov_c">Personal Property — Coverage C</label><input type="text" id="condo_cov_c" name="condo_cov_c" placeholder="e.g., $50,000"></div>
+            </div>
+            <div class="field">
+              <label for="condo_master_policy">Master policy type (if known)</label>
+              <select id="condo_master_policy" name="condo_master_policy"><option value="">Select…</option><option>Bare walls / studs out</option><option>Single entity / walls in</option><option>All-inclusive</option><option>Not sure</option></select>
+            </div>
+            <div class="field"><label for="condo_extras">Anything else we should know?</label><textarea id="condo_extras" name="condo_extras" placeholder="HOA, rental usage, recent claims, etc."></textarea></div>
+            <div class="field">
+              <label for="condo_want_umbrella">Would you like an umbrella quote too?</label>
+              <select id="condo_want_umbrella" name="condo_want_umbrella" data-cross-sell="line_umbrella">
+                <option value="">Select…</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RENTERS -->
+      <div id="section-renters" class="quote-section" hidden>
+        <div class="quote-section-head"><h2>Renters details</h2><p class="section-sub">Protects your stuff and your liability while you rent.</p></div>
+        <div class="quote-section-body">
+          <div class="field"><label for="renters_address">Rental address</label><input type="text" id="renters_address" name="renters_address" placeholder="Street, Unit, City, ZIP"></div>
+          <div data-mode-only="full">
+            <div class="field-group">
+              <div class="field"><label for="renters_cov_c">Personal Property coverage requested</label><input type="text" id="renters_cov_c" name="renters_cov_c" placeholder="e.g., $30,000"></div>
+              <div class="field">
+                <label for="renters_liability">Personal liability coverage</label>
+                <select id="renters_liability" name="renters_liability"><option value="">Select…</option><option>$100,000</option><option>$300,000</option><option>$500,000</option><option>Not sure — recommend</option></select>
+              </div>
+            </div>
+            <div class="field"><label for="renters_extras">Anything else we should know?</label><textarea id="renters_extras" name="renters_extras" placeholder="Roommates, dogs, expensive items to schedule, etc."></textarea></div>
+            <div class="field">
+              <label for="renters_want_umbrella">Would you like an umbrella quote too?</label>
+              <select id="renters_want_umbrella" name="renters_want_umbrella" data-cross-sell="line_umbrella">
+                <option value="">Select…</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RENTAL PROPERTY -->
+      <div id="section-rental" class="quote-section" hidden>
+        <div class="quote-section-head"><h2>Rental property details</h2><p class="section-sub">A property you own and rent out to tenants.</p></div>
+        <div class="quote-section-body">
+          <div class="field"><label for="rental_address">Property address</label><input type="text" id="rental_address" name="rental_address" placeholder="Street, City, ZIP"></div>
+          <div class="field-group">
+            <div class="field"><label for="rental_units">Number of units</label><input type="number" id="rental_units" name="rental_units" min="1"></div>
+            <div class="field">
+              <label for="rental_type">Property type</label>
+              <select id="rental_type" name="rental_type"><option value="">Select…</option><option>Single-family rental</option><option>Duplex</option><option>Triplex / Fourplex</option><option>Apartment building (5+ units)</option><option>Short-term rental (Airbnb/VRBO)</option></select>
+            </div>
+          </div>
+          <div data-mode-only="full">
+            <div class="field-group">
+              <div class="field"><label for="rental_year_built">Year built</label><input type="number" id="rental_year_built" name="rental_year_built"></div>
+              <div class="field"><label for="rental_square_feet">Square footage</label><input type="number" id="rental_square_feet" name="rental_square_feet"></div>
+            </div>
+            <div class="field-group">
+              <div class="field"><label for="rental_cov_a">Dwelling coverage requested</label><input type="text" id="rental_cov_a" name="rental_cov_a" placeholder="e.g., $250,000"></div>
+              <div class="field"><label for="rental_occupied">Currently occupied?</label><select id="rental_occupied" name="rental_occupied"><option value="">Select…</option><option>Yes — tenant in place</option><option>No — vacant</option><option>Owner-occupied (one unit)</option></select></div>
+            </div>
+            <div class="field"><label for="rental_extras">Anything else we should know?</label><textarea id="rental_extras" name="rental_extras" placeholder="Recent renovations, claims, lease length, etc."></textarea></div>
+            <div class="field">
+              <label for="rental_want_umbrella">Would you like an umbrella quote too?</label>
+              <select id="rental_want_umbrella" name="rental_want_umbrella" data-cross-sell="line_umbrella"><option value="">Select…</option><option>Yes</option><option>No</option></select>
+              <p class="help">Rental property owners often need umbrella for protection against tenant lawsuits.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LIFE -->
+      <div id="section-life" class="quote-section" hidden>
+        <div class="quote-section-head"><h2>Life insurance details</h2><p class="section-sub">Helps us match you with the right type and amount.</p></div>
+        <div class="quote-section-body">
+          <div class="field-group">
+            <div class="field"><label for="life_type">Coverage type</label><select id="life_type" name="life_type"><option value="">Select…</option><option>Term (10 years)</option><option>Term (20 years)</option><option>Term (30 years)</option><option>Whole Life</option><option>Universal Life</option><option>Not sure — recommend</option></select></div>
+            <div class="field"><label for="life_amount">Coverage amount</label><select id="life_amount" name="life_amount"><option value="">Select…</option><option>$100,000</option><option>$250,000</option><option>$500,000</option><option>$1,000,000</option><option>$2,000,000+</option><option>Not sure — recommend</option></select></div>
+          </div>
+          <div class="field-group">
+            <div class="field"><label for="health">General health</label><select id="health" name="health"><option value="">Select…</option><option>Excellent</option><option>Very good</option><option>Good</option><option>Average</option><option>Below average</option></select></div>
+            <div class="field"><label for="tobacco">Tobacco use in past 12 months?</label><select id="tobacco" name="tobacco"><option value="">Select…</option><option>No</option><option>Yes</option></select></div>
+          </div>
+          <div data-mode-only="full">
+            <div class="field-group">
+              <div class="field"><label for="life_height">Height</label><input type="text" id="life_height" name="life_height" placeholder="e.g., 5'10&quot;"></div>
+              <div class="field"><label for="life_weight">Weight (lb)</label><input type="number" id="life_weight" name="life_weight"></div>
+            </div>
+            <div class="field"><label for="life_conditions">Any major medical conditions or medications?</label><textarea id="life_conditions" name="life_conditions" placeholder="High blood pressure, diabetes, etc. — or 'none'"></textarea></div>
+            <div class="field"><label for="life_beneficiary">Intended beneficiary (relationship)</label><input type="text" id="life_beneficiary" name="life_beneficiary" placeholder="e.g., spouse, children, estate"></div>
+            <div class="field"><label for="life_want_umbrella">Would you like an umbrella quote too?</label><select id="life_want_umbrella" name="life_want_umbrella" data-cross-sell="line_umbrella"><option value="">Select…</option><option>Yes</option><option>No</option></select></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- UMBRELLA -->
+      <div id="section-umbrella" class="quote-section" hidden>
+        <div class="quote-section-head"><h2>Umbrella details</h2><p class="section-sub">Extra liability protection layered over your auto/home policies.</p></div>
+        <div class="quote-section-body">
+          <div class="field"><label for="umbrella_amount">Umbrella amount requested</label><select id="umbrella_amount" name="umbrella_amount"><option value="">Select…</option><option>$1,000,000</option><option>$2,000,000</option><option>$5,000,000</option><option>Not sure — recommend</option></select></div>
+          <div data-mode-only="full">
+            <div class="field"><label for="umbrella_underlying">Underlying policies you currently carry</label><textarea id="umbrella_underlying" name="umbrella_underlying" placeholder="e.g., Auto with Auto-Owners $250/500/100; Home with Auto-Owners $300k liability"></textarea></div>
+            <div class="field"><label for="umbrella_assets">Approximate net worth (helps us size coverage)</label><select id="umbrella_assets" name="umbrella_assets"><option value="">Select…</option><option>Under $500,000</option><option>$500,000 - $1M</option><option>$1M - $2M</option><option>$2M - $5M</option><option>$5M+</option><option>Prefer not to say</option></select><p class="help">Used only to recommend an appropriate umbrella amount.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RECREATIONAL -->
+      <div id="section-recreational" class="quote-section" hidden>
+        <div class="quote-section-head"><h2>Boat / Motorcycle / RV / ATV details</h2><p class="section-sub">List each toy you'd like to insure.</p></div>
+        <div class="quote-section-body">
+          <div class="field"><label for="rec_items">List each vehicle — type, year, make, model</label><textarea id="rec_items" name="rec_items" placeholder="e.g.,&#10;2021 Harley-Davidson Street Glide&#10;2019 Sea Ray 230 SLX boat"></textarea></div>
+          <div data-mode-only="full">
+            <div class="field"><label for="rec_usage">How are they used?</label><textarea id="rec_usage" name="rec_usage" placeholder="Pleasure only, commuting, tournament fishing, etc."></textarea></div>
+            <div class="field-group">
+              <div class="field"><label for="rec_storage">Where are they stored?</label><input type="text" id="rec_storage" name="rec_storage" placeholder="e.g., garage, marina slip, storage facility"></div>
+              <div class="field"><label for="rec_value">Approximate combined value</label><input type="text" id="rec_value" name="rec_value" placeholder="e.g., $35,000"></div>
+            </div>
+            <div class="field"><label for="rec_riders">Riders/operators — names &amp; experience</label><textarea id="rec_riders" name="rec_riders" placeholder="e.g., John Smith — 15 years riding"></textarea></div>
+            <div class="field"><label for="rec_want_umbrella">Would you like an umbrella quote too?</label><select id="rec_want_umbrella" name="rec_want_umbrella" data-cross-sell="line_umbrella"><option value="">Select…</option><option>Yes</option><option>No</option></select><p class="help">Boats and motorcycles especially benefit from umbrella coverage.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BUSINESS -->
+      <div id="section-business" class="quote-section" hidden>
+        <div class="quote-section-head"><h2>Business / Commercial details</h2><p class="section-sub">Tell us about your operation so we can match the right markets.</p></div>
+        <div class="quote-section-body">
+          <div class="field"><label for="business_name">Business name</label><input type="text" id="business_name" name="business_name"></div>
+          <div class="field"><label for="business_type">What does the business do?</label><textarea id="business_type" name="business_type" placeholder="e.g., HVAC contractor, restaurant, software consulting"></textarea></div>
+          <div class="field-group">
+            <div class="field"><label for="annual_revenue">Annual sales / revenue</label><input type="text" id="annual_revenue" name="annual_revenue" placeholder="e.g., $500,000"></div>
+            <div class="field"><label for="annual_payroll">Annual payroll</label><input type="text" id="annual_payroll" name="annual_payroll" placeholder="e.g., $200,000"></div>
+          </div>
+          <div class="field"><label for="business_lines">Coverages needed (or coverages on current policy)</label><textarea id="business_lines" name="business_lines" placeholder="e.g., General Liability, Workers Comp, Commercial Property, Commercial Auto"></textarea></div>
+          <div data-mode-only="full">
+            <div class="field-group">
+              <div class="field"><label for="business_building_cov">Building coverage requested</label><input type="text" id="business_building_cov" name="business_building_cov" placeholder="e.g., $400,000 or 'leased space'"></div>
+              <div class="field"><label for="business_contents_cov">Contents coverage requested</label><input type="text" id="business_contents_cov" name="business_contents_cov" placeholder="e.g., $75,000"></div>
+            </div>
+            <div class="field-group">
+              <div class="field"><label for="business_years">Years in business</label><input type="number" id="business_years" name="business_years" min="0"></div>
+              <div class="field"><label for="business_employees"># of employees (incl. owners)</label><input type="number" id="business_employees" name="business_employees" min="0"></div>
+            </div>
+            <div class="field"><label for="business_locations">Business location(s)</label><textarea id="business_locations" name="business_locations" placeholder="Street, City, ZIP for each location"></textarea></div>
+            <div class="field"><label for="business_claims">Any claims in the past 5 years?</label><textarea id="business_claims" name="business_claims" placeholder="Date, type, amount — or 'none'"></textarea></div>
+            <fieldset>
+              <legend>Other coverage to quote?</legend>
+              <div class="field-group">
+                <div class="field"><label for="business_want_wc">Do you also need Workers Compensation?</label><select id="business_want_wc" name="business_want_wc" data-cross-sell="line_workcomp"><option value="">Select…</option><option>Yes</option><option>No</option></select></div>
+                <div class="field"><label for="business_want_auto">Would you like a Commercial Auto quote too?</label><select id="business_want_auto" name="business_want_auto"><option value="">Select…</option><option>Yes</option><option>No</option></select><p class="help">Vehicles owned by or used for the business need commercial auto, not personal auto.</p></div>
+              </div>
+              <div class="field"><label for="business_want_umbrella">Would you like a Commercial Umbrella quote too?</label><select id="business_want_umbrella" name="business_want_umbrella" data-cross-sell="line_umbrella"><option value="">Select…</option><option>Yes</option><option>No</option></select></div>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+
+      <!-- WORKERS COMP -->
+      <div id="section-workcomp" class="quote-section" hidden>
+        <div class="quote-section-head"><h2>Workers Compensation details</h2><p class="section-sub">Coverage for on-the-job injuries to your employees.</p></div>
+        <div class="quote-section-body">
+          <div class="field-group">
+            <div class="field"><label for="wc_employees"># of full-time employees</label><input type="number" id="wc_employees" name="wc_employees" min="0"></div>
+            <div class="field"><label for="wc_pt_employees"># of part-time employees</label><input type="number" id="wc_pt_employees" name="wc_pt_employees" min="0"></div>
+          </div>
+          <div class="field"><label for="wc_job_classes">Job classes / what employees do</label><textarea id="wc_job_classes" name="wc_job_classes" placeholder="e.g., 5 office clerical, 8 carpentry / framing, 2 roofers"></textarea></div>
+          <div data-mode-only="full">
+            <div class="field-group">
+              <div class="field"><label for="wc_payroll">Annual payroll by class</label><input type="text" id="wc_payroll" name="wc_payroll" placeholder="e.g., Office $150k / Carpentry $400k"></div>
+              <div class="field"><label for="wc_mod">Current experience modification (Ex-Mod)</label><input type="text" id="wc_mod" name="wc_mod" placeholder="e.g., 1.00 or unknown"></div>
+            </div>
+            <div class="field"><label for="wc_carrier">Current Workers Comp carrier</label><input type="text" id="wc_carrier" name="wc_carrier" placeholder="e.g., AF Group, Accident Fund, none"></div>
+            <div class="field"><label for="wc_claims">Workers Comp claims in past 5 years</label><textarea id="wc_claims" name="wc_claims" placeholder="Date, brief description, paid amount — or 'none'"></textarea></div>
+            <fieldset>
+              <legend>Other coverage to quote?</legend>
+              <div class="field-group">
+                <div class="field"><label for="wc_want_business">Would you like a Business / Commercial quote too?</label><select id="wc_want_business" name="wc_want_business" data-cross-sell="line_business"><option value="">Select…</option><option>Yes</option><option>No</option></select></div>
+                <div class="field"><label for="wc_want_umbrella">Would you like a Commercial Umbrella quote too?</label><select id="wc_want_umbrella" name="wc_want_umbrella" data-cross-sell="line_umbrella"><option value="">Select…</option><option>Yes</option><option>No</option></select></div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMMENTS + SUBMIT -->
+      <h2 style="margin-top:1.5rem;">Anything else?</h2>
+      <div class="field"><label for="comments">Comments, questions, or anything else we should know</label><textarea id="comments" name="comments"></textarea></div>
+
+      <div class="quote-submit-row">
+        <div class="consent-notice">
+          <label class="checkbox-row">
+            <input type="checkbox" id="consent" name="consent" required>
+            <span><strong>Required:</strong> I agree to receive SMS text messages, calls, and emails from J. Jacobs &amp; Associates Insurance about my quote request and policies at the phone number and email I provide. Message frequency varies; message &amp; data rates may apply. Reply STOP to opt out or HELP for help. My mobile information will not be shared with or sold to third parties. See our <a href="../sms-terms/" target="_blank" rel="noopener">SMS Terms</a> and <a href="../privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.</span>
+          </label>
+        </div>
+        <!-- Cloudflare Turnstile — verifies the visitor is human before submission -->
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAADScpMxfNdQDkoBm" data-theme="light" data-refresh-expired="auto" style="margin-bottom:1rem;"></div>
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Get My Free Quote</button>
+        <p class="submit-helper">A licensed agent will follow up within one business day. After submitting you&rsquo;ll be offered a PDF copy of your request for your records.</p>
+      </div>
+    </form>
+
+    <!-- Success state -->
+    <div id="quote-success" hidden style="text-align:center; padding:3rem 1.5rem; max-width:600px; margin:2rem auto;">
+      <div style="width:64px; height:64px; border-radius:50%; background:var(--primary,#14365e); color:#fff; display:inline-flex; align-items:center; justify-content:center; font-size:2rem; margin-bottom:1.25rem; line-height:1;">&#10003;</div>
+      <h2 style="color:var(--primary,#14365e); margin-bottom:.75rem;">Quote Request Received!</h2>
+      <p style="font-size:1.05rem; margin-bottom:.5rem;">Thanks, <strong><span data-firstname>there</span></strong>! A licensed agent will reach out within one business day with your options.</p>
+      <p style="margin:.5rem 0 1.5rem; color:var(--text-muted,#555);">Questions in the meantime? Call <a href="tel:+12486936455"><strong>(248) 693-6455</strong></a> Monday&ndash;Friday, 9am&ndash;5pm.</p>
+      <div style="text-align:left; background:#fbfcfd; border:1px solid #e2e8f0; border-radius:10px; padding:1.25rem 1.5rem; margin:0 auto 1.5rem; max-width:520px;">
+        <p style="margin:0 0 .5rem; font-weight:700; color:var(--primary,#14365e);">Speed things up: send us your current declarations pages</p>
+        <p style="margin:0 0 .75rem; font-size:.95rem; color:var(--text-muted,#555);">Your dec pages (the summary page from your current policy) help us match or beat your coverage. Send them whichever way is easiest:</p>
+        <ol style="margin:0; padding-left:1.25rem; font-size:.95rem; color:#334155; line-height:1.7;">
+          <li><strong>Reply to the confirmation email</strong> we just sent and attach a photo or scan.</li>
+          <li><strong>Text photos to <a href="sms:+12482419549">(248) 241-9549</a></strong> &mdash; please include your name.</li>
+          <li><strong>Use the secure upload link</strong> in that confirmation email &mdash; works great from your phone.</li>
+        </ol>
+        <p style="margin:.75rem 0 0; font-size:.85rem; color:var(--text-muted,#777);">Can&rsquo;t find them? No problem &mdash; just tell us your current carrier and we&rsquo;ll take it from there.</p>
+      </div>
+      <button id="btn-download-pdf" class="btn btn-primary" style="font-size:1rem; padding:.75rem 1.75rem;">Download Your Quote Summary (PDF)</button>
+      <p style="margin-top:.75rem; font-size:.875rem; color:var(--text-muted,#555);">Save this copy for your records &mdash; it contains everything you just submitted.</p>
+    </div>
+    <p class="text-center" style="margin-top:1rem; color:var(--text-muted); font-size:.9rem;">
+      Prefer to call? Reach us at <a href="tel:+12486936455"><strong>(248) 693-6455</strong></a> Monday-Friday, 9am-5pm.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<section class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">After you hit submit</span>
+    <h2>What happens next</h2>
+    <div class="steps" style="margin-top:2rem;">
+      <div class="step"><h3>We get it right away</h3><p>Your request comes straight to our Lake Orion office &mdash; no call center, no middleman.</p></div>
+      <div class="step"><h3>A licensed agent shops it</h3><p>We compare 20+ A-rated carriers to find your best combination of price and protection.</p></div>
+      <div class="step"><h3>We call you with options</h3><p>A licensed Michigan agent follows up personally, usually within one business day, and walks you through it in plain English.</p></div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">What clients say</span>
+    <h2>Real reviews from real Michigan clients</h2>
+    <p class="lead" style="margin-top:.5rem;"><span class="stars">★★★★★</span> <strong>4.9</strong> average from <strong>808</strong> verified Google reviews</p>
+    <div class="grid grid-3" style="margin-top:2rem;">
+      <article class="review-card"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"I received great service from Todd! He helped me save money on my home and car insurance and took the time to help me understand my coverage."</blockquote><cite>A. Customer</cite><div class="source">Verified Google review</div></article>
+      <article class="review-card"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"I've been a customer for 10 years and have always been satisfied. Reachable, knowledgeable, and they respond in amazing time."</blockquote><cite>Long-time client</cite><div class="source">Verified Google review</div></article>
+      <article class="review-card"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"I always get top-notch care with J. Jacobs &mdash; that's why I've been with them over 25 years. They always make sure I get the best rates."</blockquote><cite>25-year client</cite><div class="source">Verified Google review</div></article>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="../assets/img/logo.jpeg" alt="J. Jacobs and Associates"></div>
+        <h4>J. Jacobs &amp; Associates</h4>
+        <p>Family-owned independent insurance agency serving Michigan since 1981. We shop 20+ carriers so you don&rsquo;t have to.</p>
+        <p style="margin-top:1rem;">
+          <strong style="color:#fff;">4301 S. Baldwin Rd</strong><br>
+          Lake Orion, Michigan 48359<br>
+          <a href="tel:+12486936455">(248) 693-6455</a><br>
+          <a href="mailto:Support@jjainsurance.com">Support@jjainsurance.com</a>
+        </p>
+      </div>
+      <div>
+        <h4>Insurance</h4>
+        <ul>
+          <li><a href="../personal/">Personal Insurance</a></li>
+          <li><a href="../personal/auto-insurance/">Auto Insurance</a></li>
+          <li><a href="../personal/home-insurance/">Home Insurance</a></li>
+          <li><a href="../personal/life-insurance/">Life Insurance</a></li>
+          <li><a href="../business/">Commercial Insurance</a></li>
+          <li><a href="../business/workers-compensation/">Workers Compensation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Agency</h4>
+        <ul>
+          <li><a href="../about/">About Us</a></li>
+          <li><a href="../team/">Our Team</a></li>
+          <li><a href="../carriers/">Our Carriers</a></li>
+          <li><a href="../reviews/">Reviews</a></li>
+          <li><a href="../service/">Service Center</a></li>
+          <li><a href="../billing-claims/">Billing &amp; Claims</a></li>
+          <li><a href="../faq/">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-row">
+          <a href="https://www.facebook.com/JacobsandAssociates/" aria-label="Facebook" rel="noopener" target="_blank">f</a>
+          <a href="https://www.instagram.com/jjacobs_and_associates/" aria-label="Instagram" rel="noopener" target="_blank">IG</a>
+          <a href="https://www.linkedin.com/in/joe-jacobs-7a354422/" aria-label="LinkedIn" rel="noopener" target="_blank">in</a>
+        </div>
+        <ul style="margin-top:1.25rem;">
+          <li><a href="../contact/">Contact Us</a></li>
+          <li><a href="../privacy-policy/">Privacy Policy</a></li>
+          <li><a href="../accessibility/">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-current-year>2026</span> J. Jacobs &amp; Associates Insurance. All rights reserved.</span>
+      <span>Independent Insurance Agency &middot; Lake Orion, Michigan</span>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/site.v2.js?v=20260702" defer></script>
+<!-- jsPDF — client-side PDF generation for the quote summary download -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+<script src="../assets/js/quote-pdf.js?v=20260612a"></script>
+<script>
+// Auto quote form — dynamic vehicle/driver rows + coverage logic
+(function () {
+  var MAX = 4;
+  var vCount = 1, dCount = 1;
+
+  // Helper: get checked radio value by name
+  function radioVal(name) {
+    var r = document.querySelector('[name="' + name + '"]:checked');
+    return r ? r.value : '';
+  }
+
+  // Helper: add change listener to all radios with given name
+  function onRadioChange(name, fn) {
+    document.querySelectorAll('[name="' + name + '"]').forEach(function (r) {
+      r.addEventListener('change', fn);
+    });
+  }
+
+  // ── Vehicle row template (full version with data-mode-only="full" block) ──
+  function vehicleRow(n) {
+    return '<div class="repeatable-row vehicle-row" data-idx="' + n + '">' +
+      '<div class="row-label">Vehicle ' + n + '</div>' +
+      '<div class="field-group" style="align-items:flex-end;flex-wrap:wrap;">' +
+        '<div class="field" style="flex:0 0 88px;min-width:80px;">' +
+          '<label for="vehicle_' + n + '_year">Year</label>' +
+          '<input type="number" id="vehicle_' + n + '_year" name="vehicle_' + n + '_year" min="1960" max="2027" placeholder="2022">' +
+        '</div>' +
+        '<div class="field">' +
+          '<label for="vehicle_' + n + '_make">Make</label>' +
+          '<input type="text" id="vehicle_' + n + '_make" name="vehicle_' + n + '_make" placeholder="e.g., Ford">' +
+        '</div>' +
+        '<div class="field">' +
+          '<label for="vehicle_' + n + '_model">Model</label>' +
+          '<input type="text" id="vehicle_' + n + '_model" name="vehicle_' + n + '_model" placeholder="e.g., F-150">' +
+        '</div>' +
+        '<button type="button" class="btn-row-remove" data-target="vehicle-list" aria-label="Remove vehicle ' + n + '">&#x2715; Remove</button>' +
+      '</div>' +
+      '<div class="field-group" style="margin-top:.5rem;">' +
+        '<div class="field">' +
+          '<label for="vehicle_' + n + '_collision">Collision coverage on this vehicle?</label>' +
+          '<select id="vehicle_' + n + '_collision" name="vehicle_' + n + '_collision" class="vehicle-collision">' +
+            '<option value="">Select…</option>' +
+            '<option value="Yes">Yes — include collision</option>' +
+            '<option value="No">No — liability only</option>' +
+          '</select>' +
+        '</div>' +
+      '</div>' +
+      '<div data-mode-only="full" style="margin-top:.6rem;">' +
+        '<div class="iq-grid iq-c4">' +
+          '<div class="iq-f">' +
+            '<label for="vehicle_' + n + '_vin">VIN</label>' +
+            '<input type="text" id="vehicle_' + n + '_vin" name="vehicle_' + n + '_vin" placeholder="optional" maxlength="17">' +
+          '</div>' +
+          '<div class="iq-f">' +
+            '<label for="vehicle_' + n + '_title">Title held by</label>' +
+            '<select id="vehicle_' + n + '_title" name="vehicle_' + n + '_title">' +
+              '<option value="">Select…</option><option>Insured</option><option>Spouse</option><option>Both</option><option>Other</option>' +
+            '</select>' +
+          '</div>' +
+          '<div class="iq-f">' +
+            '<label>Garaged at home address?</label>' +
+            '<div class="iq-rg">' +
+              '<label class="iq-ri"><input type="radio" name="vehicle_' + n + '_gar" value="Yes"> Yes</label>' +
+              '<label class="iq-ri"><input type="radio" name="vehicle_' + n + '_gar" value="No"> No</label>' +
+            '</div>' +
+          '</div>' +
+          '<div class="iq-f">' +
+            '<label>Lien / lease?</label>' +
+            '<div class="iq-rg">' +
+              '<label class="iq-ri"><input type="radio" name="vehicle_' + n + '_lien" value="None"> None</label>' +
+              '<label class="iq-ri"><input type="radio" name="vehicle_' + n + '_lien" value="Lien"> Lien</label>' +
+              '<label class="iq-ri"><input type="radio" name="vehicle_' + n + '_lien" value="Lease"> Lease</label>' +
+            '</div>' +
+          '</div>' +
+          '<div class="iq-f">' +
+            '<label>Rideshare / delivery use?</label>' +
+            '<div class="iq-rg">' +
+              '<label class="iq-ri"><input type="radio" name="vehicle_' + n + '_rs" value="No"> No</label>' +
+              '<label class="iq-ri"><input type="radio" name="vehicle_' + n + '_rs" value="Yes"> Yes</label>' +
+            '</div>' +
+          '</div>' +
+          '<div class="iq-f">' +
+            '<label>Business use?</label>' +
+            '<div class="iq-rg">' +
+              '<label class="iq-ri"><input type="radio" name="vehicle_' + n + '_biz" value="No"> No</label>' +
+              '<label class="iq-ri"><input type="radio" name="vehicle_' + n + '_biz" value="Yes"> Yes</label>' +
+            '</div>' +
+          '</div>' +
+          '<div class="iq-f iq-span2">' +
+            '<label>Collision type on this vehicle</label>' +
+            '<div class="iq-rg">' +
+              '<label class="iq-ri"><input type="radio" name="vehicle_' + n + '_coll_type" value="Broad"> Broad</label>' +
+              '<label class="iq-ri"><input type="radio" name="vehicle_' + n + '_coll_type" value="Standard"> Standard</label>' +
+              '<label class="iq-ri"><input type="radio" name="vehicle_' + n + '_coll_type" value="None"> None</label>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  // ── Driver row template ───────────────────────────────────────────────────
+  function driverRow(n) {
+    return '<div class="repeatable-row driver-row" data-idx="' + n + '">' +
+      '<div class="row-label">Driver ' + n + '</div>' +
+      '<div class="field-group" style="align-items:flex-end;flex-wrap:wrap;">' +
+        '<div class="field">' +
+          '<label for="driver_' + n + '_first">First name</label>' +
+          '<input type="text" id="driver_' + n + '_first" name="driver_' + n + '_first" placeholder="First name">' +
+        '</div>' +
+        '<div class="field">' +
+          '<label for="driver_' + n + '_last">Last name</label>' +
+          '<input type="text" id="driver_' + n + '_last" name="driver_' + n + '_last" placeholder="Last name">' +
+        '</div>' +
+        '<div class="field" style="flex:0 0 155px;min-width:130px;">' +
+          '<label for="driver_' + n + '_dob">Date of birth</label>' +
+          '<input type="date" id="driver_' + n + '_dob" name="driver_' + n + '_dob">' +
+        '</div>' +
+        '<div class="field" style="flex:0 0 115px;min-width:100px;">' +
+          '<label for="driver_' + n + '_gender">Gender</label>' +
+          '<select id="driver_' + n + '_gender" name="driver_' + n + '_gender">' +
+            '<option value="">Select…</option><option>Male</option><option>Female</option>' +
+          '</select>' +
+        '</div>' +
+        '<button type="button" class="btn-row-remove" data-target="driver-list" aria-label="Remove driver ' + n + '">&#x2715; Remove</button>' +
+      '</div>' +
+      '<div class="field-group" style="margin-top:.5rem;">' +
+        '<div class="field">' +
+          '<label for="driver_' + n + '_incidents">Any violations or claims in the last 3 years?</label>' +
+          '<select id="driver_' + n + '_incidents" name="driver_' + n + '_incidents" class="incident-select">' +
+            '<option value="">Select…</option><option value="No">No</option><option value="Yes">Yes</option>' +
+          '</select>' +
+        '</div>' +
+        '<div class="field incident-detail" style="display:none;">' +
+          '<label for="driver_' + n + '_incidents_detail">Brief description</label>' +
+          '<input type="text" id="driver_' + n + '_incidents_detail" name="driver_' + n + '_incidents_detail" placeholder="e.g., Speeding ticket 06/2024">' +
+        '</div>' +
+      '</div>' +
+      '<div data-mode-only="full" style="margin-top:.6rem;">' +
+        '<div class="iq-grid iq-c4">' +
+          '<div class="iq-f">' +
+            '<label for="driver_' + n + '_occ">Occupation</label>' +
+            '<input type="text" id="driver_' + n + '_occ" name="driver_' + n + '_occ" placeholder="e.g., Teacher">' +
+          '</div>' +
+          '<div class="iq-f">' +
+            '<label>License status</label>' +
+            '<div class="iq-rg">' +
+              '<label class="iq-ri"><input type="radio" name="driver_' + n + '_lic" value="Licensed"> Licensed</label>' +
+              '<label class="iq-ri"><input type="radio" name="driver_' + n + '_lic" value="Permit"> Permit</label>' +
+              '<label class="iq-ri"><input type="radio" name="driver_' + n + '_lic" value="None"> None</label>' +
+            '</div>' +
+          '</div>' +
+          '<div class="iq-f">' +
+            '<label for="driver_' + n + '_edu">Education level</label>' +
+            '<select id="driver_' + n + '_edu" name="driver_' + n + '_edu">' +
+              '<option value="">Select…</option><option>No HS Diploma</option><option>HS Diploma</option>' +
+              '<option>Some College</option><option>4-yr Degree</option><option>Graduate Degree</option>' +
+            '</select>' +
+          '</div>' +
+          '<div class="iq-f">' +
+            '<label>Good student discount?</label>' +
+            '<div class="iq-rg">' +
+              '<label class="iq-ri"><input type="radio" name="driver_' + n + '_gs" value="No"> No</label>' +
+              '<label class="iq-ri"><input type="radio" name="driver_' + n + '_gs" value="Yes"> Yes</label>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  // ── Show/hide remove buttons ──────────────────────────────────────────────
+  function refreshRemove(listId, rowSel) {
+    var list = document.getElementById(listId);
+    if (!list) return;
+    var rows = list.querySelectorAll(rowSel);
+    rows.forEach(function (r) {
+      var btn = r.querySelector('.btn-row-remove');
+      if (btn) btn.style.display = rows.length > 1 ? '' : 'none';
+    });
+  }
+
+  // ── Incident detail toggles ───────────────────────────────────────────────
+  function wireIncidents() {
+    document.querySelectorAll('.incident-select').forEach(function (sel) {
+      if (sel._wired) return;
+      sel._wired = true;
+      sel.addEventListener('change', function () {
+        var detail = this.closest('.field-group').querySelector('.incident-detail');
+        if (detail) detail.style.display = this.value === 'Yes' ? '' : 'none';
+      });
+    });
+  }
+
+  // ── Comp lock: mandatory when any vehicle has collision ───────────────────
+  // auto_comp is now a hidden input; we just update its value and show the note
+  var compNote = document.getElementById('comp-lock-note');
+
+  function anyCollision() {
+    var found = false;
+    document.querySelectorAll('.vehicle-collision').forEach(function (s) {
+      if (s.value === 'Yes') found = true;
+    });
+    return found;
+  }
+
+  function updateCompLock() {
+    var locked = anyCollision();
+    var autoComp = document.getElementById('auto_comp');
+    if (autoComp) autoComp.value = locked ? 'Yes' : '';
+    if (compNote) compNote.style.display = locked ? 'block' : 'none';
+  }
+
+  document.addEventListener('change', function (e) {
+    if (e.target.classList.contains('vehicle-collision')) updateCompLock();
+  });
+
+  // ── Add vehicle ───────────────────────────────────────────────────────────
+  var addVBtn = document.getElementById('add-vehicle');
+  if (addVBtn) {
+    addVBtn.addEventListener('click', function () {
+      if (vCount >= MAX) return;
+      vCount++;
+      document.getElementById('vehicle-list').insertAdjacentHTML('beforeend', vehicleRow(vCount));
+      // Apply current mode to newly added row
+      var form = document.getElementById('quote-form');
+      var mode = form ? (form.getAttribute('data-mode') || 'quick') : 'quick';
+      var newRow = document.getElementById('vehicle-list').lastElementChild;
+      newRow.querySelectorAll('[data-mode-only="full"]').forEach(function (el) {
+        el.hidden = mode !== 'full';
+      });
+      refreshRemove('vehicle-list', '.vehicle-row');
+      if (vCount >= MAX) addVBtn.style.display = 'none';
+    });
+  }
+
+  // ── Add driver ────────────────────────────────────────────────────────────
+  var addDBtn = document.getElementById('add-driver');
+  if (addDBtn) {
+    addDBtn.addEventListener('click', function () {
+      if (dCount >= MAX) return;
+      dCount++;
+      document.getElementById('driver-list').insertAdjacentHTML('beforeend', driverRow(dCount));
+      var form = document.getElementById('quote-form');
+      var mode = form ? (form.getAttribute('data-mode') || 'quick') : 'quick';
+      var newRow = document.getElementById('driver-list').lastElementChild;
+      newRow.querySelectorAll('[data-mode-only="full"]').forEach(function (el) {
+        el.hidden = mode !== 'full';
+      });
+      wireIncidents();
+      refreshRemove('driver-list', '.driver-row');
+      if (dCount >= MAX) addDBtn.style.display = 'none';
+    });
+  }
+
+  // ── Remove row ────────────────────────────────────────────────────────────
+  document.addEventListener('click', function (e) {
+    if (!e.target.classList.contains('btn-row-remove')) return;
+    var targetId = e.target.dataset.target;
+    var list = document.getElementById(targetId);
+    var rows = list.querySelectorAll('.repeatable-row');
+    if (rows.length <= 1) {
+      rows[0].querySelectorAll('input,select,textarea').forEach(function (el) { el.value = ''; });
+      rows[0].querySelectorAll('[type="radio"]').forEach(function (r) { r.checked = false; });
+      rows[0].querySelectorAll('.incident-detail').forEach(function (d) { d.style.display = 'none'; });
+      if (targetId === 'vehicle-list') updateCompLock();
+      return;
+    }
+    e.target.closest('.repeatable-row').remove();
+    if (targetId === 'vehicle-list') {
+      vCount = list.querySelectorAll('.vehicle-row').length;
+      if (addVBtn && vCount < MAX) addVBtn.style.display = '';
+      refreshRemove('vehicle-list', '.vehicle-row');
+      updateCompLock();
+    } else {
+      dCount = list.querySelectorAll('.driver-row').length;
+      if (addDBtn && dCount < MAX) addDBtn.style.display = '';
+      refreshRemove('driver-list', '.driver-row');
+    }
+  });
+
+  // ── Pre-fill Driver 1 from Your Information ───────────────────────────────
+  function prefillDriver1() {
+    var fn  = document.getElementById('first_name');
+    var ln  = document.getElementById('last_name');
+    var dob = document.getElementById('dob');
+    var occ = document.getElementById('occupation');
+    var d1f = document.getElementById('driver_1_first');
+    var d1l = document.getElementById('driver_1_last');
+    var d1d = document.getElementById('driver_1_dob');
+    var d1o = document.getElementById('driver_1_occ');
+    if (fn  && d1f && !d1f.dataset.manual) d1f.value = fn.value;
+    if (ln  && d1l && !d1l.dataset.manual) d1l.value = ln.value;
+    if (dob && d1d && !d1d.dataset.manual) d1d.value = dob.value;
+    if (occ && d1o && !d1o.dataset.manual) d1o.value = occ.value;
+  }
+  ['first_name','last_name','dob','occupation'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener('input', prefillDriver1);
+  });
+  ['driver_1_first','driver_1_last','driver_1_dob','driver_1_occ'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener('input', function () { this.dataset.manual = '1'; });
+  });
+
+  // ── Pre-fill Driver 2 from Spouse ────────────────────────────────────────
+  function ensureDriver2() {
+    var list = document.getElementById('driver-list');
+    if (!list || list.querySelectorAll('.driver-row').length >= 2) return;
+    dCount = 2;
+    list.insertAdjacentHTML('beforeend', driverRow(2));
+    wireIncidents();
+    refreshRemove('driver-list', '.driver-row');
+    if (addDBtn && dCount >= MAX) addDBtn.style.display = 'none';
+  }
+  function prefillDriver2() {
+    var sfn  = document.getElementById('spouse_first_name');
+    var sln  = document.getElementById('spouse_last_name');
+    var sdob = document.getElementById('spouse_dob');
+    var hasVal = (sfn && sfn.value) || (sln && sln.value) || (sdob && sdob.value);
+    if (!hasVal) return;
+    ensureDriver2();
+    var d2f = document.getElementById('driver_2_first');
+    var d2l = document.getElementById('driver_2_last');
+    var d2d = document.getElementById('driver_2_dob');
+    if (sfn  && d2f && !d2f.dataset.manual) d2f.value = sfn.value;
+    if (sln  && d2l && !d2l.dataset.manual) d2l.value = sln.value;
+    if (sdob && d2d && !d2d.dataset.manual) d2d.value = sdob.value;
+  }
+  ['spouse_first_name','spouse_last_name','spouse_dob'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener('input', prefillDriver2);
+  });
+
+  // ── "Own a home?" (radio) auto-checks homeowner discount ─────────────────
+  var homeDisc = document.getElementById('auto_disc_homeowner');
+  onRadioChange('auto_own_home', function () {
+    if (!homeDisc) return;
+    var v = radioVal('auto_own_home');
+    if (v === 'Yes') homeDisc.checked = true;
+    else if (v === 'No') homeDisc.checked = false;
+  });
+
+  // ── Suppress empty/hidden fields before submit ────────────────────────────
+  var qForm = document.getElementById('quote-form');
+  if (qForm) {
+    qForm.addEventListener('submit', function () {
+      document.querySelectorAll('.quote-section').forEach(function (sec) {
+        if (sec.hasAttribute('hidden')) {
+          sec.querySelectorAll('input,select,textarea').forEach(function (el) { el.disabled = true; });
+        }
+      });
+      if (this.dataset.mode === 'quick') {
+        document.querySelectorAll('[data-mode-only="full"] input, [data-mode-only="full"] select, [data-mode-only="full"] textarea').forEach(function (el) {
+          el.disabled = true;
+        });
+      }
+    });
+  }
+
+  // ── Pre-fill property addresses from Your Information ─────────────────────
+  // home_address auto-fills only for Home/Condo/Renters residence types
+  // condo_address and renters_address (separate product sections) always auto-fill
+  function prefillAllAddresses() {
+    var street = (document.getElementById('street_address') || {}).value || '';
+    var city   = (document.getElementById('city') || {}).value || '';
+    var zip    = (document.getElementById('zip') || {}).value || '';
+    var parts  = [street, city, zip].filter(Boolean);
+    if (!parts.length) return;
+    var addrStr = parts.join(', ');
+
+    // Home address — conditional on residence type
+    var rt = radioVal('h_res_type');
+    var autoResTypes = { 'Home': 1, 'Condo': 1, 'Renters': 1 };
+    var ha = document.getElementById('home_address');
+    if (ha && !ha.dataset.manual && (!rt || autoResTypes[rt])) ha.value = addrStr;
+
+    // Condo section address — always auto-fill (client lives there)
+    var ca = document.getElementById('condo_address');
+    if (ca && !ca.dataset.manual) ca.value = addrStr;
+
+    // Renters section address — always auto-fill
+    var ra = document.getElementById('renters_address');
+    if (ra && !ra.dataset.manual) ra.value = addrStr;
+  }
+
+  // Mark each address field as manually edited when the user types in it
+  ['home_address', 'condo_address', 'renters_address'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener('input', function () { this.dataset.manual = '1'; });
+  });
+  ['street_address', 'city', 'zip'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener('input', prefillAllAddresses);
+  });
+  // Also re-fill when the relevant product sections become visible
+  ['line_home', 'line_condo', 'line_renters'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener('change', function () {
+      if (this.checked) prefillAllAddresses();
+    });
+  });
+
+  // ── Home: pool features — multi-select checkboxes ──────────────────────────
+  var homePoolFeat    = document.getElementById('home-pool-features-wrap');
+  var homePoolOnlyWrap = document.getElementById('home-pool-only-wrap');
+  function updatePoolFeatures() {
+    var igChecked    = !!(document.getElementById('home_pool_ig') && document.getElementById('home_pool_ig').checked);
+    var agChecked    = !!(document.getElementById('home_pool_ag') && document.getElementById('home_pool_ag').checked);
+    var hottubChecked = !!(document.getElementById('home_pool_hottub') && document.getElementById('home_pool_hottub').checked);
+    var anyPool      = igChecked || agChecked || hottubChecked;
+    var hasActualPool = igChecked || agChecked;
+    if (homePoolFeat) {
+      homePoolFeat.style.display = anyPool ? '' : 'none';
+      homePoolFeat.querySelectorAll('input[type=radio]').forEach(function (el) { el.disabled = !anyPool; });
+    }
+    if (homePoolOnlyWrap) {
+      homePoolOnlyWrap.style.display = hasActualPool ? '' : 'none';
+      homePoolOnlyWrap.querySelectorAll('input[type=radio]').forEach(function (el) { el.disabled = !hasActualPool; });
+    }
+  }
+  document.querySelectorAll('.pool-cb').forEach(function (cb) {
+    cb.addEventListener('change', updatePoolFeatures);
+  });
+
+  // ── Home: trampoline features when trampoline = Yes (radio) ──────────────
+  var homeTrFeat = document.getElementById('home-tramp-features-wrap');
+  function updateTrampFeatures() {
+    if (!homeTrFeat) return;
+    var show = radioVal('home_trampoline') === 'Yes';
+    homeTrFeat.style.display = show ? '' : 'none';
+    homeTrFeat.querySelectorAll('input').forEach(function (el) { el.disabled = !show; });
+  }
+  onRadioChange('home_trampoline', updateTrampFeatures);
+
+  // ── Home: dog section — multi-dog flow ───────────────────────────────────
+  var homeDogCountWrap = document.getElementById('home-dog-count-wrap');
+  var homeDogCountSel  = document.getElementById('home_dog_count');
+  var homeDogDetWrap   = document.getElementById('home-dog-details-wrap');
+  var homeDogRows      = document.getElementById('home-dog-rows');
+
+  function buildDogRow(n) {
+    return '<div class="iq-grid iq-c2" style="background:#f8f9fa;border:1px solid #dde3ec;border-radius:7px;padding:.65rem .75rem;">' +
+      '<div class="iq-f">' +
+        '<label for="home_dog_' + n + '_breed">Dog ' + n + ' — Breed</label>' +
+        '<input type="text" id="home_dog_' + n + '_breed" name="home_dog_' + n + '_breed" placeholder="e.g., Labrador Retriever">' +
+      '</div>' +
+      '<div class="iq-f">' +
+        '<label>Dog ' + n + ' — Ever bitten someone?</label>' +
+        '<div class="iq-rg">' +
+          '<label class="iq-ri"><input type="radio" name="home_dog_' + n + '_bite" value="No"> No</label>' +
+          '<label class="iq-ri"><input type="radio" name="home_dog_' + n + '_bite" value="Yes"> Yes</label>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function rebuildDogRows() {
+    if (!homeDogRows) return;
+    var hasDogs = radioVal('home_dogs') === 'Yes';
+    var count = hasDogs && homeDogCountSel ? parseInt(homeDogCountSel.value, 10) : 0;
+    if (!count || isNaN(count)) { homeDogRows.innerHTML = ''; return; }
+    var max = count >= 4 ? 4 : count;
+    var html = '';
+    for (var i = 1; i <= max; i++) { html += buildDogRow(i); }
+    if (count >= 4) {
+      html += '<p style="font-size:.82rem;color:#5a6474;margin:.25rem 0 0;">For 4+ dogs, please list additional breeds and bite history in the Comments field at the end of the form.</p>';
+    }
+    homeDogRows.innerHTML = html;
+  }
+
+  function updateDogDetails() {
+    var hasDogs = radioVal('home_dogs') === 'Yes';
+    if (homeDogCountWrap) {
+      homeDogCountWrap.style.display = hasDogs ? '' : 'none';
+      if (homeDogCountSel) homeDogCountSel.disabled = !hasDogs;
+    }
+    if (homeDogDetWrap) {
+      var showRows = hasDogs && homeDogCountSel && homeDogCountSel.value;
+      homeDogDetWrap.style.display = showRows ? '' : 'none';
+    }
+    if (!hasDogs) {
+      if (homeDogCountSel) homeDogCountSel.value = '';
+      if (homeDogRows) homeDogRows.innerHTML = '';
+    }
+  }
+
+  onRadioChange('home_dogs', updateDogDetails);
+  if (homeDogCountSel) {
+    homeDogCountSel.addEventListener('change', function () {
+      var hasDogs = radioVal('home_dogs') === 'Yes';
+      var showRows = hasDogs && this.value;
+      if (homeDogDetWrap) homeDogDetWrap.style.display = showRows ? '' : 'none';
+      rebuildDogRows();
+    });
+  }
+
+  // ── Home: wood stove room when stove = Yes (radio) ───────────────────────
+  var homeStoveRm = document.getElementById('home-stove-room-wrap');
+  function updateStoveRoom() {
+    if (!homeStoveRm) return;
+    var show = radioVal('home_stove') === 'Yes';
+    homeStoveRm.style.display = show ? '' : 'none';
+    homeStoveRm.querySelectorAll('input').forEach(function (el) { el.disabled = !show; });
+  }
+  onRadioChange('home_stove', updateStoveRoom);
+
+  // ── Home: basement % when basement = Yes (radio) ─────────────────────────
+  var homeBsmtPct = document.getElementById('home-bsmt-pct-wrap');
+  function updateBsmtPct() {
+    if (!homeBsmtPct) return;
+    var show = radioVal('home_basement') === 'Yes';
+    homeBsmtPct.style.display = show ? '' : 'none';
+    var sel = homeBsmtPct.querySelector('select');
+    if (sel) sel.disabled = !show;
+  }
+  onRadioChange('home_basement', updateBsmtPct);
+
+  // ── Home: residence type → Landlord questions, Condo/Renters hide logic ─────
+  var homeLandlordWrap  = document.getElementById('home-landlord-wrap');
+  var homeStructureCard = document.getElementById('home-structure-card');
+  var homeSystemsCard   = document.getElementById('home-systems-card');
+
+  function applyResType() {
+    var rt = radioVal('h_res_type');
+
+    // Landlord extra questions
+    if (homeLandlordWrap) {
+      var showLL = rt === 'Landlord';
+      homeLandlordWrap.style.display = showLL ? '' : 'none';
+      homeLandlordWrap.querySelectorAll('input,select,textarea').forEach(function (el) { el.disabled = !showLL; });
+      homeLandlordWrap.querySelectorAll('input[type=radio]').forEach(function (el) { el.disabled = !showLL; });
+    }
+
+    // Structure & Systems cards — hide for Renters only
+    // Condo still needs both (the unit's interior still matters for rating)
+    var hideStructure = rt === 'Renters';
+    if (homeStructureCard) homeStructureCard.style.display = hideStructure ? 'none' : '';
+    if (homeSystemsCard)   homeSystemsCard.style.display   = hideStructure ? 'none' : '';
+
+    // Pool & Trampoline — hide for Condo and Renters (no pool on a condo unit or rental)
+    var hidePool = rt === 'Condo' || rt === 'Renters';
+    document.querySelectorAll('.pool-tramp-item').forEach(function (el) {
+      el.style.display = hidePool ? 'none' : '';
+    });
+    // If pool is being hidden, also collapse the feature sub-sections so they
+    // don't remain open invisibly and submit stale values
+    if (hidePool) {
+      var pfWrap = document.getElementById('home-pool-features-wrap');
+      var ptWrap = document.getElementById('home-tramp-features-wrap');
+      if (pfWrap) { pfWrap.style.display = 'none'; pfWrap.querySelectorAll('input[type=radio]').forEach(function(el){el.disabled=true;}); }
+      if (ptWrap) { ptWrap.style.display = 'none'; ptWrap.querySelectorAll('input[type=radio]').forEach(function(el){el.disabled=true;}); }
+    }
+
+    // Cov A and Cov B — hide for Renters (renter doesn't insure the dwelling)
+    var hideDwelling = rt === 'Renters';
+    var covAWrap = document.getElementById('home-cov-a-wrap');
+    var covBWrap = document.getElementById('home-cov-b-wrap');
+    if (covAWrap) covAWrap.style.display = hideDwelling ? 'none' : '';
+    if (covBWrap) covBWrap.style.display = hideDwelling ? 'none' : '';
+
+    // Re-run address auto-fill now that residence type changed
+    prefillAllAddresses();
+  }
+
+  onRadioChange('h_res_type', applyResType);
+
+  // ── Hide auto cross-sell if auto is already checked ───────────────────────
+  var lineAutoChk = document.getElementById('line_auto');
+  var homeAutoXsell = document.getElementById('home-auto-crosssell-wrap');
+  function updateHomeAutoXsell() {
+    if (!homeAutoXsell) return;
+    var hide = lineAutoChk && lineAutoChk.checked;
+    homeAutoXsell.style.display = hide ? 'none' : '';
+    var xSel = homeAutoXsell.querySelector('select');
+    if (xSel) xSel.disabled = hide;
+  }
+  if (lineAutoChk) lineAutoChk.addEventListener('change', updateHomeAutoXsell);
+
+  // ── Phone number auto-formatter ───────────────────────────────────────────
+  var phoneInput = document.getElementById('phone');
+  if (phoneInput) {
+    phoneInput.addEventListener('input', function () {
+      var digits = this.value.replace(/\D/g, '').slice(0, 10);
+      if (digits.length === 0)       { this.value = ''; return; }
+      if (digits.length <= 3)        { this.value = '(' + digits; return; }
+      if (digits.length <= 6)        { this.value = '(' + digits.slice(0,3) + ') ' + digits.slice(3); return; }
+      this.value = '(' + digits.slice(0,3) + ') ' + digits.slice(3,6) + '-' + digits.slice(6);
+    });
+    // Handle backspace gracefully — allow deleting formatted chars
+    phoneInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Backspace') {
+        var v = this.value;
+        if (v.endsWith(') ') || v.endsWith('-') || v.endsWith('(')) {
+          e.preventDefault();
+          this.value = v.slice(0, -2);
+        }
+      }
+    });
+  }
+
+  // ── Home Coverage auto-fill: Cov B = 10%, C = 50%, D = 20% of Cov A ──────
+  var covA = document.getElementById('home_cov_a');
+  var covB = document.getElementById('home_cov_b');
+  var covC = document.getElementById('home_cov_c');
+  var covD = document.getElementById('home_cov_d');
+
+  function parseDollar(s) {
+    var n = parseFloat(String(s).replace(/[^0-9.]/g, ''));
+    return isNaN(n) ? null : n;
+  }
+  function fmtCov(n) {
+    return '$' + Math.round(n).toLocaleString('en-US');
+  }
+  function autofillCovBCD() {
+    var a = parseDollar(covA ? covA.value : '');
+    if (a === null) return;
+    if (covB && !covB.dataset.manual) covB.value = fmtCov(a * 0.10);
+    if (covC && !covC.dataset.manual) covC.value = fmtCov(a * 0.50);
+    if (covD && !covD.dataset.manual) covD.value = fmtCov(a * 0.20);
+  }
+  // Mark B/C/D as manually edited so auto-fill doesn't overwrite user changes
+  [covB, covC, covD].forEach(function (el) {
+    if (el) el.addEventListener('input', function () { this.dataset.manual = '1'; });
+  });
+  var covATimer;
+  if (covA) {
+    covA.addEventListener('blur', autofillCovBCD);
+    covA.addEventListener('input', function () {
+      clearTimeout(covATimer);
+      covATimer = setTimeout(autofillCovBCD, 700);
+    });
+  }
+
+  // ── Init ──────────────────────────────────────────────────────────────────
+  refreshRemove('vehicle-list', '.vehicle-row');
+  refreshRemove('driver-list', '.driver-row');
+  wireIncidents();
+  prefillDriver1();
+  updateCompLock();
+  updatePoolFeatures();
+  updateTrampFeatures();
+
+  updateDogDetails();
+  updateStoveRoom();
+  updateBsmtPct();
+  updateHomeAutoXsell();
+  applyResType();
+})();
+</script>
+
+</body>
+</html>

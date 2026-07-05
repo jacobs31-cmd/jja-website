@@ -12,7 +12,7 @@ summary: "Adding a teen driver in Michigan raises your auto insurance by $2,500+
 meta_description: "Adding a teen driver in Michigan raises your auto insurance by $2,500+ per year. Here's exactly how to minimize the cost without cutting essential coverage."
 ---
 
-<p style="font-size:.9rem;background:var(--gray-50);border-left:4px solid var(--navy);padding:.75rem 1rem;border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:1.5rem;">Adding a teen driver in Michigan? Let us shop 10+ carriers to find your best rate. <a href="../../personal/auto-insurance/" style="color:var(--navy);font-weight:600;">Get a free auto insurance quote →</a></p>
+<p style="font-size:.9rem;background:var(--gray-50);border-left:4px solid var(--navy);padding:.75rem 1rem;border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:1.5rem;">Adding a teen driver in Michigan? Let us shop 20+ carriers to find your best rate. <a href="../../personal/auto-insurance/" style="color:var(--navy);font-weight:600;">Get a free auto insurance quote →</a></p>
 
 <p class="lead">The moment your teenager gets their license is equal parts exciting and expensive. Adding a teen driver to a Michigan auto policy typically increases your annual premium by <strong>$2,500 or more</strong> — and that number reflects real risk, not arbitrary pricing. Here&#39;s what&#39;s behind the cost, which discounts are genuinely worth pursuing, and how to make sure your family is fully protected without overpaying.</p>
 

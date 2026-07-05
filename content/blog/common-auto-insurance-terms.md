@@ -73,4 +73,4 @@ meta_description: "Confused by Michigan's no-fault auto insurance? This guide br
   <li><strong>Liability Only:</strong> Minimum required insurance. No coverage for damage to your own vehicle.</li>
 </ul>
 
-<p>Understanding these coverage types helps you make smarter decisions when reviewing your policy. Michigan auto insurance has unique rules — especially around No-Fault PIP — that most online guides miss. Our local agents explain every option in plain English. <a href="../../personal/auto-insurance/">Learn more about Michigan auto insurance</a> or <a href="../../quotes/">get a free comparison quote</a> from 15+ carriers.</p>
+<p>Understanding these coverage types helps you make smarter decisions when reviewing your policy. Michigan auto insurance has unique rules — especially around No-Fault PIP — that most online guides miss. Our local agents explain every option in plain English. <a href="../../personal/auto-insurance/">Learn more about Michigan auto insurance</a> or <a href="../../quotes/">get a free comparison quote</a> from 20+ carriers.</p>

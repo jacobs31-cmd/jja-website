@@ -487,7 +487,7 @@ def build_blog():
         '<p class="lead">Michigan-specific insurance education, news, and practical advice from our team of licensed agents. Updated regularly.</p>\n'
         '<div class="blog-grid">' + ''.join(cards) + '</div>\n'
         '<div class="callout"><h2>Want to talk to a real agent?</h2>'
-        '<p>Get a free comparison quote across our 50+ carriers -- no obligation.</p>'
+        '<p>Get a free comparison quote across our 20+ carriers -- no obligation.</p>'
         '<a class="btn btn-primary btn-lg" href="../quotes/">Start My Quote</a></div>\n'
         '</div>\n</section>\n</main>\n' +
         footer('../')

@@ -304,7 +304,7 @@ def footer():
     return f"""<footer class="site-footer"><div class="container"><div class="footer-grid">
       <div class="footer-brand"><div class="footer-logo"><img src="{r}assets/img/logo.jpeg" alt="J. Jacobs and Associates"></div>
         <h4>J. Jacobs &amp; Associates</h4>
-        <p>Family-owned independent insurance agency serving Michigan since 1981. We shop 35+ carriers so you don&rsquo;t have to.</p>
+        <p>Family-owned independent insurance agency serving Michigan since 1981. We shop 20+ carriers so you don&rsquo;t have to.</p>
         <p style="margin-top:1rem;"><strong style="color:#fff;">4301 S. Baldwin Rd</strong><br>Lake Orion, Michigan 48359<br><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a></p></div>
       <div><h4>Insurance</h4><ul><li><a href="{r}personal/">Personal Insurance</a></li><li><a href="{r}personal/auto-insurance/">Auto Insurance</a></li><li><a href="{r}personal/home-insurance/">Home Insurance</a></li><li><a href="{r}personal/life-insurance/">Life Insurance</a></li><li><a href="{r}business/">Commercial Insurance</a></li><li><a href="{r}business/workers-compensation/">Workers Compensation</a></li></ul></div>
       <div><h4>Agency</h4><ul><li><a href="{r}about/">About Us</a></li><li><a href="{r}team/">Our Team</a></li><li><a href="{r}carriers/">Our Carriers</a></li><li><a href="{r}reviews/">Reviews</a></li><li><a href="{r}service/">Service Center</a></li><li><a href="{r}billing-claims/">Billing &amp; Claims</a></li><li><a href="{r}faq/">FAQ</a></li></ul></div>

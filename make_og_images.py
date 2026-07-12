@@ -14,7 +14,7 @@ Usage:
   python make_og_images.py rewire        # point og:image/twitter:image at the cards
   python make_og_images.py generate force  # rebuild even if card exists
 """
-import os, re, sys, glob, html, io, urllib.request
+import os, re, sys, glob, html, io, tempfile, urllib.request
 
 NAVY=(20,54,94); NAVY_DARK=(10,35,66); NAVY_LIGHT=(30,74,122)
 WHITE=(255,255,255); GRAY=(203,215,227)
@@ -37,9 +37,25 @@ def safe_write(path, text):
             raise SystemExit("ABORT: short/truncated write to " + path)
 
 def font(sz,bold=True):
-    p=("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if bold
-       else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
-    return ImageFont.truetype(p,sz)
+    # Cross-platform font resolution. Tries Linux DejaVu (sandbox), then common
+    # Windows fonts (Joseph's real machine), then PIL's built-in as a last resort,
+    # so the OG generator runs anywhere and `finish` never crashes on a missing font.
+    win=os.path.join(os.environ.get("WINDIR","C:\\Windows"),"Fonts")
+    candidates=[
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if bold else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        os.path.join(win,"arialbd.ttf" if bold else "arial.ttf"),
+        os.path.join(win,"segoeuib.ttf" if bold else "segoeui.ttf"),
+        os.path.join(win,"tahomabd.ttf" if bold else "tahoma.ttf"),
+    ]
+    for p in candidates:
+        try:
+            return ImageFont.truetype(p,sz)
+        except Exception:
+            continue
+    try:
+        return ImageFont.load_default(sz)
+    except Exception:
+        return ImageFont.load_default()
 
 def wrap(draw,text,fnt,maxw,maxlines=3):
     words=text.split(); lines=[]; cur=""
@@ -54,7 +70,7 @@ def wrap(draw,text,fnt,maxw,maxlines=3):
 
 def fetch_jpg(token):
     url=f"https://images.unsplash.com/{token}?w=1200&h=900&q=80&auto=format&fit=crop&fm=jpg"
-    cache=f"/tmp/ogsrc_{token}.jpg"
+    cache=os.path.join(tempfile.gettempdir(), f"ogsrc_{token}.jpg")
     if os.path.exists(cache) and os.path.getsize(cache)>2000:
         return cache
     try:

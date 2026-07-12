@@ -121,6 +121,7 @@ def clean(s):
     return re.sub(r"\s+"," ",s).strip()
 
 def page_name(path):
+    path=path.replace("\\","/")  # Windows glob returns backslash paths; normalize so names/dirs are correct
     p=path[:-len("/index.html")] if path.endswith("/index.html") else path[:-5]
     return "home" if p in ("","index") else p.replace("/","-")
 
@@ -145,9 +146,9 @@ def derive(path,htmltext):
     return eyebrow,title,src
 
 def all_pages():
-    pages=sorted(set(glob.glob("**/index.html",recursive=True)+(["404.html"] if os.path.exists("404.html") else [])))
-    skip={"privacy-policy","accessibility","sms-terms"}  # legal pages -> still get branded card but low priority kept
-    return pages
+    pages=glob.glob("**/index.html",recursive=True)+(["404.html"] if os.path.exists("404.html") else [])
+    pages=[p.replace("\\","/") for p in pages]  # normalize Windows backslash paths so open()/startswith/out-paths work
+    return sorted(set(pages))
 
 def generate():
     os.makedirs(OG_DIR,exist_ok=True)

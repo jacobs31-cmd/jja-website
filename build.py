@@ -374,7 +374,11 @@ def build_faq_schema(body_html):
     Questions' / 'FAQ' followed by <h3> questions), emit FAQPage JSON-LD so the post
     can win 'People Also Ask' results and AI-engine citations. Returns '' if none.
     The schema is generated FROM the visible Q&A, so it always matches the page."""
-    m = re.search(r'<h2[^>]*>\s*(?:Frequently Asked Questions|FAQs?)\b.*?</h2>(.*?)(?=<h2|\Z)',
+    # Stop the FAQ capture before the trailing "Related Articles" block (a
+    # <div style="margin:2.5rem ...> wrapper that contains an <h3>). Without this
+    # boundary the <h3> matcher below grabs "Related Articles" as a junk FAQ
+    # question on every post. Also stop at any following <h2>.
+    m = re.search(r'<h2[^>]*>\s*(?:Frequently Asked Questions|FAQs?)\b.*?</h2>(.*?)(?=<h2|<div style="margin:2\.5rem|\Z)',
                   body_html, re.S | re.I)
     if not m:
         return ''
@@ -382,7 +386,7 @@ def build_faq_schema(body_html):
     for q, a in re.findall(r'<h3[^>]*>(.*?)</h3>(.*?)(?=<h3|\Z)', m.group(1), re.S):
         q = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', q)).strip()
         a = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', a)).strip()
-        if q and a:
+        if q and a and q.lower() != 'related articles':  # belt-and-suspenders: never emit the related-links heading
             qas.append({"@type": "Question", "name": q,
                         "acceptedAnswer": {"@type": "Answer", "text": a}})
     # Also support the site-standard <details class="faq-item"> markup

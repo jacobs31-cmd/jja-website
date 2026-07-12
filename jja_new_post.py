@@ -37,7 +37,7 @@ Subcommands
   clean
       Remove known temp/scratch files so nothing strays into a deploy.
 """
-import sys, os, re, glob, subprocess, datetime, urllib.request
+import sys, os, re, glob, subprocess, datetime, time, urllib.request
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 BLOG = os.path.join(ROOT, "blog")
@@ -61,9 +61,16 @@ def _safe_write(path, text):
     data = text.replace("\r\n", "\n").encode("utf-8")
     with open(path, "wb") as f:
         f.write(data)
-    with open(path, "rb") as f:
-        if f.read() != data:
-            raise SystemExit("ABORT: short/truncated write to " + path)
+        f.flush()
+        os.fsync(f.fileno())
+    # Retry the verify read: a genuine short write stays short across all tries,
+    # but a transient Windows AV/file-lock race clears within a moment.
+    for _ in range(5):
+        with open(path, "rb") as f:
+            if f.read() == data:
+                return
+        time.sleep(0.25)
+    raise SystemExit("ABORT: short/truncated write to " + path)
 
 def _unsplash(token, w=1600):
     url = f"https://images.unsplash.com/{token}?w={w}&q=85&auto=format&fit=crop&fm=jpg"

@@ -30,12 +30,12 @@ files, so it's the fastest way to spot drift. Everything outside the markers is
 hand-written and the script never touches it.
 
 <!-- AUTO:STATE -->
-_Generated 2026-07-02 by `update_handoff.py`._
+_Generated 2026-07-06 by `update_handoff.py`._
 
 - **Quote form posts to:** `https://jja-al3-worker.jacobs31.workers.dev`
 - **Contact form posts to:** `https://jja-contact.jacobs31.workers.dev`
 - **Turnstile sitekey:** `0x4AAAAAADScpMxfNdQDkoBm`
-- **Cache-bust versions in use (styles.css):** `20260529` (120)
+- **Cache-bust versions in use (styles.css):** `20260529` (122)
 - **Published blog posts:** 38  ·  **markdown sources in content/blog:** 38
 - **Team cards:** 16
 - **Canonical blog builder:** `build.py`

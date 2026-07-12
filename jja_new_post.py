@@ -52,6 +52,19 @@ def _read(p):
     with open(p, "rb") as f:
         return f.read().replace(b"\x00", b"").decode("utf-8", "replace")
 
+def _safe_write(path, text):
+    """Flush-and-verify write. Writes in BINARY with LF normalized (so Windows
+    text-mode CRLF translation can't make the verify read-back differ from what
+    we wrote), closes the handle via the with-block, then re-reads bytes and
+    aborts loudly only on a genuine short/truncated write — the failure mode that
+    left sitemap.xml missing its </urlset>."""
+    data = text.replace("\r\n", "\n").encode("utf-8")
+    with open(path, "wb") as f:
+        f.write(data)
+    with open(path, "rb") as f:
+        if f.read() != data:
+            raise SystemExit("ABORT: short/truncated write to " + path)
+
 def _unsplash(token, w=1600):
     url = f"https://images.unsplash.com/{token}?w={w}&q=85&auto=format&fit=crop&fm=jpg"
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
@@ -119,10 +132,20 @@ def _slugs_from_content():
 
 def cmd_sitemap_sync():
     xml = _read(SITEMAP)
+    # Self-heal a truncated sitemap: an earlier unclosed write can drop </urlset>
+    # (and leave a dangling partial <url>). Trim any incomplete trailing entry and
+    # re-close the urlset so the insert below has a valid anchor.
+    repaired = False
+    if "</urlset>" not in xml:
+        idx = xml.rfind("</url>")
+        if idx != -1:
+            xml = xml[:idx + len("</url>")] + "\n"
+        xml = xml.rstrip() + "\n</urlset>\n"
+        repaired = True
     today = datetime.date.today().isoformat()
     built = [d for d in os.listdir(BLOG) if os.path.isdir(os.path.join(BLOG, d))]
     added = []
-    for slug in built:
+    for slug in sorted(built):
         loc = f"{SITE}/blog/{slug}/"
         if loc in xml:
             continue
@@ -130,8 +153,10 @@ def cmd_sitemap_sync():
                  f"    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n")
         xml = xml.replace("</urlset>", block + "</urlset>")
         added.append(slug)
-    if added:
-        open(SITEMAP, "w", encoding="utf-8").write(xml)
+    # Always write via the verified writer (repair may change xml even if added==[]).
+    _safe_write(SITEMAP, xml)
+    if repaired:
+        print("  NOTE: sitemap.xml was missing </urlset> (truncated) - repaired.")
     print(f"sitemap.xml: added {len(added)} new entr{'y' if len(added)==1 else 'ies'}" +
           (": " + ", ".join(added) if added else " (already in sync)"))
 
@@ -168,7 +193,14 @@ def cmd_finish():
     print("== build ==")
     subprocess.run([sys.executable, "build.py"], cwd=ROOT, check=True)
     print("\n== og cards ==")
-    subprocess.run([sys.executable, "make_og_images.py", "generate"], cwd=ROOT, check=True)
+    og_ok = True
+    try:
+        subprocess.run([sys.executable, "make_og_images.py", "generate"], cwd=ROOT, check=True)
+    except subprocess.CalledProcessError as e:
+        og_ok = False
+        print(f"  WARNING: OG card generation failed ({e}).")
+        print("  Continuing anyway - sitemap + verify still run so a cosmetic OG issue")
+        print("  can't block the deploy. Regenerate OG cards separately, then re-deploy.")
     print("\n== sitemap ==")
     cmd_sitemap_sync()
     print("\n== verify ==")
@@ -178,7 +210,9 @@ def cmd_finish():
     print("\nReady. NOT deployed (Joseph deploys). From a Windows terminal:")
     print("  cd C:\\Website && npx wrangler deploy")
     print("Then: python checkpoint.py")
-    sys.exit(0 if ok else 1)
+    if not og_ok:
+        print("\nNOTE: OG cards did NOT regenerate this run - see the WARNING above.")
+    sys.exit(0 if (ok and og_ok) else 1)
 
 def main():
     a = sys.argv[1:]

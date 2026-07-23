@@ -19,7 +19,7 @@ EMAIL = "Support@jjainsurance.com"
 # Cache-bust versions — keep in sync with the sitewide canonical values
 # (styles.css and site.v2.js are versioned independently; bump only the one whose file changed).
 CSS_VERSION = "20260529"
-JS_VERSION = "20260702"  # bumped 2026-07-02 to match the sitewide bump done by the marketing project
+JS_VERSION = "20260713"  # bumped 2026-07-13 — added Google Ads tag AW-811167469 to site.v2.js
 
 CONTENT_DIR = Path('content/blog')
 BLOG_DIR = Path('blog')

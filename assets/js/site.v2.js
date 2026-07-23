@@ -9,10 +9,15 @@
   // -------- Auto year update --------
   $$('[data-current-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
 
-  // -------- Google Analytics 4 --------
-  // Load gtag.js asynchronously and configure with the GA4 measurement ID.
+  // -------- Google Analytics 4 + Google Ads --------
+  // One gtag.js loader, two destinations:
+  //   G-QRLBD79S35  = GA4 property (analytics, key events)
+  //   AW-811167469  = Google Ads tag (remarketing lists + conversion linker)
+  // The Ads destination was missing until 2026-07-13, which left every Google Ads
+  // remarketing audience at size 0 ("Too small to serve") and stopped the Display
+  // retargeting campaign from ever serving an impression. Do not remove it.
   // GT-M3LBGVP (Google Tag Manager) is a separate tool — not installed here.
-  (function loadGA4() {
+  (function loadGoogleTags() {
     if (window.gtag || document.getElementById('ga4-loader')) return;
     var s = document.createElement('script');
     s.id = 'ga4-loader';
@@ -23,6 +28,7 @@
     window.gtag = function () { window.dataLayer.push(arguments); };
     window.gtag('js', new Date());
     window.gtag('config', 'G-QRLBD79S35', { anonymize_ip: true });
+    window.gtag('config', 'AW-811167469');
   })();
 
   // -------- Microsoft Clarity --------
@@ -489,4 +495,80 @@
     applyMode(quoteForm.getAttribute('data-mode') || 'quick');
   }
 
+})();
+
+/* ============================================================
+   2026 refresh — highlight "Michigan" in page-hero headings so
+   the gold flair (styles.css: .page-hero h1 .accent) can show.
+   Progressive enhancement; safe no-op if not applicable.
+   ============================================================ */
+(function () {
+  try {
+    var h = document.querySelector('.page-hero h1');
+    if (!h || h.querySelector('.accent')) return;
+    var walk = document.createTreeWalker(h, NodeFilter.SHOW_TEXT, null);
+    var node, re = /\bMichigan\b/;
+    while ((node = walk.nextNode())) {
+      var m = node.nodeValue.match(re);
+      if (!m) continue;
+      var i = m.index, full = node.nodeValue;
+      var span = document.createElement('span');
+      span.className = 'accent';
+      span.textContent = full.slice(i, i + m[0].length);
+      var frag = document.createDocumentFragment();
+      if (i > 0) frag.appendChild(document.createTextNode(full.slice(0, i)));
+      frag.appendChild(span);
+      var rest = full.slice(i + m[0].length);
+      if (rest) frag.appendChild(document.createTextNode(rest));
+      node.parentNode.replaceChild(frag, node);
+      break;
+    }
+  } catch (e) {}
+})();
+
+/* ============================================================
+   2026 refresh — pre-select quote coverages from a ?coverage=
+   URL param (e.g. homepage tiles). Safe: only toggles existing
+   checkboxes + fires the same 'change' a click would. Never
+   changes field names/values or submission.
+   ============================================================ */
+(function () {
+  try {
+    var picker = document.querySelector('.product-picker');
+    if (!picker) return;
+    var cov = new URLSearchParams(location.search).get('coverage');
+    if (!cov) return;
+    cov.split(',').forEach(function (key) {
+      key = key.trim().toLowerCase().replace(/[^a-z]/g, '');
+      if (!key) return;
+      var cb = document.getElementById('line_' + key);
+      if (cb && cb.type === 'checkbox' && !cb.checked) {
+        cb.checked = true;
+        cb.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    });
+  } catch (e) {}
+})();
+
+/* ============================================================
+   2026 refresh — "Business Auto" reuses the Auto section.
+   Shows #section-auto when EITHER line_auto or line_business_auto
+   is checked; hides only when both are off. Additive; the real
+   auto section, its fields, and submission are unchanged.
+   ============================================================ */
+(function () {
+  try {
+    var bauto = document.getElementById('line_business_auto');
+    var sec = document.getElementById('section-auto');
+    if (!bauto || !sec) return;
+    var auto = document.getElementById('line_auto');
+    function sync() {
+      var want = (auto && auto.checked) || bauto.checked;
+      if (want) sec.removeAttribute('hidden');
+      else sec.setAttribute('hidden', '');
+    }
+    if (auto) auto.addEventListener('change', sync);
+    bauto.addEventListener('change', sync);
+    sync();
+  } catch (e) {}
 })();

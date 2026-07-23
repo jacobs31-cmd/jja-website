@@ -1,6 +1,8 @@
 /* ============================================================
    J. Jacobs & Associates — Modern Navy + Gray Design System
    ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap');
+
 
 /* --- Reset & Base --- */
 *,
@@ -2025,3 +2027,177 @@ textarea:focus-visible {
   background: var(--navy-cta); color: #fff; font-size: .7rem; font-weight: 700;
   letter-spacing: .05em; text-transform: uppercase; padding: .25rem .6rem; border-radius: var(--r-full);
 }
+
+
+/* ============================================================
+   J. Jacobs & Associates — 2026 Site Refresh
+   Appended AFTER the base system so these override on equal specificity.
+   Site-wide: serif headings, MORE color, no pills, keyword "flair".
+   Requires the Fraunces font <link> in each page <head>.
+   ============================================================ */
+
+:root{
+  --gold:#e0a83e; --gold-deep:#c8912b; --gold-soft:#fbf1dc;
+  --teal:#0f9aa3; --teal-soft:#e0f5f6; --teal-ink:#0b7d84;
+  --acc-blue:#2f6fed; --blue-soft:#e9f1fe; --blue-ink:#1c4fbf;
+  --acc-green:#2d8659; --green-soft:#e3f3ea; --green-ink:#1f6b46;
+  --acc-coral:#e26d5a; --coral-soft:#fdece7; --coral-ink:#c0492f;
+}
+
+/* --- Serif display headings (de-blockify) --- */
+h1, h2, .hero h1, .page-hero h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600; letter-spacing: -0.015em;
+}
+
+/* --- Keyword "flair" — italic serif + curved gold swoosh (matches homepage) --- */
+.hero h1 .flair, .page-hero h1 .flair,
+.hero h1 .accent, .page-hero h1 .accent {
+  font-style: italic; color: var(--navy);
+  padding-bottom: .18em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12' preserveAspectRatio='none'%3E%3Cpath d='M4 8 C60 2 150 2 296 6' fill='none' stroke='%23e0a83e' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-size: 100% .38em;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+}
+
+/* --- Colored eyebrow with a gold accent rule --- */
+.eyebrow { color: var(--teal); }
+.eyebrow::before {
+  content: ""; display: inline-block; width: 22px; height: 2px;
+  vertical-align: middle; margin-right: .5rem;
+  background: var(--gold); border-radius: 2px;
+}
+
+/* ================= NO PILLS + MORE COLOR ================= */
+
+/* Hero eyebrow badge -> plain text (no capsule / dot) */
+.hero-badge {
+  background: transparent; border: 0; box-shadow: none;
+  padding: 0; border-radius: 0;
+  color: var(--navy-light); font-weight: 700; font-size: .9rem;
+}
+.hero-badge-dot { display: none; }
+
+/* Coverage .tag chips -> squared, colorful tags (rotating accents) */
+.tags { gap: .5rem .55rem; }
+.tag {
+  border: 0; padding: .42rem .8rem; border-radius: var(--r-sm);
+  font-weight: 700; font-size: .86rem;
+  background: var(--blue-soft); color: var(--blue-ink);
+}
+.tag a { color: inherit; }
+.tag:hover { filter: brightness(.96); }
+.tags .tag:nth-child(5n+2){ background: var(--teal-soft);  color: var(--teal-ink); }
+.tags .tag:nth-child(5n+3){ background: var(--green-soft); color: var(--green-ink); }
+.tags .tag:nth-child(5n+4){ background: var(--gold-soft);  color: var(--gold-deep); }
+.tags .tag:nth-child(5n+5){ background: var(--coral-soft); color: var(--coral-ink); }
+
+/* Blog category filter -> squared buttons (not pills) */
+.blog-filter .chip { border-radius: var(--r-sm); }
+
+/* Blog card category label -> squared colored tag (not a pill) */
+.blog-card-cat {
+  background: var(--gold-soft); color: var(--gold-deep);
+  border-radius: var(--r-sm); padding: .18rem .55rem;
+}
+
+/* Gold CTA button (used on the homepage) */
+.btn-gold { background: var(--gold); color:#3c2c04; border-color: var(--gold); }
+.btn-gold:hover { background: var(--gold-deep); color:#3c2c04; transform: translateY(-1px); }
+
+/* ============================================================
+   2026 Refresh — UI polish: quote picker, coverage tiles, team
+   (visual only — no form field / name / value / logic changes)
+   ============================================================ */
+
+/* --- Quote "check all that apply" -> borderless selectable rows (NO boxes) --- */
+.product-picker { gap: .3rem .9rem; }
+.product-pick { padding: .7rem 3rem .7rem .9rem; border: 0; border-radius: var(--r-sm); background: transparent; box-shadow: none; transition: background .15s; }
+.product-pick:hover { background: var(--gray-50); }
+.product-pick:has(input:checked) { border: 0; background: transparent; box-shadow: none; }
+/* real checkbox stays functional but visually hidden */
+.product-pick input[type="checkbox"] { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; pointer-events: none; }
+/* round "selected" indicator on the right (not a box) */
+.product-pick::after { content: ""; position: absolute; top: 50%; right: .9rem; transform: translateY(-50%); width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--border-strong); background: #fff center / 13px 13px no-repeat; transition: border-color .15s, background-color .15s; }
+.product-pick:has(input:checked) .pick-name { color: var(--acc-blue); }
+.product-pick:has(input:checked)::after { border-color: var(--acc-blue); background-color: var(--acc-blue); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E"); }
+.product-pick:has(input:focus-visible) { outline: 2px solid var(--acc-blue); outline-offset: 2px; border-radius: var(--r-sm); }
+
+/* --- Coverage-options -> borderless colored list rows (NO boxes) --- */
+.product-card { border: 0; border-radius: var(--r-sm); background: transparent; box-shadow: none; gap: 0; position: relative; padding: .6rem 2rem .6rem 1.45rem; transition: background .15s, color .15s; }
+.product-card .icon { display: none; }
+.product-card::before { content: ""; position: absolute; left: .35rem; top: 50%; transform: translateY(-50%); width: 9px; height: 9px; border-radius: 50%; background: var(--acc-blue); }
+.product-card:nth-child(6n+2)::before { background: var(--teal); }
+.product-card:nth-child(6n+3)::before { background: var(--acc-green); }
+.product-card:nth-child(6n+4)::before { background: var(--gold-deep); }
+.product-card:nth-child(6n+5)::before { background: var(--acc-coral); }
+.product-card:nth-child(6n+6)::before { background: var(--navy-cta); }
+.product-card::after { content: "\2192"; position: absolute; right: .9rem; top: 50%; transform: translateY(-50%); color: var(--text-subtle); font-weight: 700; opacity: 0; transition: opacity .15s, right .15s; }
+.product-card:hover { background: var(--gray-50); transform: none; box-shadow: none; color: var(--ink); }
+.product-card:hover::after { opacity: 1; color: var(--acc-blue); right: .7rem; }
+
+/* --- Team cards: colorful avatars + accent top border --- */
+.team-card { border-top: 3px solid var(--acc-blue); }
+.team-card:nth-child(6n+2) { border-top-color: var(--teal); }
+.team-card:nth-child(6n+3) { border-top-color: var(--acc-green); }
+.team-card:nth-child(6n+4) { border-top-color: var(--gold-deep); }
+.team-card:nth-child(6n+5) { border-top-color: var(--acc-coral); }
+.team-card:nth-child(6n+6) { border-top-color: var(--navy-cta); }
+.team-card .avatar { background: linear-gradient(135deg, var(--acc-blue), #255fd6); }
+.team-card:nth-child(6n+2) .avatar { background: linear-gradient(135deg, var(--teal), var(--teal-ink)); }
+.team-card:nth-child(6n+3) .avatar { background: linear-gradient(135deg, var(--acc-green), var(--green-ink)); }
+.team-card:nth-child(6n+4) .avatar { background: linear-gradient(135deg, var(--gold), var(--gold-deep)); }
+.team-card:nth-child(6n+5) .avatar { background: linear-gradient(135deg, var(--acc-coral), var(--coral-ink)); }
+.team-card:nth-child(6n+6) .avatar { background: linear-gradient(135deg, var(--navy-cta), var(--navy)); }
+
+/* --- Quote picker: vertical (column-major) order + color dots --- */
+.product-picker { display: grid; grid-template-columns: 1fr 1fr; grid-auto-flow: column; grid-template-rows: repeat(6, auto); gap: .1rem 1.6rem; }
+@media (max-width: 600px) { .product-picker { grid-auto-flow: row; grid-template-columns: 1fr; grid-template-rows: none; } }
+.product-pick { padding-left: 1.7rem; }
+.product-pick::before { content: ""; position: absolute; left: .55rem; top: 50%; transform: translateY(-50%); width: 9px; height: 9px; border-radius: 50%; background: var(--acc-blue); }
+.product-pick:nth-child(6n+2)::before { background: var(--teal); }
+.product-pick:nth-child(6n+3)::before { background: var(--acc-green); }
+.product-pick:nth-child(6n+4)::before { background: var(--gold-deep); }
+.product-pick:nth-child(6n+5)::before { background: var(--acc-coral); }
+.product-pick:nth-child(6n+6)::before { background: var(--navy-cta); }
+
+/* --- "How this works" intro box: make it stand out --- */
+.quote-intro { background: var(--blue-soft); border: 0; border-left: 4px solid var(--acc-blue); border-radius: var(--r-md); padding: 1.05rem 1.25rem; margin: 1.25rem 0 1.5rem; }
+.quote-intro strong { display: block; font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.12rem; color: var(--navy); margin-bottom: .45rem; }
+.quote-intro ol { margin: 0; padding-left: 1.25rem; }
+.quote-intro li { color: var(--text); margin-bottom: .25rem; line-height: 1.5; }
+.quote-intro li::marker { color: var(--acc-blue); font-weight: 700; }
+
+/* --- Quote picker: Style 1 — icon rows (colored icon + name/desc + round check) --- */
+.product-pick { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: .85rem; align-items: center; padding: .65rem 3rem .65rem .55rem; }
+.product-pick::before { display: none; } /* remove the dot */
+.pick-ic { grid-area: 1 / 1 / 3 / 2; align-self: center; width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; color: #fff; }
+.pick-ic svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.product-pick .pick-name { grid-area: 1 / 2 / 2 / 3; }
+.product-pick .pick-desc { grid-area: 2 / 2 / 3 / 3; }
+.product-pick:nth-child(6n+1) .pick-ic { background: var(--acc-blue); }
+.product-pick:nth-child(6n+2) .pick-ic { background: var(--teal); }
+.product-pick:nth-child(6n+3) .pick-ic { background: var(--acc-green); }
+.product-pick:nth-child(6n+4) .pick-ic { background: var(--gold-deep); }
+.product-pick:nth-child(6n+5) .pick-ic { background: var(--acc-coral); }
+.product-pick:nth-child(6n+6) .pick-ic { background: var(--navy-cta); }
+
+/* --- Product pages: Style 1 — icon rows (colored icon + name + hover arrow) --- */
+.product-card { display: flex; align-items: center; gap: .8rem; border: 0; border-radius: var(--r-md); background: transparent; box-shadow: none; position: relative; padding: .55rem 2.2rem .55rem .5rem; }
+.product-card .icon { display: none; }
+.product-card::before { display: none; }
+.prod-ic { width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center; color: #fff; flex-shrink: 0; }
+.prod-ic svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.product-card:nth-child(6n+1) .prod-ic { background: var(--acc-blue); }
+.product-card:nth-child(6n+2) .prod-ic { background: var(--teal); }
+.product-card:nth-child(6n+3) .prod-ic { background: var(--acc-green); }
+.product-card:nth-child(6n+4) .prod-ic { background: var(--gold-deep); }
+.product-card:nth-child(6n+5) .prod-ic { background: var(--acc-coral); }
+.product-card:nth-child(6n+6) .prod-ic { background: var(--navy-cta); }
+.product-card::after { content: "\2192"; position: absolute; right: .9rem; top: 50%; transform: translateY(-50%); color: var(--text-subtle); font-weight: 700; opacity: 0; transition: opacity .15s, right .15s; }
+.product-card:hover { background: var(--gray-50); transform: none; box-shadow: none; color: var(--ink); }
+.product-card:hover::after { opacity: 1; color: var(--acc-blue); right: .7rem; }
+
+/* products-list heading anti-clip */
+#products-list{ padding-top:.55rem; line-height:1.3; scroll-margin-top:100px; }

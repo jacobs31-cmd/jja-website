@@ -26,8 +26,9 @@
 <!-- Preconnect / fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./assets/css/styles.css?v=20260529">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/styles.css?v=20260719">
+<link rel="stylesheet" href="./assets/css/home.css?v=20260719">
 
 <!-- Structured Data: LocalBusiness / InsuranceAgency -->
 <script type="application/ld+json">
@@ -159,6 +160,32 @@
 </head>
 <body>
 
+<!-- icon sprite (2026 refresh) -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.1 8.6 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.6 12 2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.6-1.5-1.9L16 10l-2.2-2.3c-.4-.4-.9-.7-1.5-.7H5c-.6 0-1.1.4-1.4.9l-1.3 2.9c-.2.4-.3.8-.3 1.2V16c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="1"/><path d="M9 6h.01M13 6h.01M9 10h.01M13 10h.01M9 14h.01M13 14h.01M10 22v-4h4v4"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><polyline points="21 3 21 9 15 9"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 5.6a5.4 5.4 0 0 0-7.6 0L12 6.7l-1.2-1.1a5.4 5.4 0 0 0-7.6 7.6L12 21l8.8-7.8a5.4 5.4 0 0 0 0-7.6z"/></symbol>
+  <symbol id="i-umbrella" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10H2A10 10 0 0 1 12 2z"/><path d="M12 12v7a2 2 0 0 0 4 0"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="15.5" cy="8.5" r="4.5"/><path d="M12.3 11.7 3 21m3-3 2 2m1-5 2 2"/></symbol>
+  <symbol id="i-anchor" viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><line x1="12" y1="22" x2="12" y2="8"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/></symbol>
+  <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M4 21h16M6 7h12l-4-2m-4 0L6 7"/><path d="M6 7l-3 6a3 3 0 0 0 6 0zM18 7l3 6a3 3 0 0 1-6 0z"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><rect x="1" y="5" width="14" height="11" rx="1"/><path d="M15 8h4l3 3v5h-7"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></symbol>
+  <symbol id="i-hardhat" viewBox="0 0 24 24"><path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1z"/><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M4 15v-3a6 6 0 0 1 6-6"/><path d="M14 6a6 6 0 0 1 6 6v3"/></symbol>
+  <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M4 3v6a2 2 0 0 0 4 0V3M6 11v10"/><path d="M18 3c-1.7 0-3 2-3 5s1.3 4 3 4v9"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.4 5-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+</svg>
+
+
 <a class="skip-link" href="#main">Skip to content</a>
 
 <!-- Utility bar -->
@@ -221,48 +248,79 @@
 <main id="main">
 
 
-<!-- Hero -->
-<section class="hero">
+<!-- Hero (2026 refresh) -->
+<section class="home-hero">
   <div class="container">
-    <div class="hero-grid">
+    <div class="home-hero-grid">
       <div>
-    <div class="hero-badge"><span class="hero-badge-dot"></span> Family-owned · Independent · Since 1981</div>
-    <h1>Independent insurance agency in Lake Orion &mdash; <span class="accent">serving all of Michigan.</span></h1>
-    <p class="lead">We shop 20+ carriers to find the best auto, home, life, and business insurance for Michigan families and business owners. Save time, aggravation, and money.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary btn-lg" href="./quotes/">Get My Quote</a>
-      <a class="btn btn-outline btn-lg" href="tel:+12486936455">Call (248) 693-6455</a>
-    </div>
-    <div class="hero-meta">
-      <span class="hero-meta-item"><span class="stars">★★★★★</span> 4.9 stars from 808 Google reviews</span>
-      <span class="hero-meta-item">✓ 20+ insurance carriers</span>
-      <span class="hero-meta-item">✓ Licensed statewide in Michigan</span>
+        <span class="home-kicker reveal">Family-owned in Lake Orion &middot; Independent &middot; Since 1981</span>
+        <h1 class="reveal">Independent insurance for <span class="accent">Michigan.</span></h1>
+        <p class="lead reveal">From our family-owned Lake Orion office, we shop 20+ carriers to find the best auto, home, life, and business coverage for Michigan families and business owners &mdash; saving you time, aggravation, and money.</p>
+        <div class="home-hero-actions reveal">
+          <a class="btn btn-gold btn-lg" href="./quotes/">Get My Quote &rarr;</a>
+          <a class="btn btn-outline btn-lg" href="tel:+12486936455">Call (248) 693-6455</a>
+        </div>
+        <div class="home-hero-trust reveal">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="rev">4.9 from 808 Google reviews &middot; Licensed statewide in Michigan</span>
+        </div>
+      </div>
+      <div class="home-hero-media reveal">
+        <span class="home-blob gold" aria-hidden="true"></span><span class="home-blob teal" aria-hidden="true"></span>
+        <div class="home-hero-photo">
+          <picture>
+            <source srcset="./assets/img/blog/photo-1709216461598-018ae6307dc0.avif" type="image/avif">
+            <img src="./assets/img/blog/photo-1709216461598-018ae6307dc0.avif" alt="Michigan family protected by J. Jacobs and Associates Insurance" loading="eager" width="900" height="600">
+          </picture>
+        </div>
+        <div class="home-chip tl"><span class="ic bg-gold" aria-hidden="true"><svg><use href="#i-star"/></svg></span><div>4.9 / 5.0<small>808 reviews</small></div></div>
+        <div class="home-chip br"><span class="ic bg-teal" aria-hidden="true"><svg><use href="#i-shield"/></svg></span><div>20+ carriers<small>shopped for you</small></div></div>
+      </div>
     </div>
   </div>
-      <div class="hero-image-wrap">
-        <picture>
-          <source srcset="./assets/img/blog/photo-1709216461598-018ae6307dc0.avif" type="image/avif">
-          <img src="./assets/img/blog/photo-1709216461598-018ae6307dc0.avif" alt="Michigan family protected by J. Jacobs and Associates Insurance" loading="eager" width="900" height="600">
-        </picture>
-      </div>
-    </div>
-</div>
 </section>
 
+<!-- Quick quote bar -->
+<div class="qbar reveal"><div class="qbar-inner">
+  <div class="qbar-title">Start your quote in <span>minutes</span><small>We shop 20+ carriers and get real numbers back to you &mdash; often the same day.</small></div>
+  <div class="qtiles">
+    <a class="qtile" href="./quotes/?coverage=auto"><span class="ic bg-blue" aria-hidden="true"><svg><use href="#i-car"/></svg></span> Auto</a>
+    <a class="qtile" href="./quotes/?coverage=home"><span class="ic bg-green" aria-hidden="true"><svg><use href="#i-home"/></svg></span> Home</a>
+    <a class="qtile" href="./business-quote/?coverage=business,workcomp"><span class="ic bg-gold" aria-hidden="true"><svg><use href="#i-building"/></svg></span> Business</a>
+    <a class="qtile" href="./quotes/?coverage=auto,home,umbrella"><span class="ic bg-coral" aria-hidden="true"><svg><use href="#i-layers"/></svg></span> Bundle</a>
+  </div>
+  <a class="btn btn-primary btn-lg" href="./quotes/">Start&nbsp;Quote</a>
+</div></div>
 
-<!-- Value props -->
+<!-- Carrier logo strip -->
+<section class="carrier-band reveal"><div class="container">
+  <p class="carrier-band-title">A few of the 20+ carriers we shop for you</p>
+  <div class="logo-row">
+    <span class="logo-tile"><img src="./assets/img/carriers/citizens.png" alt="Citizens Insurance" loading="lazy"></span>
+    <span class="logo-tile"><img src="./assets/img/carriers/cincinnati.png" alt="Cincinnati Insurance" loading="lazy"></span>
+    <span class="logo-tile"><img src="./assets/img/carriers/frankenmuth.png" alt="Frankenmuth Insurance" loading="lazy"></span>
+    <span class="logo-tile"><img src="./assets/img/carriers/progressive.png" alt="Progressive" loading="lazy"></span>
+    <span class="logo-tile"><img src="./assets/img/carriers/liberty-mutual.png" alt="Liberty Mutual" loading="lazy"></span>
+    <span class="logo-tile"><img src="./assets/img/carriers/aaa.png" alt="AAA of Michigan" loading="lazy"></span>
+  </div>
+</div></section>
+
+
+<!-- Value props (colored) -->
 <section class="section">
   <div class="container">
-    <div class="grid grid-3">
-      <div class="card">
+    <div class="vp-grid">
+      <div class="vp reveal" style="--accent:var(--acc-blue)">
+        <span class="ic bg-blue" aria-hidden="true"><svg><use href="#i-shield"/></svg></span>
         <h3>20+ Carriers, One Agency</h3>
-        <p>Because we&rsquo;re 100% independent, we shop your coverage across 20+ commercial carriers and 20+ personal lines carriers — finding the best price for the protection you actually need.</p>
+        <p>Because we&rsquo;re 100% independent, we shop your coverage across 20+ carriers &mdash; finding the best price for the protection you actually need.</p>
       </div>
-      <div class="card">
+      <div class="vp reveal" style="--accent:var(--gold-deep)">
+        <span class="ic bg-gold" aria-hidden="true"><svg><use href="#i-pin"/></svg></span>
         <h3>Michigan&rsquo;s Specialists</h3>
-        <p>Born and based in Lake Orion. We understand Michigan&rsquo;s unique insurance landscape — from No-Fault auto reform to lake-home flood exposures to seasonal contractor coverage.</p>
+        <p>Born and based in Lake Orion. We understand Michigan&rsquo;s unique insurance landscape &mdash; from No-Fault auto reform to lake-home flood exposures to seasonal contractor coverage.</p>
       </div>
-      <div class="card">
+      <div class="vp reveal" style="--accent:var(--acc-green)">
+        <span class="ic bg-green" aria-hidden="true"><svg><use href="#i-refresh"/></svg></span>
         <h3>We Re-Shop at Renewal</h3>
         <p>Premiums went up? Call us. We&rsquo;ll re-quote with our other carriers so you never have to call around yourself. Most clients stay because they don&rsquo;t have to.</p>
       </div>
@@ -270,87 +328,86 @@
   </div>
 </section>
 
-<!-- Products -->
-<section class="section section-alt">
+<!-- What we cover (photo cards + icon tiles) -->
+<section class="section section-alt" id="cover">
   <div class="container">
     <span class="eyebrow">What we cover</span>
     <h2>Insurance for every part of your life and business</h2>
     <p class="lead" style="max-width:720px;">Whether you&rsquo;re protecting your family, your home, or the business you&rsquo;ve built, our team helps you find coverage that actually fits.</p>
 
-    <div class="grid grid-2" style="margin-top: 2rem;">
-      <div class="card">
-        <h3>Personal Insurance</h3>
-        <p>Coverage for individuals and families across Michigan. Bundle and save.</p>
-        <ul class="tags" style="margin: 1rem 0;">
-          <li class="tag"><a href="./personal/auto-insurance/" style="color:inherit;text-decoration:none;">Auto</a></li>
-          <li class="tag"><a href="./personal/home-insurance/" style="color:inherit;text-decoration:none;">Home</a></li>
-          <li class="tag"><a href="./personal/life-insurance/" style="color:inherit;text-decoration:none;">Life</a></li>
-          <li class="tag"><a href="./personal/umbrella-insurance/" style="color:inherit;text-decoration:none;">Umbrella</a></li>
-          <li class="tag"><a href="./personal/condo-insurance/" style="color:inherit;text-decoration:none;">Condo</a></li>
-          <li class="tag"><a href="./personal/renters-insurance/" style="color:inherit;text-decoration:none;">Renters</a></li>
-          <li class="tag"><a href="./personal/boat-insurance/" style="color:inherit;text-decoration:none;">Boat &amp; RV</a></li>
-          <li class="tag"><a href="./personal/motorcycle-insurance/" style="color:inherit;text-decoration:none;">Motorcycle</a></li>
-          <li class="tag"><a href="./personal/collector-car-insurance/" style="color:inherit;text-decoration:none;">Collector Car</a></li>
-          <li class="tag"><a href="./personal/flood-insurance/" style="color:inherit;text-decoration:none;">Flood</a></li>
-          <li class="tag"><a href="./personal/pet-insurance/" style="color:inherit;text-decoration:none;">Pet</a></li>
-        </ul>
-        <a class="btn btn-secondary" href="./personal/">Explore Personal Insurance →</a>
+    <div class="cover-grid">
+      <div class="cover-card reveal">
+        <div class="cover-head">
+          <img src="./assets/img/personal-family.jpg" alt="Michigan family" loading="lazy">
+          <div class="veil"></div>
+          <div class="htext"><h3>Personal Insurance</h3><p>For individuals &amp; families across Michigan &mdash; bundle and save.</p></div>
+        </div>
+        <div class="cover-body">
+          <div class="cov-items">
+            <a class="cov-item" href="./personal/auto-insurance/"><span class="ic soft-blue" aria-hidden="true"><svg><use href="#i-car"/></svg></span> Auto</a>
+            <a class="cov-item" href="./personal/home-insurance/"><span class="ic soft-green" aria-hidden="true"><svg><use href="#i-home"/></svg></span> Home</a>
+            <a class="cov-item" href="./personal/life-insurance/"><span class="ic soft-coral" aria-hidden="true"><svg><use href="#i-heart"/></svg></span> Life</a>
+            <a class="cov-item" href="./personal/umbrella-insurance/"><span class="ic soft-navy" aria-hidden="true"><svg><use href="#i-umbrella"/></svg></span> Umbrella</a>
+            <a class="cov-item" href="./personal/condo-insurance/"><span class="ic soft-teal" aria-hidden="true"><svg><use href="#i-building"/></svg></span> Condo</a>
+            <a class="cov-item" href="./personal/renters-insurance/"><span class="ic soft-gold" aria-hidden="true"><svg><use href="#i-key"/></svg></span> Renters</a>
+            <a class="cov-item" href="./personal/boat-insurance/"><span class="ic soft-teal" aria-hidden="true"><svg><use href="#i-anchor"/></svg></span> Boat &amp; RV</a>
+            <a class="cov-item" href="./personal/motorcycle-insurance/"><span class="ic soft-blue" aria-hidden="true"><svg><use href="#i-bike"/></svg></span> Motorcycle</a>
+          </div>
+          <div class="cov-more">+ Collector Car &middot; Flood &middot; Pet</div>
+          <a class="btn btn-primary" href="./personal/" style="display:flex;width:100%">Explore Personal Insurance &rarr;</a>
+        </div>
       </div>
-      <div class="card">
-        <h3>Commercial Insurance</h3>
-        <p>Protecting Michigan business owners — from solo contractors to established companies.</p>
-        <ul class="tags" style="margin: 1rem 0;">
-          <li class="tag"><a href="./business/general-liability-insurance/" style="color:inherit;text-decoration:none;">General Liability</a></li>
-          <li class="tag"><a href="./business/commercial-property-insurance/" style="color:inherit;text-decoration:none;">Commercial Property</a></li>
-          <li class="tag"><a href="./business/commercial-auto-insurance/" style="color:inherit;text-decoration:none;">Commercial Auto</a></li>
-          <li class="tag"><a href="./business/workers-compensation/" style="color:inherit;text-decoration:none;">Workers Comp</a></li>
-          <li class="tag"><a href="./business/restaurant-insurance/" style="color:inherit;text-decoration:none;">Restaurant</a></li>
-          <li class="tag"><a href="./business/contractor-insurance/" style="color:inherit;text-decoration:none;">Contractors</a></li>
-          <li class="tag"><a href="./business/professional-liability-insurance/" style="color:inherit;text-decoration:none;">Professional Liability</a></li>
-          <li class="tag"><a href="./business/cannabis-insurance/" style="color:inherit;text-decoration:none;">Cannabis</a></li>
-          <li class="tag"><a href="./business/surety-bonds/" style="color:inherit;text-decoration:none;">Bonds</a></li>
-          <li class="tag"><a href="./business/builders-risk-insurance/" style="color:inherit;text-decoration:none;">Builders Risk</a></li>
-        </ul>
-        <a class="btn btn-secondary" href="./business/">Explore Commercial Insurance →</a>
+
+      <div class="cover-card biz reveal">
+        <div class="cover-head">
+          <img src="./assets/img/team-office.jpg" alt="Michigan business owner meeting with an agent" loading="lazy">
+          <div class="veil"></div>
+          <div class="htext"><h3>Commercial Insurance</h3><p>Protecting Michigan businesses &mdash; solo contractors to established companies.</p></div>
+        </div>
+        <div class="cover-body">
+          <div class="cov-items">
+            <a class="cov-item" href="./business/general-liability-insurance/"><span class="ic soft-navy" aria-hidden="true"><svg><use href="#i-scale"/></svg></span> General Liability</a>
+            <a class="cov-item" href="./business/commercial-property-insurance/"><span class="ic soft-blue" aria-hidden="true"><svg><use href="#i-building"/></svg></span> Commercial Property</a>
+            <a class="cov-item" href="./business/commercial-auto-insurance/"><span class="ic soft-teal" aria-hidden="true"><svg><use href="#i-truck"/></svg></span> Commercial Auto</a>
+            <a class="cov-item" href="./business/workers-compensation/"><span class="ic soft-green" aria-hidden="true"><svg><use href="#i-hardhat"/></svg></span> Workers Comp</a>
+            <a class="cov-item" href="./business/restaurant-insurance/"><span class="ic soft-coral" aria-hidden="true"><svg><use href="#i-utensils"/></svg></span> Restaurant</a>
+            <a class="cov-item" href="./business/contractor-insurance/"><span class="ic soft-gold" aria-hidden="true"><svg><use href="#i-wrench"/></svg></span> Contractors</a>
+            <a class="cov-item" href="./business/professional-liability-insurance/"><span class="ic soft-blue" aria-hidden="true"><svg><use href="#i-briefcase"/></svg></span> Professional Liab.</a>
+            <a class="cov-item" href="./business/cannabis-insurance/"><span class="ic soft-green" aria-hidden="true"><svg><use href="#i-leaf"/></svg></span> Cannabis</a>
+          </div>
+          <div class="cov-more">+ Surety Bonds &middot; Builders Risk</div>
+          <a class="btn btn-gold" href="./business/" style="display:flex;width:100%">Explore Commercial Insurance &rarr;</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Why JJA — full-bleed photo band -->
-<section class="why-jja">
+<!-- Why JJA — full-bleed photo band (colored pillar icons) -->
+<section class="home-why">
   <picture style="position:absolute;inset:0;width:100%;height:100%;display:block;">
     <source srcset="./assets/img/blog/photo-1709216461598-018ae6307dc0.avif" type="image/avif">
-    <img class="why-jja-photo" src="./assets/img/blog/photo-1709216461598-018ae6307dc0.avif" alt="J. Jacobs & Associates — independent insurance for Michigan families and business owners" loading="lazy">
+    <img class="home-why-photo" src="./assets/img/blog/photo-1709216461598-018ae6307dc0.avif" alt="J. Jacobs & Associates — independent insurance for Michigan families and business owners" loading="lazy">
   </picture>
   <div class="container">
     <div>
-      <p class="why-jja-eyebrow">Family-owned · Independent · Since 1981</p>
+      <p class="home-why-eyebrow">Family-owned &middot; Independent &middot; Since 1981</p>
       <h2>Michigan families deserve an agent who actually picks up the phone.</h2>
-      <p>We're not a call center. We're a Lake Orion agency with 45 years in Michigan — same agents, same faces, real advice when you need it most.</p>
-      <a class="btn-white" href="./about/">Meet the team →</a>
+      <p>We're not a call center. We're a Lake Orion agency with 45 years in Michigan &mdash; same agents, same faces, real advice when you need it most.</p>
+      <a class="btn-white" href="./about/">Meet the team &rarr;</a>
     </div>
-    <div class="why-jja-pillars">
-      <div class="why-jja-pillar">
-        <span class="why-jja-pillar-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2L4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3z"/></svg></span>
-        <div>
-          <strong>20+ carriers, one call</strong>
-          <span>We shop the market so you don't have to — and we explain every option in plain English.</span>
-        </div>
+    <div class="pillars">
+      <div class="pillar reveal">
+        <span class="ic bg-blue" aria-hidden="true"><svg><use href="#i-shield"/></svg></span>
+        <div><strong>20+ carriers, one call</strong><span>We shop the market so you don't have to &mdash; and we explain every option in plain English.</span></div>
       </div>
-      <div class="why-jja-pillar">
-        <span class="why-jja-pillar-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg></span>
-        <div>
-          <strong>Michigan-only expertise</strong>
-          <span>No-Fault, PIP elections, flood zones — we know this state and what your coverage actually needs to cover.</span>
-        </div>
+      <div class="pillar reveal">
+        <span class="ic bg-gold" aria-hidden="true"><svg><use href="#i-pin"/></svg></span>
+        <div><strong>Michigan-only expertise</strong><span>No-Fault, PIP elections, flood zones &mdash; we know this state and what your coverage actually needs to cover.</span></div>
       </div>
-      <div class="why-jja-pillar">
-        <span class="why-jja-pillar-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2z"/></svg></span>
-        <div>
-          <strong>Best of the Best, 8 years running</strong>
-          <span>Lake Orion Review Readers' Choice 1st Place Insurance Agency, 2018–2025.</span>
-        </div>
+      <div class="pillar reveal">
+        <span class="ic bg-green" aria-hidden="true"><svg><use href="#i-star"/></svg></span>
+        <div><strong>Best of the Best, 8 years running</strong><span>Lake Orion Review Readers' Choice 1st Place Insurance Agency, 2018&ndash;2025.</span></div>
       </div>
     </div>
   </div>
@@ -578,6 +635,17 @@
     </div>
   </div>
 </footer>
-<script src="./assets/js/site.v2.js?v=20260702" defer></script>
+<script src="./assets/js/site.v2.js?v=20260719" defer></script>
+<script>
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var els = document.querySelectorAll('.reveal');
+    if (reduce || !('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('in')}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {threshold:.14, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){ io.observe(e); });
+  })();
+</script>
 </body>
 </html>

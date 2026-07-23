@@ -1,0 +1,139 @@
+/* ============================================================
+   J. Jacobs & Associates — Homepage-only styles (2026 refresh)
+   Linked ONLY from index.html. Uses tokens from styles.css +
+   the accent vars added in the styles.css refresh block.
+   ============================================================ */
+
+/* ---------- HERO ---------- */
+.home-hero{
+  position:relative; overflow:hidden; padding:4.25rem 0 2.75rem;
+  background:
+    radial-gradient(680px 360px at 88% 4%, rgba(224,168,62,.14), transparent 62%),
+    radial-gradient(620px 420px at 4% 96%, rgba(15,154,163,.10), transparent 60%),
+    linear-gradient(180deg, var(--bg-alt) 0%, #fff 72%);
+  border-bottom:1px solid var(--border);
+}
+.home-hero::before{
+  content:""; position:absolute; inset:0;
+  background-image:radial-gradient(rgba(20,54,94,.06) 1.2px, transparent 1.2px);
+  background-size:22px 22px;
+  -webkit-mask-image:linear-gradient(180deg,#000,transparent 60%);
+  mask-image:linear-gradient(180deg,#000,transparent 60%); pointer-events:none;
+}
+.home-hero .container{position:relative}
+.home-hero-grid{display:grid; grid-template-columns:1.12fr .88fr; gap:3rem; align-items:center}
+@media(max-width:900px){.home-hero-grid{grid-template-columns:1fr; gap:2.25rem}.home-hero-media{order:-1}}
+.home-kicker{display:inline-block; font-weight:700; font-size:.9rem; letter-spacing:.03em; color:var(--navy-light); margin-bottom:1.25rem}
+.home-hero h1{color:var(--ink); margin-bottom:1.15rem; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:clamp(2.6rem,5.8vw,4.3rem); letter-spacing:-.015em; line-height:1.04}
+.home-hero h1 .accent{
+  font-style:italic; color:var(--navy); padding-bottom:.18em;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12' preserveAspectRatio='none'%3E%3Cpath d='M4 8 C60 2 150 2 296 6' fill='none' stroke='%23e0a83e' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-size:100% .38em; background-position:0 100%; background-repeat:no-repeat;
+}
+.home-hero .lead{font-size:1.18rem; max-width:560px; color:var(--text-muted); margin-bottom:1.8rem}
+.home-hero-actions{display:flex; gap:.8rem; flex-wrap:wrap; align-items:center}
+.home-hero-trust{margin-top:1.9rem}
+.home-hero-trust .stars{color:var(--gold); letter-spacing:.06em; font-size:1rem}
+.home-hero-trust .rev{color:var(--text-muted); font-weight:600; font-size:.92rem}
+
+.home-hero-media{position:relative}
+.home-hero-photo{position:relative; border-radius:var(--r-xl); overflow:hidden; box-shadow:var(--shadow-xl); aspect-ratio:4/3; z-index:2}
+.home-hero-photo img{width:100%; height:100%; object-fit:cover}
+.home-blob{position:absolute; border-radius:38% 62% 55% 45%/50% 45% 55% 50%; filter:blur(2px); z-index:1}
+.home-blob.gold{width:190px; height:190px; background:radial-gradient(circle at 35% 35%, rgba(224,168,62,.55), rgba(224,168,62,0)); top:-38px; right:-30px}
+.home-blob.teal{width:210px; height:210px; background:radial-gradient(circle at 40% 40%, rgba(15,154,163,.35), rgba(15,154,163,0)); bottom:-46px; left:-40px}
+.home-chip{position:absolute; z-index:3; background:#fff; border:1px solid var(--border); border-radius:14px; box-shadow:var(--shadow-lg); padding:.6rem .85rem; display:flex; align-items:center; gap:.55rem; font-weight:700; font-size:.86rem; color:var(--ink)}
+.home-chip .ic{width:34px; height:34px; border-radius:9px; display:grid; place-items:center; color:#fff}
+.home-chip .ic svg{width:18px;height:18px}
+.home-chip small{display:block; font-weight:600; color:var(--text-subtle); font-size:.72rem}
+.home-chip.tl{top:18px; left:-26px}
+.home-chip.br{bottom:20px; right:-22px}
+@media(max-width:520px){.home-chip.tl{left:6px}.home-chip.br{right:6px}}
+
+/* ---------- QUICK-QUOTE BAR ---------- */
+.qbar{max-width:var(--container); margin:-1.25rem auto 0; position:relative; z-index:5; padding:0 1.5rem}
+.qbar-inner{background:#fff; border:1px solid var(--border); border-radius:var(--r-xl); box-shadow:var(--shadow-xl); padding:1.4rem 1.5rem; display:grid; grid-template-columns:auto 1fr auto; gap:1.35rem; align-items:center}
+.qbar-title{font-weight:800; color:var(--ink); font-size:1.05rem; line-height:1.25; max-width:200px; font-family:'Fraunces',Georgia,serif}
+.qbar-title span{color:var(--teal)}
+.qbar-title small{display:block; font-weight:600; color:var(--text-subtle); font-size:.72rem; line-height:1.35; margin-top:.3rem; font-family:'Inter',sans-serif}
+.qtiles{display:grid; grid-template-columns:repeat(4,1fr); gap:.7rem}
+.qtile{display:flex; align-items:center; gap:.6rem; background:var(--gray-50); border:1.5px solid var(--border); border-radius:var(--r-md); padding:.7rem .8rem; font-weight:700; color:var(--navy); font-size:.95rem; transition:.16s}
+.qtile:hover{background:#fff; transform:translateY(-2px); box-shadow:var(--shadow-md); border-color:var(--border-strong)}
+.qtile .ic{width:36px; height:36px; border-radius:9px; display:grid; place-items:center; color:#fff; flex-shrink:0}
+.qtile .ic svg{width:19px;height:19px}
+@media(max-width:1040px){.qbar-inner{grid-template-columns:1fr}.qbar-title{max-width:none}.qbar .btn{justify-self:start}}
+@media(max-width:640px){.qtiles{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- CARRIER LOGO STRIP ---------- */
+.carrier-band{padding:2.25rem 0 .5rem; background:#fff}
+.carrier-band-title{text-align:center; font-size:.8rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--text-subtle); margin:0 0 1.25rem}
+.logo-row{display:flex; flex-wrap:wrap; justify-content:center; gap:.9rem}
+.logo-tile{background:#fff; border:1px solid var(--border); border-radius:12px; box-shadow:var(--shadow-sm); height:64px; width:131px; display:grid; place-items:center; padding:.5rem .7rem; transition:.18s}
+.logo-tile:hover{transform:translateY(-3px); box-shadow:var(--shadow-md); border-color:var(--border-strong)}
+.logo-tile img{max-height:36px; max-width:104px; width:auto; object-fit:contain; display:block}
+@media(max-width:640px){.logo-tile{width:120px; height:58px}.logo-tile img{max-width:92px; max-height:32px}}
+
+/* ---------- VALUE PROPS ---------- */
+.vp-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem}
+@media(max-width:860px){.vp-grid{grid-template-columns:1fr}}
+.vp{background:#fbfcfd; border:1.5px solid var(--gray-200); border-radius:var(--r-lg); padding:1.9rem 1.6rem; box-shadow:var(--shadow-md); border-top:4px solid var(--accent,var(--navy-cta)); transition:.22s}
+.vp:hover{transform:translateY(-3px); box-shadow:var(--shadow-lg); background:#fff}
+.vp .ic{width:52px; height:52px; border-radius:13px; display:grid; place-items:center; color:#fff; margin-bottom:1rem}
+.vp .ic svg{width:26px;height:26px}
+.vp h3{font-size:1.2rem; margin:0 0 .5rem; font-family:'Fraunces',Georgia,serif}
+.vp p{color:var(--text-muted); margin:0; font-size:.97rem}
+
+/* ---------- WHAT WE COVER (photo cards + icon tiles) ---------- */
+.cover-grid{display:grid; grid-template-columns:1fr 1fr; gap:1.75rem; margin-top:2.25rem}
+@media(max-width:860px){.cover-grid{grid-template-columns:1fr}}
+.cover-card{background:#fff; border:1px solid var(--border); border-top:4px solid var(--navy-cta); border-radius:var(--r-xl); overflow:hidden; box-shadow:var(--shadow-md); transition:.22s}
+.cover-card.biz{border-top-color:var(--gold-deep)}
+.cover-card:hover{box-shadow:var(--shadow-xl); transform:translateY(-3px)}
+.cover-head{position:relative; height:158px; overflow:hidden}
+.cover-head img{width:100%; height:100%; object-fit:cover}
+.cover-head .veil{position:absolute; inset:0; background:linear-gradient(180deg,rgba(10,35,66,.10) 0%,rgba(10,35,66,.45) 52%,rgba(10,35,66,.86) 100%)}
+.cover-head .veil::after{content:""; position:absolute; left:0; top:0; bottom:0; width:5px; background:var(--navy-cta)}
+.cover-card.biz .cover-head .veil::after{background:var(--gold)}
+.cover-head .htext{position:absolute; left:1.4rem; bottom:1rem; color:#fff; z-index:2}
+.cover-head .htext h3{color:#fff; margin:0; font-size:1.35rem; font-family:'Fraunces',Georgia,serif}
+.cover-head .htext p{margin:.15rem 0 0; font-size:.86rem; color:#e6eef8; font-weight:500}
+.cover-body{padding:1.4rem}
+.cov-items{display:grid; grid-template-columns:1fr 1fr; gap:.55rem; margin-bottom:1.25rem}
+@media(max-width:420px){.cov-items{grid-template-columns:1fr}}
+.cov-item{display:flex; align-items:center; gap:.6rem; padding:.55rem .6rem; border-radius:var(--r-md); font-weight:600; color:var(--text); font-size:.92rem; transition:.15s}
+.cov-item:hover{background:var(--gray-50)}
+.cov-item .ic{width:32px; height:32px; border-radius:8px; display:grid; place-items:center; flex-shrink:0}
+.cov-item .ic svg{width:16px;height:16px}
+.cov-more{font-size:.85rem; color:var(--text-subtle); font-weight:600; padding:0 .6rem; margin-bottom:1rem}
+
+/* ---------- WHY JJA (colored pillar icons) ---------- */
+.home-why{position:relative; background:var(--navy); overflow:hidden; padding:5rem 0}
+.home-why-photo{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 30%; opacity:.20}
+.home-why .container{position:relative; z-index:2; display:grid; grid-template-columns:1.1fr 1fr; gap:3.5rem; align-items:center}
+@media(max-width:860px){.home-why .container{grid-template-columns:1fr; gap:2.25rem}}
+.home-why-eyebrow{font-size:.72rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:.6rem}
+.home-why h2{color:#fff; font-size:clamp(1.5rem,3vw,2rem); margin-bottom:1rem; font-family:'Fraunces',Georgia,serif}
+.home-why p{color:#b8d0e8; margin-bottom:1.5rem}
+.home-why .btn-white{display:inline-block; background:#fff; color:var(--navy); font-weight:700; padding:11px 26px; border-radius:var(--r-md)}
+.home-why .btn-white:hover{background:#dce8f5}
+.pillars{display:flex; flex-direction:column; gap:.9rem}
+.pillar{display:flex; gap:1rem; align-items:flex-start; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); border-radius:var(--r-lg); padding:1.05rem 1.2rem}
+.pillar .ic{width:44px; height:44px; border-radius:11px; display:grid; place-items:center; color:#fff; flex-shrink:0}
+.pillar .ic svg{width:22px;height:22px}
+.pillar strong{display:block; color:#fff; font-size:.98rem; margin-bottom:.15rem}
+.pillar span{color:#a9c8e4; font-size:.88rem; line-height:1.5}
+
+/* ---------- icon color helpers ---------- */
+.bg-blue{background:var(--acc-blue)} .bg-gold{background:var(--gold-deep)} .bg-teal{background:var(--teal)}
+.bg-green{background:var(--acc-green)} .bg-coral{background:var(--acc-coral)} .bg-navy{background:var(--navy-cta)}
+.soft-blue{background:var(--blue-soft); color:var(--blue-ink)} .soft-gold{background:var(--gold-soft); color:var(--gold-deep)}
+.soft-teal{background:var(--teal-soft); color:var(--teal-ink)} .soft-green{background:var(--green-soft); color:var(--green-ink)}
+.soft-coral{background:var(--coral-soft); color:var(--coral-ink)} .soft-navy{background:var(--blue-soft); color:var(--navy-cta)}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s ease}
+.reveal.in{opacity:1; transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1; transform:none; transition:none}}
+
+/* Line-icon rendering for all .ic SVGs (2026 refresh polish) */
+.ic svg { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }

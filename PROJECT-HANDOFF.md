@@ -30,14 +30,14 @@ files, so it's the fastest way to spot drift. Everything outside the markers is
 hand-written and the script never touches it.
 
 <!-- AUTO:STATE -->
-_Generated 2026-07-16 by `update_handoff.py`._
+_Generated 2026-07-23 by `update_handoff.py`._
 
 - **Quote form posts to:** `https://jja-al3-worker.jacobs31.workers.dev`
 - **Contact form posts to:** `https://jja-contact.jacobs31.workers.dev`
 - **Turnstile sitekey:** `0x4AAAAAADScpMxfNdQDkoBm`
-- **Cache-bust versions in use (styles.css):** `20260529` (130)
+- **Cache-bust versions in use (styles.css):** `20260719` (130)
 - **Published blog posts:** 46  ·  **markdown sources in content/blog:** 46
-- **Team cards:** 16
+- **Team cards:** 17
 - **Canonical blog builder:** `build.py`
 - **City landing pages (20):** auburn-hills-insurance, bloomfield-insurance, clarkston-insurance, fenton-insurance, goodrich-insurance, grand-blanc-insurance, holly-insurance, lapeer-insurance, oakland-township-insurance, orion-township-insurance, ortonville-insurance, oxford-insurance, pontiac-insurance, rochester-hills-insurance, rochester-insurance, shelby-township-insurance, troy-insurance, washington-township-insurance, waterford-insurance, white-lake-insurance
 - **Core sections present:** about, team, carriers, reviews, faq, personal, business, service, billing-claims, blog, quotes, contact, privacy-policy, accessibility
